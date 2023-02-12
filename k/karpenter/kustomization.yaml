@@ -2,6 +2,7 @@
 
 patchesStrategicMerge:
   - patch-deployment-karpenter-irsa.yaml
+namespace: karpenter
 resources:
   - karpenter.yaml
   - resource-namespace-karpenter.yaml
@@ -9,4 +10,3 @@ resources:
   - resource-provisioner-control-vc2.yaml
   - resource-provisioner-control-vc3.yaml
   - resource-provisioner-control-vc4.yaml
-namespace: karpenter

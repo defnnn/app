@@ -1,19 +1,19 @@
 #ManagedBy: cue
 
 patchesStrategicMerge: []
+namespace: external-secrets
 resources:
   - resource-namespace-external-secrets.yaml
   - resource-cluster-role-binding-delegator.yaml
-namespace: external-secrets
 helmCharts:
   - releaseName: external-secrets
-    name: external-secrets
-    version: 0.6.0
-    repo: https://charts.external-secrets.io
     namespace: external-secrets
     valuesInline:
       webhook:
         create: false
       certController:
         create: false
+    name: external-secrets
+    version: 0.6.0
+    repo: https://charts.external-secrets.io
     includeCRDs: true

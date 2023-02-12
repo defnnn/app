@@ -1,18 +1,18 @@
 #ManagedBy: cue
 
 patchesStrategicMerge: []
+namespace: external-dns
 resources:
   - resource-namespace-external-dns.yaml
-namespace: external-dns
 helmCharts:
   - releaseName: external-dns
-    name: external-dns
-    version: 6.7.2
-    repo: https://charts.bitnami.com/bitnami
     namespace: external-dns
     valuesInline:
       sources:
         - service
         - ingress
       provider: cloudflare
+    name: external-dns
+    version: 6.7.2
+    repo: https://charts.bitnami.com/bitnami
     includeCRDs: true

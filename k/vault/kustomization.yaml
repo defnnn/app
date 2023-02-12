@@ -2,14 +2,11 @@
 
 patchesStrategicMerge:
   - patch-statefulset-vault-set-vault-token.yaml
+namespace: vault
 resources:
   - resource-namespace-vault.yaml
-namespace: vault
 helmCharts:
   - releaseName: vault
-    name: vault
-    version: 0.20.1
-    repo: https://helm.releases.hashicorp.com
     namespace: vault
     valuesInline:
       server:
@@ -37,4 +34,7 @@ helmCharts:
               mount_path = "transit/"
               tls_skip_verify = "true"
             }
+    name: vault
+    version: 0.20.1
+    repo: https://helm.releases.hashicorp.com
     includeCRDs: true

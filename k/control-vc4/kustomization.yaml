@@ -1,14 +1,11 @@
 #ManagedBy: cue
 
 patchesStrategicMerge: []
+namespace: control-vc4
 resources:
   - resource-namespace-vcluster.yaml
-namespace: control-vc4
 helmCharts:
   - releaseName: vcluster
-    name: vcluster
-    version: 0.12.3
-    repo: https://charts.loft.sh
     namespace: control-vc4
     valuesInline:
       service:
@@ -36,4 +33,7 @@ helmCharts:
                     operator: In
                     values:
                       - control-vc4
+    name: vcluster
+    version: 0.12.3
+    repo: https://charts.loft.sh
     includeCRDs: true

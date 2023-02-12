@@ -11,13 +11,13 @@
       ]
     }
   },
+  "module": {
+    "devpod": [{ "source": "../m/devpod", "envs": "${local.envs}" }]
+  },
   "provider": {
     "kubernetes": [
       { "config_context": "k3d-control", "config_path": "~/.kube/config" }
     ]
-  },
-  "module": {
-    "devpod": [{ "source": "../m/devpod", "envs": "${local.envs}" }]
   },
   "locals": [
     {

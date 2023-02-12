@@ -1,16 +1,13 @@
 #ManagedBy: cue
 
 patchesStrategicMerge: []
+namespace: kuma
 resources:
   - resource-namespace-kuma.yaml
   - resource-external-secret-kds-ca-certs.yaml
   - resource-external-secret-kuma-tls-cert.yaml
-namespace: kuma
 helmCharts:
   - releaseName: kuma
-    name: kuma
-    version: 1.8.1
-    repo: https://kumahq.github.io/charts
     namespace: kuma
     valuesInline:
       controlPlane:
@@ -27,4 +24,7 @@ helmCharts:
         enabled: true
       egress:
         enabled: true
+    name: kuma
+    version: 1.8.1
+    repo: https://kumahq.github.io/charts
     includeCRDs: true

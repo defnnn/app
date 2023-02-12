@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
 patchesStrategicMerge: []
+namespace: tf-system
 resources:
   - https://raw.githubusercontent.com/isaaguilar/terraform-operator/master/deploy/bundles/v0.9.0-alpha1/v0.9.0-alpha1.yaml
-namespace: tf-system
