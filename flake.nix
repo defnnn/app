@@ -1,15 +1,15 @@
 {
   inputs = {
-    dev.url = github:defn/pkg/dev-0.0.12?dir=dev;
+    dev.url = github:defn/pkg/dev-0.0.22?dir=dev;
   };
 
-  outputs = inputs: inputs.dev.main {
+  outputs = inputs: inputs.dev.main rec {
     inherit inputs;
 
-    src = ./.;
+    src = builtins.path { path = ./.; name = builtins.readFile ./SLUG; };
 
     config = rec {
-      slug = "defn-app";
+      slug = builtins.readFile ./SLUG;
       version = builtins.readFile ./VERSION;
     };
 
