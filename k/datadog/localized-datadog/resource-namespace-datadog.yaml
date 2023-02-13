@@ -1,6 +1,0 @@
-#ManagedBy: cue
-
-metadata:
-  name: datadog
-kind: Namespace
-apiVersion: v1

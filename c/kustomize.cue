@@ -252,41 +252,6 @@ kustomize: "external-dns": #KustomizeHelm & {
 	}
 }
 
-kustomize: "datadog": #KustomizeHelm & {
-	namespace: "datadog"
-
-	helm: {
-		release: "datadog"
-		name:    "datadog"
-		version: "3.1.1"
-		repo:    "https://helm.datadoghq.com"
-		values: {
-			clusterAgent: {
-				enabled: "true"
-				metricsProvider: enabled: "true"
-				processAgent: enabled:    "false"
-			}
-			targetSystem: "linux"
-			datadog: {
-				logs: {
-					enabled:             true
-					containerCollectAll: true
-				}
-				appKeyExistingSecret: "datadog-app-secret"
-				apiKeyExistingSecret: "datadog-api-secret"
-			}
-		}
-	}
-
-	resource: "namespace-datadog": core.#Namespace & {
-		apiVersion: "v1"
-		kind:       "Namespace"
-		metadata: {
-			name: "datadog"
-		}
-	}
-}
-
 kustomize: {
 	for a in ["k3d-global"] {
 		"\(a)-kuma-global": #KustomizeHelm & {
