@@ -18,7 +18,7 @@ gen:
 
 regen:
 	$(MAKE) gen
-	cd ../k && for a in */; do echo $$a; done | runmany 1 'cd ../k/$$1 && echo && pwd && rm -rf charts localized-* && mkdir -p out && kustomize build --enable-helm > out/main.yaml && kustomize localize && ln -nfs localized-* local && cd local && kustomize build --enable-helm > ../out/local.yaml'
+	cd ../k && for a in */; do echo $$a; done | runmany 1 'cd ../k/$$1 && echo && pwd && rm -rf charts localized-* local && mkdir -p out && kustomize build --enable-helm > out/main.yaml && kustomize localize . local && cd local && kustomize build --enable-helm > ../out/local.yaml'
 	pc
 	git add ../k/
 	git add -u ../k/
