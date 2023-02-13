@@ -13,13 +13,11 @@ gen:
 	rm -f ../tf/*/*.tf.json
 	c gen
 	git add ../e ../k ../tf
-	pc || true
 	git add ../e ../k ../tf
 
 regen:
 	$(MAKE) gen
 	cd ../k && for a in */; do echo $$a; done | runmany 1 'cd ../k/$$1 && echo && pwd && rm -rf local.yaml local && kustomize localize . local && kustomize build --enable-helm local > local.yaml'
-	pc
 	git add ../k/
 	git add -u ../k/
 

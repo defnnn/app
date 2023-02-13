@@ -14,7 +14,7 @@ spec:
     source: https://github.com/defn/app.git//tf/m/egg?ref=master
   taskOptions:
     - for:
-        - "*"
+        - '*'
       env:
         - name: TF_VAR_egg
           value: rocky

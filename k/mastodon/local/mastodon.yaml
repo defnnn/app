@@ -458,7 +458,7 @@ kind: Service
 metadata:
   name: mastodon-elasticsearch-master-hl
   namespace: "default"
-  labels: 
+  labels:
     app.kubernetes.io/name: elasticsearch
     helm.sh/chart: elasticsearch-19.0.1
     app.kubernetes.io/instance: mastodon
@@ -579,7 +579,7 @@ metadata:
     app.kubernetes.io/instance: mastodon
     app.kubernetes.io/managed-by: Helm
   annotations:
-    
+
 spec:
   type: ClusterIP
   clusterIP: None
@@ -745,8 +745,7 @@ spec:
             claimName: mastodon-system
       containers:
         - name: mastodon
-          securityContext:
-            {}
+          securityContext: {}
           image: "tootsuite/mastodon:v3.5.3"
           imagePullPolicy: IfNotPresent
           command:
@@ -776,8 +775,7 @@ spec:
               mountPath: /opt/mastodon/public/assets
             - name: system
               mountPath: /opt/mastodon/public/system
-          resources:
-            {}
+          resources: {}
 ---
 # Source: mastodon/templates/deployment-streaming.yaml
 apiVersion: apps/v1
@@ -983,14 +981,14 @@ spec:
       annotations:
     spec:
       serviceAccountName: default
-      
+
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
-          
+
         nodeAffinity:
-          
+
       securityContext:
         fsGroup: 1001
       initContainers:
@@ -1047,7 +1045,7 @@ spec:
             - name: ELASTICSEARCH_TOTAL_NODES
               value: "2"
             - name: ELASTICSEARCH_CLUSTER_MASTER_HOSTS
-              value: mastodon-elasticsearch-master-0 
+              value: mastodon-elasticsearch-master-0
             - name: ELASTICSEARCH_MINIMUM_MASTER_NODES
               value: "1"
             - name: ELASTICSEARCH_ADVERTISED_HOSTNAME
@@ -1127,14 +1125,14 @@ spec:
       annotations:
     spec:
       serviceAccountName: default
-      
+
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
-          
+
         nodeAffinity:
-          
+
       securityContext:
         fsGroup: 1001
       initContainers:
@@ -1191,7 +1189,7 @@ spec:
             - name: ELASTICSEARCH_TOTAL_NODES
               value: "2"
             - name: ELASTICSEARCH_CLUSTER_MASTER_HOSTS
-              value: mastodon-elasticsearch-master-0 
+              value: mastodon-elasticsearch-master-0
             - name: ELASTICSEARCH_MINIMUM_MASTER_NODES
               value: "1"
             - name: ELASTICSEARCH_ADVERTISED_HOSTNAME
@@ -1279,14 +1277,14 @@ spec:
       annotations:
     spec:
       serviceAccountName: default
-      
+
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
-          
+
         nodeAffinity:
-          
+
       securityContext:
         fsGroup: 1001
       initContainers:
@@ -1343,7 +1341,7 @@ spec:
             - name: ELASTICSEARCH_TOTAL_NODES
               value: "2"
             - name: ELASTICSEARCH_CLUSTER_MASTER_HOSTS
-              value: mastodon-elasticsearch-master-0 
+              value: mastodon-elasticsearch-master-0
             - name: ELASTICSEARCH_MINIMUM_MASTER_NODES
               value: "1"
             - name: ELASTICSEARCH_ADVERTISED_HOSTNAME
@@ -1423,14 +1421,14 @@ spec:
       annotations:
     spec:
       serviceAccountName: default
-      
+
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
-          
+
         nodeAffinity:
-          
+
       securityContext:
         fsGroup: 1001
       initContainers:
@@ -1487,7 +1485,7 @@ spec:
             - name: ELASTICSEARCH_TOTAL_NODES
               value: "2"
             - name: ELASTICSEARCH_CLUSTER_MASTER_HOSTS
-              value: mastodon-elasticsearch-master-0 
+              value: mastodon-elasticsearch-master-0
             - name: ELASTICSEARCH_MINIMUM_MASTER_NODES
               value: "1"
             - name: ELASTICSEARCH_ADVERTISED_HOSTNAME
@@ -1573,10 +1571,10 @@ spec:
       annotations:
     spec:
       serviceAccountName: default
-      
+
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
             - podAffinityTerm:
@@ -1590,7 +1588,7 @@ spec:
                 topologyKey: kubernetes.io/hostname
               weight: 1
         nodeAffinity:
-          
+
       securityContext:
         fsGroup: 1001
       hostNetwork: false
@@ -1674,7 +1672,7 @@ spec:
                 - /bin/sh
                 - -c
                 - -e
-                
+
                 - |
                   exec pg_isready -U "mastodon" -d "dbname=mastodon_production" -h 127.0.0.1 -p 5432
                   [ -f /opt/bitnami/postgresql/tmp/.initialized ] || [ -f /bitnami/postgresql/.initialized ]
@@ -1739,13 +1737,12 @@ spec:
         checksum/scripts: 46756d9fef7088f08c5219a223ef0ae603218882fd0c548dc455b10232ed578a
         checksum/secret: eaf60b35fa4950217cce1356cddd40be35c5dbc78a159766f84e1dac798d8c79
     spec:
-      
       securityContext:
         fsGroup: 1001
       serviceAccountName: mastodon-redis
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
             - podAffinityTerm:
@@ -1759,7 +1756,7 @@ spec:
                 topologyKey: kubernetes.io/hostname
               weight: 1
         nodeAffinity:
-          
+
       terminationGracePeriodSeconds: 30
       containers:
         - name: redis
@@ -1824,7 +1821,7 @@ spec:
               mountPath: /health
             - name: redis-data
               mountPath: /data
-              subPath: 
+              subPath:
             - name: config
               mountPath: /opt/bitnami/redis/mounted-etc
             - name: redis-tmp-conf
@@ -1898,13 +1895,12 @@ spec:
         checksum/scripts: 46756d9fef7088f08c5219a223ef0ae603218882fd0c548dc455b10232ed578a
         checksum/secret: 0a1fad6386340c8ce1c6c8aac8988615b971345e9d6e16ebdb0f7a7a8a9cbcd6
     spec:
-      
       securityContext:
         fsGroup: 1001
       serviceAccountName: mastodon-redis
       affinity:
         podAffinity:
-          
+
         podAntiAffinity:
           preferredDuringSchedulingIgnoredDuringExecution:
             - podAffinityTerm:
@@ -1918,7 +1914,7 @@ spec:
                 topologyKey: kubernetes.io/hostname
               weight: 1
         nodeAffinity:
-          
+
       terminationGracePeriodSeconds: 30
       containers:
         - name: redis
@@ -1999,7 +1995,7 @@ spec:
               mountPath: /health
             - name: redis-data
               mountPath: /data
-              subPath: 
+              subPath:
             - name: config
               mountPath: /opt/bitnami/redis/mounted-etc
             - name: redis-tmp-conf
@@ -2155,8 +2151,8 @@ spec:
   containers:
     - name: wget
       image: busybox
-      command: ['wget']
-      args: ['mastodon:80']
+      command: ["wget"]
+      args: ["mastodon:80"]
   restartPolicy: Never
 ---
 # Source: mastodon/templates/job-assets-precompile.yaml
@@ -2207,7 +2203,7 @@ spec:
             - bash
             - -c
             - |
-                bundle exec rake assets:precompile && yarn cache clean
+              bundle exec rake assets:precompile && yarn cache clean
           envFrom:
             - configMapRef:
                 name: mastodon-env

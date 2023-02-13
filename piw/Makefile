@@ -16,7 +16,7 @@ keys.json:
 discovery.json: discovery.cue
 	cue export --out=json > discovery.json
 
-json: 
+json:
 	rm discovery.json keys.json
 	env PRIV_KEY="sa-signer.key" PUB_KEY="sa-signer.key.pub" PKCS_KEY="sa-signer-pkcs8.pub" $(MAKE) json-inner
 
