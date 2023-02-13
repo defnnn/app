@@ -1,6 +1,7 @@
 {
   inputs = {
     dev.url = github:defn/pkg/dev-0.0.22?dir=dev;
+    kubernetes.url = github:defn/pkg/kubernetes-0.0.6?dir=kubernetes;
   };
 
   outputs = inputs: inputs.dev.main rec {
@@ -14,7 +15,9 @@
     };
 
     handler = { pkgs, wrap, system, builders }: rec {
-      defaultPackage = wrap.nullBuilder { };
+      defaultPackage = wrap.nullBuilder { 
+        propagatedBuildInputs = wrap.flakeInputs;
+      };
     };
   };
 }
