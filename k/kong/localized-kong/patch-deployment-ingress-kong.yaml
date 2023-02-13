@@ -1,0 +1,9 @@
+#ManagedBy: cue
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ingress-kong
+  namespace: kong
+  annotations:
+    kuma.io/gateway: enabled

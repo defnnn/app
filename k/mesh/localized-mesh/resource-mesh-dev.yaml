@@ -1,0 +1,12 @@
+#ManagedBy: cue
+
+apiVersion: kuma.io/v1alpha1
+kind: Mesh
+metadata:
+  name: dev
+spec:
+  mtls:
+    enabledBackend: ca-dev-1
+    backends:
+      - name: ca-dev-1
+        type: builtin

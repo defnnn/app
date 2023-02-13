@@ -1,0 +1,4 @@
+namespace: default
+resources:
+- hello.yaml
+- resource-default.yaml

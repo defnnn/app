@@ -1,0 +1,10 @@
+#ManagedBy: cue
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kong
+  namespace: kong
+  labels:
+    kuma.io/sidecar-injection: enabled
+    kuma.io/mesh: dev

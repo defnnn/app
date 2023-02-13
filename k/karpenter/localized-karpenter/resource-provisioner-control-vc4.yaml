@@ -1,0 +1,33 @@
+#ManagedBy: cue
+
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: control-vc4
+spec:
+  requirements:
+    - key: karpenter.sh/capacity-type
+      operator: In
+      values:
+        - spot
+    - key: kubernetes.io/arch
+      operator: In
+      values:
+        - amd64
+    - key: node.kubernetes.io/instance-type
+      operator: In
+      values:
+        - t3.medium
+        - t3a.medium
+  limits:
+    resources:
+      cpu: "2"
+  labels:
+    env: control-vc4
+  taints:
+    - key: env
+      value: control-vc4
+      effect: NoSchedule
+  providerRef:
+    name: default
+  ttlSecondsAfterEmpty: 600

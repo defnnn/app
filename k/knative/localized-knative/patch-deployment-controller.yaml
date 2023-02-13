@@ -1,0 +1,12 @@
+#ManagedBy: cue
+
+metadata:
+  name: controller
+  namespace: knative-serving
+spec:
+  template:
+    metadata:
+      annotations:
+        kuma.io/virtual-probes: disabled
+kind: Deployment
+apiVersion: apps/v1

@@ -1,0 +1,24 @@
+helmCharts:
+- includeCRDs: true
+  name: datadog
+  namespace: datadog
+  releaseName: datadog
+  repo: https://helm.datadoghq.com
+  valuesInline:
+    clusterAgent:
+      enabled: "true"
+      metricsProvider:
+        enabled: "true"
+      processAgent:
+        enabled: "false"
+    datadog:
+      apiKeyExistingSecret: datadog-api-secret
+      appKeyExistingSecret: datadog-app-secret
+      logs:
+        containerCollectAll: true
+        enabled: true
+    targetSystem: linux
+  version: 3.1.1
+namespace: datadog
+resources:
+- resource-namespace-datadog.yaml
