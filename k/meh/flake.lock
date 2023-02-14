@@ -6,36 +6,36 @@
         "kubernetes": "kubernetes"
       },
       "locked": {
-        "lastModified": 1676345074,
-        "narHash": "sha256-rexpNECxY+uY0KToiiLdXflLyeLHXh3blp+US9bYOM0=",
+        "lastModified": 1676402140,
+        "narHash": "sha256-jt/lmSGbvC+L7VV2KZcxLgMZlIf9VqaIi67gQL4CdUk=",
         "owner": "defn",
         "repo": "app",
-        "rev": "1d14c2c41a1df65ffa6f13eec766e0b2c5004061",
+        "rev": "5abce7ecc1d9a728133793a148e943a1baab3017",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.4",
+        "ref": "0.0.5",
         "repo": "app",
         "type": "github"
       }
     },
     "app_2": {
       "inputs": {
-        "dev": "dev_12",
+        "dev": "dev_11",
         "kubernetes": "kubernetes_2"
       },
       "locked": {
-        "lastModified": 1676345074,
-        "narHash": "sha256-rexpNECxY+uY0KToiiLdXflLyeLHXh3blp+US9bYOM0=",
+        "lastModified": 1676402140,
+        "narHash": "sha256-jt/lmSGbvC+L7VV2KZcxLgMZlIf9VqaIi67gQL4CdUk=",
         "owner": "defn",
         "repo": "app",
-        "rev": "1d14c2c41a1df65ffa6f13eec766e0b2c5004061",
+        "rev": "5abce7ecc1d9a728133793a148e943a1baab3017",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.4",
+        "ref": "0.0.5",
         "repo": "app",
         "type": "github"
       }
@@ -63,51 +63,49 @@
     },
     "argo-cd": {
       "inputs": {
-        "app": "app",
-        "dev": "dev_11"
+        "app": "app"
       },
       "locked": {
         "dir": "k/argo-cd",
-        "lastModified": 1676345110,
-        "narHash": "sha256-7hx9HiuyEsVb+Ef4hhYV/89eeuhFooDhK4RVxxZniOY=",
+        "lastModified": 1676402245,
+        "narHash": "sha256-YVJIyQHWDtKWrj1SfuPG5PFAeg9lF8r1tqKiHAogLqo=",
         "owner": "defn",
         "repo": "app",
-        "rev": "950b912fde369606f38a121cfc70020c21739b36",
+        "rev": "88be58ff3bd46a9c002b3a334ce5db8db3daa844",
         "type": "github"
       },
       "original": {
         "dir": "k/argo-cd",
         "owner": "defn",
-        "ref": "argo-cd-0.0.2",
+        "ref": "argo-cd-0.0.3",
         "repo": "app",
         "type": "github"
       }
     },
     "argo-workflows": {
       "inputs": {
-        "app": "app_2",
-        "dev": "dev_22"
+        "app": "app_2"
       },
       "locked": {
         "dir": "k/argo-workflows",
-        "lastModified": 1676345148,
-        "narHash": "sha256-Nhg5fkZlZbQTwZZpbpwVDiAeK0RPThjAfBMItykBGm4=",
+        "lastModified": 1676402291,
+        "narHash": "sha256-Blt4QoxyzsuF11hvWCLUNKQEuxAgqpShW8IiN/nJDB8=",
         "owner": "defn",
         "repo": "app",
-        "rev": "6c95f8306423fc9ed46195fe326b87e31c31ff04",
+        "rev": "0f6b66f00e2ce64e3364a6fdcc61e29b52b2107c",
         "type": "github"
       },
       "original": {
         "dir": "k/argo-workflows",
         "owner": "defn",
-        "ref": "argo-workflows-0.0.2",
+        "ref": "argo-workflows-0.0.3",
         "repo": "app",
         "type": "github"
       }
     },
     "argo_2": {
       "inputs": {
-        "dev": "dev_13"
+        "dev": "dev_12"
       },
       "locked": {
         "dir": "argo",
@@ -149,7 +147,7 @@
     },
     "argocd_2": {
       "inputs": {
-        "dev": "dev_14"
+        "dev": "dev_13"
       },
       "locked": {
         "dir": "argocd",
@@ -191,7 +189,7 @@
     },
     "argorollouts_2": {
       "inputs": {
-        "dev": "dev_15"
+        "dev": "dev_14"
       },
       "locked": {
         "dir": "argorollouts",
@@ -295,17 +293,17 @@
       },
       "locked": {
         "dir": "dev",
-        "lastModified": 1676084972,
-        "narHash": "sha256-ZJ0lpCy/HAnHnhDOe/MNnp5RNPceJwmwwpW5xdWvVAg=",
+        "lastModified": 1672881401,
+        "narHash": "sha256-HAJ2t2wgkqyxyiFOrvQgnX9CIuTgmKorJ/7NnNfIpro=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "c2a5558d599c190bc991ec1032543966731792f4",
+        "rev": "fdf2e168283f0c574684de50c12f70355f5624da",
         "type": "github"
       },
       "original": {
         "dir": "dev",
         "owner": "defn",
-        "ref": "dev-0.0.23",
+        "ref": "dev-0.0.22",
         "repo": "pkg",
         "type": "github"
       }
@@ -542,56 +540,6 @@
         "nixpkgs": "nixpkgs_41",
         "wrapper": "wrapper_41",
         "yaegi": "yaegi_21"
-      },
-      "locked": {
-        "dir": "dev",
-        "lastModified": 1672881401,
-        "narHash": "sha256-HAJ2t2wgkqyxyiFOrvQgnX9CIuTgmKorJ/7NnNfIpro=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "fdf2e168283f0c574684de50c12f70355f5624da",
-        "type": "github"
-      },
-      "original": {
-        "dir": "dev",
-        "owner": "defn",
-        "ref": "dev-0.0.22",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "dev_22": {
-      "inputs": {
-        "flake-utils": "flake-utils_43",
-        "gomod2nix": "gomod2nix_22",
-        "nixpkgs": "nixpkgs_43",
-        "wrapper": "wrapper_43",
-        "yaegi": "yaegi_22"
-      },
-      "locked": {
-        "dir": "dev",
-        "lastModified": 1676084972,
-        "narHash": "sha256-ZJ0lpCy/HAnHnhDOe/MNnp5RNPceJwmwwpW5xdWvVAg=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "c2a5558d599c190bc991ec1032543966731792f4",
-        "type": "github"
-      },
-      "original": {
-        "dir": "dev",
-        "owner": "defn",
-        "ref": "dev-0.0.23",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "dev_23": {
-      "inputs": {
-        "flake-utils": "flake-utils_45",
-        "gomod2nix": "gomod2nix_23",
-        "nixpkgs": "nixpkgs_45",
-        "wrapper": "wrapper_45",
-        "yaegi": "yaegi_23"
       },
       "locked": {
         "dir": "dev",
@@ -1377,70 +1325,6 @@
         "type": "github"
       }
     },
-    "flake-utils_43": {
-      "locked": {
-        "lastModified": 1652776076,
-        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      }
-    },
-    "flake-utils_44": {
-      "locked": {
-        "lastModified": 1652776076,
-        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      }
-    },
-    "flake-utils_45": {
-      "locked": {
-        "lastModified": 1652776076,
-        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      }
-    },
-    "flake-utils_46": {
-      "locked": {
-        "lastModified": 1652776076,
-        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
-        "type": "github"
-      }
-    },
     "flake-utils_5": {
       "locked": {
         "lastModified": 1652776076,
@@ -1588,12 +1472,14 @@
     "gomod2nix_11": {
       "inputs": {
         "nixpkgs": [
-          "argo-cd",
+          "argo-workflows",
+          "app",
           "dev",
           "nixpkgs"
         ],
         "utils": [
-          "argo-cd",
+          "argo-workflows",
+          "app",
           "dev",
           "flake-utils"
         ]
@@ -1618,12 +1504,16 @@
         "nixpkgs": [
           "argo-workflows",
           "app",
+          "kubernetes",
+          "argo",
           "dev",
           "nixpkgs"
         ],
         "utils": [
           "argo-workflows",
           "app",
+          "kubernetes",
+          "argo",
           "dev",
           "flake-utils"
         ]
@@ -1649,7 +1539,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argo",
+          "argocd",
           "dev",
           "nixpkgs"
         ],
@@ -1657,7 +1547,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argo",
+          "argocd",
           "dev",
           "flake-utils"
         ]
@@ -1683,7 +1573,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argocd",
+          "argorollouts",
           "dev",
           "nixpkgs"
         ],
@@ -1691,7 +1581,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argocd",
+          "argorollouts",
           "dev",
           "flake-utils"
         ]
@@ -1717,7 +1607,6 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argorollouts",
           "dev",
           "nixpkgs"
         ],
@@ -1725,7 +1614,6 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argorollouts",
           "dev",
           "flake-utils"
         ]
@@ -1751,6 +1639,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
+          "helm",
           "dev",
           "nixpkgs"
         ],
@@ -1758,6 +1647,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
+          "helm",
           "dev",
           "flake-utils"
         ]
@@ -1783,7 +1673,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "helm",
+          "k3d",
           "dev",
           "nixpkgs"
         ],
@@ -1791,7 +1681,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "helm",
+          "k3d",
           "dev",
           "flake-utils"
         ]
@@ -1817,7 +1707,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k3d",
+          "k9s",
           "dev",
           "nixpkgs"
         ],
@@ -1825,7 +1715,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k3d",
+          "k9s",
           "dev",
           "flake-utils"
         ]
@@ -1851,7 +1741,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k9s",
+          "kubectl",
           "dev",
           "nixpkgs"
         ],
@@ -1859,7 +1749,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k9s",
+          "kubectl",
           "dev",
           "flake-utils"
         ]
@@ -1919,7 +1809,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "kubectl",
+          "kustomize",
           "dev",
           "nixpkgs"
         ],
@@ -1927,7 +1817,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "kubectl",
+          "kustomize",
           "dev",
           "flake-utils"
         ]
@@ -1948,68 +1838,6 @@
       }
     },
     "gomod2nix_21": {
-      "inputs": {
-        "nixpkgs": [
-          "argo-workflows",
-          "app",
-          "kubernetes",
-          "kustomize",
-          "dev",
-          "nixpkgs"
-        ],
-        "utils": [
-          "argo-workflows",
-          "app",
-          "kubernetes",
-          "kustomize",
-          "dev",
-          "flake-utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1671408935,
-        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
-        "owner": "defn",
-        "repo": "gomod2nix",
-        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "defn",
-        "ref": "1.5.0-4",
-        "repo": "gomod2nix",
-        "type": "github"
-      }
-    },
-    "gomod2nix_22": {
-      "inputs": {
-        "nixpkgs": [
-          "argo-workflows",
-          "dev",
-          "nixpkgs"
-        ],
-        "utils": [
-          "argo-workflows",
-          "dev",
-          "flake-utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1671408935,
-        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
-        "owner": "defn",
-        "repo": "gomod2nix",
-        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "defn",
-        "ref": "1.5.0-4",
-        "repo": "gomod2nix",
-        "type": "github"
-      }
-    },
-    "gomod2nix_23": {
       "inputs": {
         "nixpkgs": [
           "dev",
@@ -2294,7 +2122,7 @@
     },
     "helm_2": {
       "inputs": {
-        "dev": "dev_17"
+        "dev": "dev_16"
       },
       "locked": {
         "dir": "helm",
@@ -2336,7 +2164,7 @@
     },
     "k3d_2": {
       "inputs": {
-        "dev": "dev_18"
+        "dev": "dev_17"
       },
       "locked": {
         "dir": "k3d",
@@ -2378,7 +2206,7 @@
     },
     "k9s_2": {
       "inputs": {
-        "dev": "dev_19"
+        "dev": "dev_18"
       },
       "locked": {
         "dir": "k9s",
@@ -2420,7 +2248,7 @@
     },
     "kubectl_2": {
       "inputs": {
-        "dev": "dev_20"
+        "dev": "dev_19"
       },
       "locked": {
         "dir": "kubectl",
@@ -2473,7 +2301,7 @@
         "argo": "argo_2",
         "argocd": "argocd_2",
         "argorollouts": "argorollouts_2",
-        "dev": "dev_16",
+        "dev": "dev_15",
         "helm": "helm_2",
         "k3d": "k3d_2",
         "k9s": "k9s_2",
@@ -2520,7 +2348,7 @@
     },
     "kustomize_2": {
       "inputs": {
-        "dev": "dev_21"
+        "dev": "dev_20"
       },
       "locked": {
         "dir": "kustomize",
@@ -3131,70 +2959,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_43": {
-      "locked": {
-        "lastModified": 1669833724,
-        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      }
-    },
-    "nixpkgs_44": {
-      "locked": {
-        "lastModified": 1669833724,
-        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      }
-    },
-    "nixpkgs_45": {
-      "locked": {
-        "lastModified": 1669833724,
-        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      }
-    },
-    "nixpkgs_46": {
-      "locked": {
-        "lastModified": 1669833724,
-        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
-        "type": "github"
-      }
-    },
     "nixpkgs_5": {
       "locked": {
         "lastModified": 1669833724,
@@ -3279,7 +3043,7 @@
       "inputs": {
         "argo-cd": "argo-cd",
         "argo-workflows": "argo-workflows",
-        "dev": "dev_23"
+        "dev": "dev_21"
       }
     },
     "wrapper": {
@@ -3711,7 +3475,8 @@
     "wrapper_21": {
       "inputs": {
         "nixpkgs": [
-          "argo-cd",
+          "argo-workflows",
+          "app",
           "dev",
           "nixpkgs"
         ]
@@ -3736,13 +3501,15 @@
     "wrapper_22": {
       "inputs": {
         "flake-utils": [
-          "argo-cd",
+          "argo-workflows",
+          "app",
           "dev",
           "yaegi",
           "flake-utils"
         ],
         "nixpkgs": [
-          "argo-cd",
+          "argo-workflows",
+          "app",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -3770,23 +3537,25 @@
         "nixpkgs": [
           "argo-workflows",
           "app",
+          "kubernetes",
+          "argo",
           "dev",
           "nixpkgs"
         ]
       },
       "locked": {
         "dir": "wrapper",
-        "lastModified": 1675898361,
-        "narHash": "sha256-nTZ/70bRO4dlP5qtNJVJmcdI12ZOK15Oj4Asc9tGdts=",
+        "lastModified": 1672874916,
+        "narHash": "sha256-kbJMLgEEyKQbJ2jlQ17WLowLCUzoCw3CHGFluRlAsqg=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "0cb76251e275643ab918607ba10d6783c971b6cb",
+        "rev": "e2bb8a3dc0999b3c956c45d909153829a21c99e0",
         "type": "github"
       },
       "original": {
         "dir": "wrapper",
         "owner": "defn",
-        "ref": "wrapper-0.0.17",
+        "ref": "wrapper-0.0.15",
         "repo": "pkg",
         "type": "github"
       }
@@ -3796,6 +3565,8 @@
         "flake-utils": [
           "argo-workflows",
           "app",
+          "kubernetes",
+          "argo",
           "dev",
           "yaegi",
           "flake-utils"
@@ -3803,6 +3574,8 @@
         "nixpkgs": [
           "argo-workflows",
           "app",
+          "kubernetes",
+          "argo",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -3831,7 +3604,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argo",
+          "argocd",
           "dev",
           "nixpkgs"
         ]
@@ -3859,7 +3632,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argo",
+          "argocd",
           "dev",
           "yaegi",
           "flake-utils"
@@ -3868,7 +3641,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argo",
+          "argocd",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -3897,7 +3670,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argocd",
+          "argorollouts",
           "dev",
           "nixpkgs"
         ]
@@ -3925,7 +3698,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argocd",
+          "argorollouts",
           "dev",
           "yaegi",
           "flake-utils"
@@ -3934,7 +3707,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argocd",
+          "argorollouts",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -3963,7 +3736,6 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argorollouts",
           "dev",
           "nixpkgs"
         ]
@@ -4019,7 +3791,6 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argorollouts",
           "dev",
           "yaegi",
           "flake-utils"
@@ -4028,7 +3799,6 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "argorollouts",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -4057,6 +3827,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
+          "helm",
           "dev",
           "nixpkgs"
         ]
@@ -4084,6 +3855,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
+          "helm",
           "dev",
           "yaegi",
           "flake-utils"
@@ -4092,6 +3864,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
+          "helm",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -4120,7 +3893,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "helm",
+          "k3d",
           "dev",
           "nixpkgs"
         ]
@@ -4148,7 +3921,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "helm",
+          "k3d",
           "dev",
           "yaegi",
           "flake-utils"
@@ -4157,7 +3930,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "helm",
+          "k3d",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -4186,7 +3959,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k3d",
+          "k9s",
           "dev",
           "nixpkgs"
         ]
@@ -4214,7 +3987,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k3d",
+          "k9s",
           "dev",
           "yaegi",
           "flake-utils"
@@ -4223,7 +3996,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k3d",
+          "k9s",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -4252,7 +4025,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k9s",
+          "kubectl",
           "dev",
           "nixpkgs"
         ]
@@ -4280,7 +4053,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k9s",
+          "kubectl",
           "dev",
           "yaegi",
           "flake-utils"
@@ -4289,7 +4062,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "k9s",
+          "kubectl",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -4318,7 +4091,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "kubectl",
+          "kustomize",
           "dev",
           "nixpkgs"
         ]
@@ -4384,7 +4157,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "kubectl",
+          "kustomize",
           "dev",
           "yaegi",
           "flake-utils"
@@ -4393,7 +4166,7 @@
           "argo-workflows",
           "app",
           "kubernetes",
-          "kubectl",
+          "kustomize",
           "dev",
           "yaegi",
           "nixpkgs"
@@ -4419,151 +4192,28 @@
     "wrapper_41": {
       "inputs": {
         "nixpkgs": [
-          "argo-workflows",
-          "app",
-          "kubernetes",
-          "kustomize",
           "dev",
           "nixpkgs"
         ]
       },
       "locked": {
         "dir": "wrapper",
-        "lastModified": 1672874916,
-        "narHash": "sha256-kbJMLgEEyKQbJ2jlQ17WLowLCUzoCw3CHGFluRlAsqg=",
+        "lastModified": 1675898361,
+        "narHash": "sha256-nTZ/70bRO4dlP5qtNJVJmcdI12ZOK15Oj4Asc9tGdts=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "e2bb8a3dc0999b3c956c45d909153829a21c99e0",
+        "rev": "0cb76251e275643ab918607ba10d6783c971b6cb",
         "type": "github"
       },
       "original": {
         "dir": "wrapper",
         "owner": "defn",
-        "ref": "wrapper-0.0.15",
+        "ref": "wrapper-0.0.17",
         "repo": "pkg",
         "type": "github"
       }
     },
     "wrapper_42": {
-      "inputs": {
-        "flake-utils": [
-          "argo-workflows",
-          "app",
-          "kubernetes",
-          "kustomize",
-          "dev",
-          "yaegi",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "argo-workflows",
-          "app",
-          "kubernetes",
-          "kustomize",
-          "dev",
-          "yaegi",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "wrapper",
-        "lastModified": 1671399461,
-        "narHash": "sha256-0LmUd1ACOzVz5GprvEvb3tkKnvZPA8/66OzPWPjDHjo=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "77790964128ceb36a9d8aa504e99fe6e8214988a",
-        "type": "github"
-      },
-      "original": {
-        "dir": "wrapper",
-        "owner": "defn",
-        "ref": "wrapper-0.0.12",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "wrapper_43": {
-      "inputs": {
-        "nixpkgs": [
-          "argo-workflows",
-          "dev",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "wrapper",
-        "lastModified": 1675898361,
-        "narHash": "sha256-nTZ/70bRO4dlP5qtNJVJmcdI12ZOK15Oj4Asc9tGdts=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "0cb76251e275643ab918607ba10d6783c971b6cb",
-        "type": "github"
-      },
-      "original": {
-        "dir": "wrapper",
-        "owner": "defn",
-        "ref": "wrapper-0.0.17",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "wrapper_44": {
-      "inputs": {
-        "flake-utils": [
-          "argo-workflows",
-          "dev",
-          "yaegi",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "argo-workflows",
-          "dev",
-          "yaegi",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "wrapper",
-        "lastModified": 1671399461,
-        "narHash": "sha256-0LmUd1ACOzVz5GprvEvb3tkKnvZPA8/66OzPWPjDHjo=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "77790964128ceb36a9d8aa504e99fe6e8214988a",
-        "type": "github"
-      },
-      "original": {
-        "dir": "wrapper",
-        "owner": "defn",
-        "ref": "wrapper-0.0.12",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "wrapper_45": {
-      "inputs": {
-        "nixpkgs": [
-          "dev",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "wrapper",
-        "lastModified": 1675898361,
-        "narHash": "sha256-nTZ/70bRO4dlP5qtNJVJmcdI12ZOK15Oj4Asc9tGdts=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "0cb76251e275643ab918607ba10d6783c971b6cb",
-        "type": "github"
-      },
-      "original": {
-        "dir": "wrapper",
-        "owner": "defn",
-        "ref": "wrapper-0.0.17",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "wrapper_46": {
       "inputs": {
         "flake-utils": [
           "dev",
@@ -5056,52 +4706,6 @@
         "flake-utils": "flake-utils_42",
         "nixpkgs": "nixpkgs_42",
         "wrapper": "wrapper_42"
-      },
-      "locked": {
-        "dir": "yaegi",
-        "lastModified": 1671399917,
-        "narHash": "sha256-O2Wsy2X3I4Q0cFtnNO/QyPN/ZbPcWum2+dyzU3qpBiQ=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "4754ac1330e3507fed02e7bbc288e89396fb7012",
-        "type": "github"
-      },
-      "original": {
-        "dir": "yaegi",
-        "owner": "defn",
-        "ref": "yaegi-0.14.3-4",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "yaegi_22": {
-      "inputs": {
-        "flake-utils": "flake-utils_44",
-        "nixpkgs": "nixpkgs_44",
-        "wrapper": "wrapper_44"
-      },
-      "locked": {
-        "dir": "yaegi",
-        "lastModified": 1671399917,
-        "narHash": "sha256-O2Wsy2X3I4Q0cFtnNO/QyPN/ZbPcWum2+dyzU3qpBiQ=",
-        "owner": "defn",
-        "repo": "pkg",
-        "rev": "4754ac1330e3507fed02e7bbc288e89396fb7012",
-        "type": "github"
-      },
-      "original": {
-        "dir": "yaegi",
-        "owner": "defn",
-        "ref": "yaegi-0.14.3-4",
-        "repo": "pkg",
-        "type": "github"
-      }
-    },
-    "yaegi_23": {
-      "inputs": {
-        "flake-utils": "flake-utils_46",
-        "nixpkgs": "nixpkgs_46",
-        "wrapper": "wrapper_46"
       },
       "locked": {
         "dir": "yaegi",
