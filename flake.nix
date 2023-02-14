@@ -16,8 +16,25 @@
           kustomize build --enable-helm local > $out/main.yaml
         '';
       };
+
+      main = { src }:
+        let
+          s = src;
+        in
+        inputs.dev.main rec {
+          inherit inputs;
+
+          src = builtins.path { path = s; name = (builtins.fromJSON (builtins.readFile "${s}/flake.json")).slug; };
+
+          handler = { pkgs, wrap, system, builders, commands, config }: rec {
+            defaultPackage = kustomize { inherit src; inherit wrap; };
+          };
+        };
     in
-    { inherit kustomize; } // inputs.dev.main rec {
+    {
+      inherit kustomize; 
+      inherit main;
+    } // inputs.dev.main rec {
       inherit inputs;
 
       src = builtins.path { path = ./.; name = builtins.readFile ./SLUG; };
