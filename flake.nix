@@ -7,7 +7,7 @@
   outputs = inputs:
     let
       kustomize = { src, wrap }: wrap.bashBuilder {
-        propagatedBuildInputs = wrap.flakeInputs;
+        buildInputs = wrap.flakeInputs;
 
         inherit src;
 
