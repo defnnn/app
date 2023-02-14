@@ -6,16 +6,16 @@
         "kubernetes": "kubernetes"
       },
       "locked": {
-        "lastModified": 1676333217,
-        "narHash": "sha256-g1tYhzNCGKXUX7CnjQKTnWxExGiDSQZI5T8ADsbHgiw=",
+        "lastModified": 1676345074,
+        "narHash": "sha256-rexpNECxY+uY0KToiiLdXflLyeLHXh3blp+US9bYOM0=",
         "owner": "defn",
         "repo": "app",
-        "rev": "86196dcf352909dfda1e53220ccd83948db1f6f5",
+        "rev": "1d14c2c41a1df65ffa6f13eec766e0b2c5004061",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.3",
+        "ref": "0.0.4",
         "repo": "app",
         "type": "github"
       }
