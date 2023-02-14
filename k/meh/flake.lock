@@ -6,16 +6,16 @@
         "kubernetes": "kubernetes"
       },
       "locked": {
-        "lastModified": 1676333217,
-        "narHash": "sha256-g1tYhzNCGKXUX7CnjQKTnWxExGiDSQZI5T8ADsbHgiw=",
+        "lastModified": 1676345074,
+        "narHash": "sha256-rexpNECxY+uY0KToiiLdXflLyeLHXh3blp+US9bYOM0=",
         "owner": "defn",
         "repo": "app",
-        "rev": "86196dcf352909dfda1e53220ccd83948db1f6f5",
+        "rev": "1d14c2c41a1df65ffa6f13eec766e0b2c5004061",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.3",
+        "ref": "0.0.4",
         "repo": "app",
         "type": "github"
       }
@@ -26,16 +26,16 @@
         "kubernetes": "kubernetes_2"
       },
       "locked": {
-        "lastModified": 1676333217,
-        "narHash": "sha256-g1tYhzNCGKXUX7CnjQKTnWxExGiDSQZI5T8ADsbHgiw=",
+        "lastModified": 1676345074,
+        "narHash": "sha256-rexpNECxY+uY0KToiiLdXflLyeLHXh3blp+US9bYOM0=",
         "owner": "defn",
         "repo": "app",
-        "rev": "86196dcf352909dfda1e53220ccd83948db1f6f5",
+        "rev": "1d14c2c41a1df65ffa6f13eec766e0b2c5004061",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.3",
+        "ref": "0.0.4",
         "repo": "app",
         "type": "github"
       }
@@ -68,17 +68,17 @@
       },
       "locked": {
         "dir": "k/argo-cd",
-        "lastModified": 1676333721,
-        "narHash": "sha256-4W+YY5LJqmLM1GgclPKAkFsq3egRlkBypreB3KG9T6w=",
+        "lastModified": 1676345110,
+        "narHash": "sha256-7hx9HiuyEsVb+Ef4hhYV/89eeuhFooDhK4RVxxZniOY=",
         "owner": "defn",
         "repo": "app",
-        "rev": "cc4e3c0f525c86838e3f5dce1bebcda124276d4d",
+        "rev": "950b912fde369606f38a121cfc70020c21739b36",
         "type": "github"
       },
       "original": {
         "dir": "k/argo-cd",
         "owner": "defn",
-        "ref": "argo-cd-0.0.1",
+        "ref": "argo-cd-0.0.2",
         "repo": "app",
         "type": "github"
       }
@@ -90,17 +90,17 @@
       },
       "locked": {
         "dir": "k/argo-workflows",
-        "lastModified": 1676333750,
-        "narHash": "sha256-uURRoiOcLwvn4krxd4+D60iJ6vweNgUi6+CKRwpCZNI=",
+        "lastModified": 1676345148,
+        "narHash": "sha256-Nhg5fkZlZbQTwZZpbpwVDiAeK0RPThjAfBMItykBGm4=",
         "owner": "defn",
         "repo": "app",
-        "rev": "d22737fc2f98ca31d6c80b509989470f501d4041",
+        "rev": "6c95f8306423fc9ed46195fe326b87e31c31ff04",
         "type": "github"
       },
       "original": {
         "dir": "k/argo-workflows",
         "owner": "defn",
-        "ref": "argo-workflows-0.0.1",
+        "ref": "argo-workflows-0.0.2",
         "repo": "app",
         "type": "github"
       }
