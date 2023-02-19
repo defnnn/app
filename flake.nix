@@ -7,9 +7,9 @@
   outputs = inputs:
     let
       kustomize = { src, wrap }: wrap.bashBuilder {
-        buildInputs = wrap.flakeInputs;
-
         inherit src;
+
+        buildInputs = wrap.flakeInputs;
 
         installPhase = ''
           mkdir -p $out
@@ -18,17 +18,10 @@
       };
 
       main = { src }:
-        let
-          s = src;
-        in
-        inputs.dev.main rec {
-          inherit inputs;
+        inputs.pkg.main rec {
+          inherit src;
 
-          src = builtins.path { path = s; name = (builtins.fromJSON (builtins.readFile "${s}/flake.json")).slug; };
-
-          handler = { pkgs, wrap, system, builders, commands, config }: rec {
-            defaultPackage = kustomize { inherit src; inherit wrap; };
-          };
+          defaultPackage = ctx: kustomize { inherit src; wrap = ctx.wrap; };
         };
     in
     {
