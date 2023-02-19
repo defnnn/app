@@ -1,7 +1,7 @@
 {
   inputs = {
-    dev.url = github:defn/pkg/dev-0.0.23?dir=dev;
-    kubernetes.url = github:defn/pkg/kubernetes-0.0.6?dir=kubernetes;
+    pkg.url = github:defn/pkg/0.0.158;
+    kubernetes.url = github:defn/pkg/kubernetes-0.0.7?dir=kubernetes;
   };
 
   outputs = inputs:
@@ -32,17 +32,13 @@
         };
     in
     {
-      inherit kustomize; 
+      inherit kustomize;
       inherit main;
-    } // inputs.dev.main rec {
-      inherit inputs;
+    } // inputs.pkg.main rec {
+      src = ./.;
 
-      src = builtins.path { path = ./.; name = builtins.readFile ./SLUG; };
-
-      handler = { pkgs, wrap, system, builders, commands, config }: rec {
-        defaultPackage = wrap.nullBuilder {
-          propagatedBuildInputs = wrap.flakeInputs;
-        };
+      defaultPackage = ctx: ctx.wrap.nullBuilder {
+        propagatedBuildInputs = ctx.wrap.flakeInputs;
       };
     };
 }
