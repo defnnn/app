@@ -1,7 +1,7 @@
 {
   inputs = {
     pkg.url = github:defn/pkg/0.0.158;
-    kubernetes.url = github:defn/pkg/kubernetes-0.0.7?dir=kubernetes;
+    kustomize.url = github:defn/pkg/kustomize-5.0.0-7?dir=kustomize;
   };
 
   outputs = inputs:
@@ -9,7 +9,9 @@
       kustomize = { src, wrap }: wrap.bashBuilder {
         inherit src;
 
-        buildInputs = wrap.flakeInputs;
+        buildInputs = [
+          inputs.kustomize
+        ];
 
         installPhase = ''
           mkdir -p $out
