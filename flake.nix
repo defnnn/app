@@ -6,11 +6,11 @@
 
   outputs = inputs:
     let
-      kustomize = { src, wrap }: wrap.bashBuilder {
-        inherit src;
+      kustomize = ctx: ctx.wrap.bashBuilder {
+        src = ctx.src;
 
         buildInputs = [
-          inputs.kustomize
+          inputs.kustomize.defaultPackage.${ctx.system}
         ];
 
         installPhase = ''
@@ -19,11 +19,11 @@
         '';
       };
 
-      main = { src }:
+      main = caller:
         inputs.pkg.main rec {
-          inherit src;
+          src = caller.src;
 
-          defaultPackage = ctx: kustomize { inherit src; wrap = ctx.wrap; };
+          defaultPackage = ctx: kustomize { inherit ctx; };
         };
     in
     {
