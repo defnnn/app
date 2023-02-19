@@ -7,16 +7,16 @@
         "pkg": "pkg_3"
       },
       "locked": {
-        "lastModified": 1676778346,
-        "narHash": "sha256-CQXs1uUHNGUmMPu4uS7DnBcuh9hw5gd5S1XfJ2/FJpY=",
+        "lastModified": 1676779751,
+        "narHash": "sha256-2i3hxMT5B3KfxtTBUj/SZkm4cX4qF3JttHqSddiHl6s=",
         "owner": "defn",
         "repo": "app",
-        "rev": "a5191c1a701e5e761c2bf3e68459712080a36d23",
+        "rev": "49fc4838de99be0fe3e22d6d961de02df9a34b37",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.14",
+        "ref": "0.0.15",
         "repo": "app",
         "type": "github"
       }
