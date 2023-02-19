@@ -12,6 +12,7 @@
 
         buildInputs = [
           inputs.kustomize.defaultPackage.${ctx.system}
+          inputs.helm.defaultPackage.${ctx.system}
         ];
 
         installPhase = ''
