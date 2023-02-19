@@ -7,21 +7,22 @@
 
   outputs = inputs:
     let
-      kustomize = ctx: ctx.wrap.bashBuilder {
-        src = ctx.src;
+      kustomizeMain = caller:
+        let
+          kustomize = ctx: ctx.wrap.bashBuilder {
+            src = caller.src;
 
-        buildInputs = [
-          inputs.kustomize.defaultPackage.${ctx.system}
-          inputs.helm.defaultPackage.${ctx.system}
-        ];
+            buildInputs = [
+              inputs.kustomize.defaultPackage.${ctx.system}
+              inputs.helm.defaultPackage.${ctx.system}
+            ];
 
-        installPhase = ''
-          mkdir -p $out
-          kustomize build --enable-helm local > $out/main.yaml
-        '';
-      };
-
-      main = caller:
+            installPhase = ''
+              mkdir -p $out
+              kustomize build --enable-helm local > $out/main.yaml
+            '';
+          };
+        in
         inputs.pkg.main rec {
           src = caller.src;
 
@@ -29,13 +30,9 @@
         };
     in
     {
-      inherit kustomize;
-      inherit main;
+      inherit kustomizeMain;
     } // inputs.pkg.main rec {
       src = ./.;
-
-      defaultPackage = ctx: ctx.wrap.nullBuilder {
-        propagatedBuildInputs = ctx.wrap.flakeInputs;
-      };
+      defaultPackage = ctx: ctx.wrap.nullBuilder { };
     };
 }
