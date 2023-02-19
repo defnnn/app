@@ -23,7 +23,7 @@
         inputs.pkg.main rec {
           src = caller.src;
 
-          defaultPackage = ctx: kustomize ctx;
+          defaultPackage = ctx: kustomize (ctx // { inherit src; });
         };
     in
     {
