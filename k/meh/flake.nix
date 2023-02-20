@@ -16,7 +16,7 @@
         cat \
             ${inputs.argo-cd.defaultPackage.${ctx.system}}/main.yaml \
             ${inputs.argo-workflows.defaultPackage.${ctx.system}}/main.yaml \
-            > $out/main.yam
+            > $out/main.yaml
       '';
     };
   };
