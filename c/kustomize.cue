@@ -16,23 +16,21 @@ kustomize: (#Transform & {
 	}
 }).outputs
 
-kustomize: "ingress": #Kustomize & {
-	resource: "ingress-argocd-server": core.#Service & {
-		apiVersion: "v1"
-		kind:       "Service"
-		metadata: {
-			name:      "ingress-argocd-server"
-			namespace: "argocd"
+kustomize: "misc": #Kustomize & {
+	resource: "cluster-role-binding-admin": rbac.#ClusterRoleBinding & {
+		apiVersion: "rbac.authorization.k8s.io/v1"
+		kind:       "ClusterRoleBinding"
+		metadata: name: "default-admin"
+		roleRef: {
+			apiGroup: "rbac.authorization.k8s.io"
+			kind:     "ClusterRole"
+			name:     "cluster-admin"
 		}
-		spec: {
-			ports: [{
-				port:       8123
-				protocol:   "TCP"
-				targetPort: 443
-			}]
-			selector: "app.kubernetes.io/name": "argocd-server"
-			type: "LoadBalancer"
-		}
+		subjects: [{
+			kind:      "ServiceAccount"
+			name:      "default"
+			namespace: "default"
+		}]
 	}
 }
 

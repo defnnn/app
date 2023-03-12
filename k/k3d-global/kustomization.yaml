@@ -86,12 +86,12 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-        ingress: |
+        misc: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
           metadata:
             namespace: argocd
-            name: k3d-global-ingress
+            name: k3d-global-misc
             annotations:
               argocd.argoproj.io/sync-wave: "100"
           spec:
@@ -101,7 +101,7 @@ helmCharts:
             source:
               repoURL: https://github.com/defn/app
               targetRevision: master
-              path: k/ingress
+              path: k/misc
             syncPolicy:
               automated:
                 prune: true

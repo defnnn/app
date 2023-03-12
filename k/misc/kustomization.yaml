@@ -2,4 +2,4 @@
 
 patchesStrategicMerge: []
 resources:
-  - resource-ingress-argocd-server.yaml
+  - resource-cluster-role-binding-admin.yaml
