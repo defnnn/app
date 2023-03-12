@@ -1,0 +1,5 @@
+#ManagedBy: cue
+
+patchesStrategicMerge: []
+resources:
+  - resource-ingress-argocd-server.yaml

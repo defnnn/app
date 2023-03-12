@@ -1,0 +1,15 @@
+#ManagedBy: cue
+
+metadata:
+  name: ingress-argocd-server
+  namespace: argocd
+spec:
+  ports:
+    - port: 8123
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app.kubernetes.io/name: argocd-server
+  type: LoadBalancer
+kind: Service
+apiVersion: v1

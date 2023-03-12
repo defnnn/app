@@ -16,6 +16,26 @@ kustomize: (#Transform & {
 	}
 }).outputs
 
+kustomize: "ingress": #Kustomize & {
+	resource: "ingress-argocd-server": core.#Service & {
+		apiVersion: "v1"
+		kind:       "Service"
+		metadata: {
+			name:      "ingress-argocd-server"
+			namespace: "argocd"
+		}
+		spec: {
+			ports: [{
+				port:       8123
+				protocol:   "TCP"
+				targetPort: 80
+			}]
+			selector: "app.kubernetes.io/name": "argocd-server"
+			type: "LoadBalancer"
+		}
+	}
+}
+
 kustomize: "hello": #Kustomize & {
 	namespace: "default"
 
