@@ -331,7 +331,7 @@ kustomize: "vault": #KustomizeHelm & {
 
 kustomize: "kourier": #Kustomize & {
 	resource: "kourier": {
-		url: "https://github.com/knative-sandbox/net-kourier/releases/download/knative-v1.7.0/kourier.yaml"
+		url: "https://github.com/knative-sandbox/net-kourier/releases/download/knative-v1.9.2/kourier.yaml"
 	}
 
 	psm: "service-kourier-set-cluster-ip": {
@@ -538,7 +538,7 @@ kustomize: "karpenter": #Kustomize & {
 
 kustomize: "knative": #Kustomize & {
 	resource: "knative-serving": {
-		url: "https://github.com/knative/serving/releases/download/knative-v1.8.0/serving-core.yaml"
+		url: "https://github.com/knative/serving/releases/download/knative-v1.9.2/serving-core.yaml"
 	}
 
 	psm: "namespace-knative-serving": core.#Namespace & {

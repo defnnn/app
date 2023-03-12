@@ -13,4 +13,4 @@ patchesStrategicMerge:
   - patch-config-map-config-features.yaml
   - patch-config-map-config-network.yaml
 resources:
-  - https://github.com/knative/serving/releases/download/knative-v1.8.0/serving-core.yaml
+  - https://github.com/knative/serving/releases/download/knative-v1.9.2/serving-core.yaml
