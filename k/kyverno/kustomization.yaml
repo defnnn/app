@@ -10,6 +10,6 @@ helmCharts:
     valuesInline:
       replicaCount: 1
     name: kyverno
-    version: 2.5.5
+    version: 2.7.1
     repo: https://kyverno.github.io/kyverno
     includeCRDs: true

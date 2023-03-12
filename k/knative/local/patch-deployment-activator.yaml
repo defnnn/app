@@ -3,12 +3,5 @@
 metadata:
   name: activator
   namespace: knative-serving
-spec:
-  template:
-    metadata:
-      annotations:
-        traffic.kuma.io/exclude-inbound-ports: "8012"
-        traffic.kuma.io/exclude-outbound-ports: "8080"
-        kuma.io/virtual-probes: disabled
 kind: Deployment
 apiVersion: apps/v1

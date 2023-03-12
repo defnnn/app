@@ -46,7 +46,6 @@ env: (#Transform & {
 				"pod-identity-webhook":      10
 				"kyverno":                   10
 				"external-secrets-operator": 10
-				"karpenter":                 20
 				"k3d-control-secrets-store": 20
 			}
 		}
@@ -58,7 +57,6 @@ env: (#Transform & {
 				"pod-identity-webhook":      10
 				"kyverno":                   10
 				"external-secrets-operator": 10
-				"karpenter":                 20
 				"k3d-global-secrets-store":  20
 				"tfo":                       30
 			}

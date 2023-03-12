@@ -2,8 +2,5 @@
 
 metadata:
   name: knative-serving
-  labels:
-    kuma.io/sidecar-injection: enabled
-    kuma.io/mesh: dev
 kind: Namespace
 apiVersion: v1

@@ -5,4 +5,4 @@ patchesStrategicMerge:
 namespace: argocd
 resources:
   - resource-namespace-argocd.yaml
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.0/manifests/install.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.6.4/manifests/install.yaml

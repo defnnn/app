@@ -141,33 +141,6 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
-        karpenter: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-control-karpenter
-            annotations:
-              argocd.argoproj.io/sync-wave: "20"
-          spec:
-            project: default
-            destination:
-              name: k3d-control
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/karpenter
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         k3d-control-secrets-store: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application

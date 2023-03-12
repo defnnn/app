@@ -1,7 +1,0 @@
-namespace: kong
-patchesStrategicMerge:
-- patch-namespace-kong.yaml
-- patch-deployment-ingress-kong.yaml
-- patch-service-kong-proxy-set-cluster-ip.yaml
-resources:
-- localized-files/raw.githubusercontent.com/Kong/kubernetes-ingress-controller/v2.7.0/deploy/single/all-in-one-dbless.yaml
