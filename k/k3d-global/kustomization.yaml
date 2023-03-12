@@ -86,26 +86,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-        misc: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-misc
-            annotations:
-              argocd.argoproj.io/sync-wave: "100"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/misc
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
     name: any-resource
     version: 0.1.0
     repo: https://kiwigrid.github.io

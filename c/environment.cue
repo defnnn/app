@@ -51,6 +51,7 @@ env: (#Transform & {
 				"rocky":                     50
 				"rosie":                     50
 				"bonchon":                   50
+				"misc":                      100
 			}
 		}
 
@@ -61,7 +62,6 @@ env: (#Transform & {
 				"pod-identity-webhook":      10
 				"external-secrets-operator": 10
 				"k3d-global-secrets-store":  20
-				"misc":                      100
 			}
 		}
 	}
