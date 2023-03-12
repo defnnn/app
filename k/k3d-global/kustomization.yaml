@@ -114,33 +114,6 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
-        tfo: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-tfo
-            annotations:
-              argocd.argoproj.io/sync-wave: "30"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/tfo
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
     name: any-resource
     version: 0.1.0
     repo: https://kiwigrid.github.io

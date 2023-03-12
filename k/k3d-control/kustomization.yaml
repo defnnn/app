@@ -114,6 +114,33 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
+        tfo: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            namespace: argocd
+            name: k3d-control-tfo
+            annotations:
+              argocd.argoproj.io/sync-wave: "30"
+          spec:
+            project: default
+            destination:
+              name: k3d-control
+            source:
+              repoURL: https://github.com/defn/app
+              targetRevision: master
+              path: k/tfo
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+            ignoreDifferences:
+              - group: ""
+                kind: Secret
+                jsonPointers:
+                  - /data
+                name: karpenter-cert
+                namespace: karpenter
         knative: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -148,7 +175,7 @@ helmCharts:
             namespace: argocd
             name: k3d-control-kourier
             annotations:
-              argocd.argoproj.io/sync-wave: "40"
+              argocd.argoproj.io/sync-wave: "30"
           spec:
             project: default
             destination:
