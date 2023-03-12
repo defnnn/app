@@ -114,6 +114,33 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
+        karpenter: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            namespace: argocd
+            name: k3d-global-karpenter
+            annotations:
+              argocd.argoproj.io/sync-wave: "20"
+          spec:
+            project: default
+            destination:
+              name: k3d-global
+            source:
+              repoURL: https://github.com/defn/app
+              targetRevision: master
+              path: k/karpenter
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+            ignoreDifferences:
+              - group: ""
+                kind: Secret
+                jsonPointers:
+                  - /data
+                name: karpenter-cert
+                namespace: karpenter
         k3d-global-secrets-store: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -141,33 +168,6 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
-        k3d-global-kuma-global: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-kuma-global
-            annotations:
-              argocd.argoproj.io/sync-wave: "30"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/k3d-global-kuma-global
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         tfo: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -184,33 +184,6 @@ helmCharts:
               repoURL: https://github.com/defn/app
               targetRevision: master
               path: k/tfo
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
-        mesh: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-mesh
-            annotations:
-              argocd.argoproj.io/sync-wave: "40"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/mesh
             syncPolicy:
               automated:
                 prune: true

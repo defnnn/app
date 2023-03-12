@@ -141,33 +141,6 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
-        argo-events: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-control-argo-events
-            annotations:
-              argocd.argoproj.io/sync-wave: "10"
-          spec:
-            project: default
-            destination:
-              name: k3d-control
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/argo-events
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         karpenter: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -211,33 +184,6 @@ helmCharts:
               repoURL: https://github.com/defn/app
               targetRevision: master
               path: k/k3d-control-secrets-store
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
-        tfo: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-control-tfo
-            annotations:
-              argocd.argoproj.io/sync-wave: "30"
-          spec:
-            project: default
-            destination:
-              name: k3d-control
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/tfo
             syncPolicy:
               automated:
                 prune: true

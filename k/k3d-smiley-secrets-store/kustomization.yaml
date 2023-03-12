@@ -1,5 +1,0 @@
-#ManagedBy: cue
-
-patchesStrategicMerge: []
-resources:
-  - resource-cluster-secret-store-dev.yaml
