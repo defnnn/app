@@ -40,15 +40,6 @@ kustomize: "hello": #Kustomize & {
 	resource: "hello": {
 		url: "hello.yaml"
 	}
-
-	resource: "default": {
-		apiVersion: "v1"
-		kind:       "Namespace"
-		metadata: {
-			name:      "default"
-			namespace: "default"
-		}
-	}
 }
 
 kustomize: "mastodon": #Kustomize & {
@@ -662,7 +653,7 @@ kustomize: "knative": #Kustomize & {
 			name:      "config-network"
 			namespace: "knative-serving"
 		}
-		data: "ingress-class": "kong"
+		data: "ingress-class": "kourier"
 	}
 }
 
