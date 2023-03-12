@@ -3,5 +3,7 @@
 metadata:
   name: config-network
   namespace: knative-serving
+data:
+  ingress-class: kourier
 kind: ConfigMap
 apiVersion: v1

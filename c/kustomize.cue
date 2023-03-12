@@ -653,6 +653,7 @@ kustomize: "knative": #Kustomize & {
 			name:      "config-network"
 			namespace: "knative-serving"
 		}
+		data: "ingress-class": "kourier"
 	}
 }
 
