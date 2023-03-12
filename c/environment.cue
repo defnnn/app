@@ -44,7 +44,6 @@ env: (#Transform & {
 				"argo-cd":                   0
 				"cert-manager":              1
 				"pod-identity-webhook":      10
-				"kyverno":                   10
 				"external-secrets-operator": 10
 				"k3d-control-secrets-store": 20
 			}
@@ -55,7 +54,6 @@ env: (#Transform & {
 			bootstrap: {
 				"cert-manager":              1
 				"pod-identity-webhook":      10
-				"kyverno":                   10
 				"external-secrets-operator": 10
 				"k3d-global-secrets-store":  20
 				"tfo":                       30

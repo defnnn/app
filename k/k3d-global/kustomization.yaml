@@ -60,33 +60,6 @@ helmCharts:
                   - /data
                 name: karpenter-cert
                 namespace: karpenter
-        kyverno: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-kyverno
-            annotations:
-              argocd.argoproj.io/sync-wave: "10"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/kyverno
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         external-secrets-operator: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
