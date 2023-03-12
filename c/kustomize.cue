@@ -47,8 +47,6 @@ kustomize: "hello": #Kustomize & {
 		metadata: {
 			name:      "default"
 			namespace: "default"
-			labels: "kuma.io/sidecar-injection": "disabled"
-			labels: "kuma.io/mesh":              "dev"
 		}
 	}
 }

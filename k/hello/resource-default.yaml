@@ -5,6 +5,3 @@ kind: Namespace
 metadata:
   name: default
   namespace: default
-  labels:
-    kuma.io/sidecar-injection: disabled
-    kuma.io/mesh: dev

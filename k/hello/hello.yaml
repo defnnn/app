@@ -3,19 +3,11 @@ kind: Service
 metadata:
   labels:
     networking.knative.dev/visibility: cluster-local
-  annotations:
-    networking.knative.dev/ingress.class: kong
   name: hello
   namespace: default
 
 spec:
   template:
-    metadata:
-      annotations:
-        kuma.io/mesh: dev
-        kuma.io/sidecar-injection: "enabled"
-        kuma.io/virtual-probes: "disabled"
-        traffic.kuma.io/exclude-inbound-ports: "8012"
     spec:
       containerConcurrency: 0
       containers:
@@ -32,18 +24,10 @@ kind: Service
 metadata:
   labels:
     networking.knative.dev/visibility: cluster-local
-  annotations:
-    networking.knative.dev/ingress.class: kong
   name: bye
   namespace: default
 spec:
   template:
-    metadata:
-      annotations:
-        kuma.io/mesh: dev
-        kuma.io/sidecar-injection: "enabled"
-        kuma.io/virtual-probes: "disabled"
-        traffic.kuma.io/exclude-inbound-ports: "8012"
     spec:
       containerConcurrency: 0
       containers:

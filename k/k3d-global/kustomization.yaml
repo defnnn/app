@@ -166,6 +166,26 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
+        hello: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            namespace: argocd
+            name: k3d-global-hello
+            annotations:
+              argocd.argoproj.io/sync-wave: "50"
+          spec:
+            project: default
+            destination:
+              name: k3d-global
+            source:
+              repoURL: https://github.com/defn/app
+              targetRevision: master
+              path: k/hello
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
         rocky: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
