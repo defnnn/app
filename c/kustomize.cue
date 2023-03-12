@@ -28,7 +28,7 @@ kustomize: "ingress": #Kustomize & {
 			ports: [{
 				port:       8123
 				protocol:   "TCP"
-				targetPort: 80
+				targetPort: 443
 			}]
 			selector: "app.kubernetes.io/name": "argocd-server"
 			type: "LoadBalancer"
