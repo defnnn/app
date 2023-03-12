@@ -46,7 +46,10 @@ env: (#Transform & {
 				"external-secrets-operator": 10
 				"k3d-control-secrets-store": 20
 				"knative":                   30
-				"kourier":                   30
+				"kourier":                   40
+				"rocky":                     50
+				"rosie":                     50
+				"bonchon":                   50
 			}
 		}
 
