@@ -45,7 +45,6 @@ env: (#Transform & {
 				"pod-identity-webhook":      10
 				"external-secrets-operator": 10
 				"k3d-control-secrets-store": 20
-				"tfo":                       30
 				"knative":                   30
 				"kourier":                   40
 				"rocky":                     50
@@ -57,8 +56,11 @@ env: (#Transform & {
 		// global is the global control plane, used by all machines.
 		global: {
 			bootstrap: {
+				"cert-manager":              1
+				"pod-identity-webhook":      10
 				"external-secrets-operator": 10
 				"k3d-global-secrets-store":  20
+				"tfo":                       30
 			}
 		}
 	}
