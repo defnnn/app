@@ -26,13 +26,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         pod-identity-webhook: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -53,13 +46,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         external-secrets-operator: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -80,13 +66,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         k3d-global-secrets-store: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -107,13 +86,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
     name: any-resource
     version: 0.1.0
     repo: https://kiwigrid.github.io

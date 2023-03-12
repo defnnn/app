@@ -26,13 +26,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
     name: any-resource
     version: 0.1.0
     repo: https://kiwigrid.github.io

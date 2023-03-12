@@ -26,13 +26,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         pod-identity-webhook: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -53,13 +46,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         external-secrets-operator: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -80,13 +66,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         k3d-control-secrets-store: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -107,13 +86,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         tfo: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -134,13 +106,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         knative: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -161,13 +126,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         kourier: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -188,13 +146,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         rocky: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -215,13 +166,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         rosie: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -242,13 +186,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         bonchon: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -269,13 +206,6 @@ helmCharts:
               automated:
                 prune: true
                 selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
     name: any-resource
     version: 0.1.0
     repo: https://kiwigrid.github.io

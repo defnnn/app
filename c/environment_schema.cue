@@ -125,14 +125,6 @@ import (
 				prune:    true
 				selfHeal: true
 			}
-
-			ignoreDifferences: [{
-				group: ""
-				kind:  "Secret"
-				jsonPointers: ["/data"]
-				name:      "karpenter-cert"
-				namespace: "karpenter"
-			}]
 		}
 	}
 }
