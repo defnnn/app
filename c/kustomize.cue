@@ -66,6 +66,14 @@ kustomize: "demo2": #Kustomize & {
 kustomize: "argo-cd": #Kustomize & {
 	namespace: "argocd"
 
+	resource: "namespace-argocd": core.#Namespace & {
+		apiVersion: "v1"
+		kind:       "Namespace"
+		metadata: {
+			name: "argocd"
+		}
+	}
+
 	resource: "argo-cd": {
 		url: "https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.0/manifests/install.yaml"
 	}
