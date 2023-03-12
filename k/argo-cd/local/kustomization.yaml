@@ -1,6 +1,0 @@
-namespace: argocd
-patchesStrategicMerge:
-- patch-configmap-argocd-cm.yaml
-resources:
-- resource-namespace-argocd.yaml
-- localized-files/raw.githubusercontent.com/argoproj/argo-cd/v2.6.4/manifests/install.yaml
