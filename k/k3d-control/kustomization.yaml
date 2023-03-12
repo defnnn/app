@@ -6,33 +6,6 @@ helmCharts:
   - releaseName: bootstrap
     valuesInline:
       anyResources:
-        argo-cd: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-control-argo-cd
-            annotations:
-              argocd.argoproj.io/sync-wave: "0"
-          spec:
-            project: default
-            destination:
-              name: k3d-control
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/argo-cd
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-            ignoreDifferences:
-              - group: ""
-                kind: Secret
-                jsonPointers:
-                  - /data
-                name: karpenter-cert
-                namespace: karpenter
         cert-manager: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application

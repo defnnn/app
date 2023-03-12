@@ -41,7 +41,6 @@ env: (#Transform & {
 		// control is the control plane, used by the operator.
 		control: {
 			bootstrap: {
-				"argo-cd":                   0
 				"cert-manager":              1
 				"pod-identity-webhook":      10
 				"external-secrets-operator": 10
