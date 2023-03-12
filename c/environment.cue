@@ -48,10 +48,10 @@ env: (#Transform & {
 				"tfo":                       30
 				"knative":                   30
 				"kourier":                   30
+				"misc":                      40
 				"rocky":                     50
 				"rosie":                     50
 				"bonchon":                   50
-				"misc":                      100
 			}
 		}
 
