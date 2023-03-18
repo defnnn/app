@@ -1,8 +1,8 @@
 {
   inputs = {
-    pkg.url = github:defn/pkg/0.0.158;
-    kustomize.url = github:defn/pkg/kustomize-5.0.0-7?dir=kustomize;
-    helm.url = github:defn/pkg/helm-3.11.1-9?dir=helm;
+    pkg.url = github:defn/pkg/0.0.170;
+    kustomize.url = github:defn/pkg/kustomize-5.0.0-9?dir=kustomize;
+    helm.url = github:defn/pkg/helm-3.11.2-3?dir=helm;
   };
 
   outputs = inputs:
