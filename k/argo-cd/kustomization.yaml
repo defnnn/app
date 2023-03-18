@@ -1,8 +1,10 @@
 #ManagedBy: cue
 
-patchesStrategicMerge:
-  - patch-configmap-argocd-cm.yaml
 namespace: argocd
 resources:
-  - resource-namespace-argocd.yaml
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.6.4/manifests/install.yaml
+- resource-namespace-argocd.yaml
+- https://raw.githubusercontent.com/argoproj/argo-cd/v2.6.4/manifests/install.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patches:
+- path: patch-configmap-argocd-cm.yaml

@@ -1,0 +1,36 @@
+helmCharts:
+- includeCRDs: true
+  name: vcluster
+  namespace: control-vc2
+  releaseName: vcluster
+  repo: https://charts.loft.sh
+  valuesInline:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: env
+              operator: In
+              values:
+              - control-vc2
+    service:
+      type: ClusterIP
+    sync:
+      nodes:
+        enabled: true
+        nodeSelector: env=control-vc2
+    syncer:
+      extraArgs:
+      - --tls-san=vcluster.control-vc2.svc.cluster.local
+      - --enforce-toleration=env=control-vc2:NoSchedule
+    tolerations:
+    - key: env
+      operator: Equal
+      value: control-vc2
+    vcluster:
+      image: rancher/k3s:v1.23.13-k3s1
+  version: 0.12.3
+namespace: control-vc2
+resources:
+- resource-namespace-vcluster.yaml

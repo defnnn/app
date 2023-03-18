@@ -1,0 +1,28 @@
+helmCharts:
+- includeCRDs: true
+  name: any-resource
+  releaseName: bootstrap
+  repo: https://kiwigrid.github.io
+  valuesInline:
+    anyResources:
+      cert-manager: |
+        apiVersion: argoproj.io/v1alpha1
+        kind: Application
+        metadata:
+          namespace: argocd
+          name: vcluster-control-vc2-cert-manager
+          annotations:
+            argocd.argoproj.io/sync-wave: "1"
+        spec:
+          project: default
+          destination:
+            name: vcluster-control-vc2
+          source:
+            repoURL: https://github.com/defn/app
+            targetRevision: master
+            path: k/cert-manager
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
+  version: 0.1.0

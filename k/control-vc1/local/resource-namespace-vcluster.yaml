@@ -1,0 +1,6 @@
+#ManagedBy: cue
+
+metadata:
+  name: control-vc1
+kind: Namespace
+apiVersion: v1

@@ -1,0 +1,8 @@
+#ManagedBy: cue
+
+metadata:
+  name: config-domain
+  namespace: knative-serving
+data: {}
+kind: ConfigMap
+apiVersion: v1

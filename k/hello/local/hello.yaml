@@ -1,0 +1,39 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  labels:
+    networking.knative.dev/visibility: cluster-local
+  name: hello
+  namespace: default
+spec:
+  template:
+    spec:
+      containerConcurrency: 0
+      containers:
+        - name: whoami
+          image: containous/whoami:latest
+          ports:
+            - containerPort: 80
+  traffic:
+    - latestRevision: true
+      percent: 100
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  labels:
+    networking.knative.dev/visibility: cluster-local
+  name: bye
+  namespace: default
+spec:
+  template:
+    spec:
+      containerConcurrency: 0
+      containers:
+        - name: whoami
+          image: containous/whoami:latest
+          ports:
+            - containerPort: 80
+  traffic:
+    - latestRevision: true
+      percent: 100
