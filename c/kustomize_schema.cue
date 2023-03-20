@@ -41,9 +41,9 @@ kustomize: [NAME=string]: _name: NAME
 			namespace: kns
 		}
 
-		patchesStrategicMerge: [
+		patches: [
 			for _psm_name, _psm in psm {
-				"patch-\(_psm_name).yaml"
+				path: "patch-\(_psm_name).yaml"
 			},
 		]
 

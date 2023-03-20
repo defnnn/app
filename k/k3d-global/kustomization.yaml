@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
-patchesStrategicMerge: []
+patches: []
 resources: []
 helmCharts:
   - releaseName: bootstrap

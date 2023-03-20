@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
-patchesStrategicMerge: []
+patches: []
 namespace: argo-events
 resources:
   - resource-namespace-argo-events.yaml

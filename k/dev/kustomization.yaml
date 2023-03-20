@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
-patchesStrategicMerge: []
+patches: []
 namespace: default
 resources:
   - resource-statefulset-dev.yaml

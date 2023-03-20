@@ -1,7 +1,7 @@
 #ManagedBy: cue
 
-patchesStrategicMerge:
-  - patch-statefulset-vault-set-vault-token.yaml
+patches:
+  - path: patch-statefulset-vault-set-vault-token.yaml
 namespace: vault
 resources:
   - resource-namespace-vault.yaml

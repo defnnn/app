@@ -32,7 +32,7 @@ helmCharts:
           }
   version: 0.20.1
 namespace: vault
-patchesStrategicMerge:
-- patch-statefulset-vault-set-vault-token.yaml
+patches:
+- path: patch-statefulset-vault-set-vault-token.yaml
 resources:
 - resource-namespace-vault.yaml

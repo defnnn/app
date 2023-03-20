@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
-patchesStrategicMerge: []
+patches: []
 namespace: external-dns
 resources:
   - resource-namespace-external-dns.yaml

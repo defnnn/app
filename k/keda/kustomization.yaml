@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
-patchesStrategicMerge: []
+patches: []
 namespace: keda
 resources:
   - resource-namespace-keda.yaml

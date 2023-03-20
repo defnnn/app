@@ -1,6 +1,6 @@
 #ManagedBy: cue
 
-patchesStrategicMerge: []
+patches: []
 resources:
   - resource-tfo-demo-bonchon.yaml
   - resource-pre-sync-hook-dry-brine-rocky-chicken.yaml

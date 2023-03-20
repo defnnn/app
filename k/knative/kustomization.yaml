@@ -1,16 +1,16 @@
 #ManagedBy: cue
 
-patchesStrategicMerge:
-  - patch-namespace-knative-serving.yaml
-  - patch-deployment-webhook.yaml
-  - patch-deployment-domainmappingwebhook.yaml
-  - patch-deployment-domain-mapping.yaml
-  - patch-deployment-controller.yaml
-  - patch-deployment-autoscaler.yaml
-  - patch-deployment-activator.yaml
-  - patch-config-map-config-defaults.yaml
-  - patch-config-map-config-domain.yaml
-  - patch-config-map-config-features.yaml
-  - patch-config-map-config-network.yaml
+patches:
+  - path: patch-namespace-knative-serving.yaml
+  - path: patch-deployment-webhook.yaml
+  - path: patch-deployment-domainmappingwebhook.yaml
+  - path: patch-deployment-domain-mapping.yaml
+  - path: patch-deployment-controller.yaml
+  - path: patch-deployment-autoscaler.yaml
+  - path: patch-deployment-activator.yaml
+  - path: patch-config-map-config-defaults.yaml
+  - path: patch-config-map-config-domain.yaml
+  - path: patch-config-map-config-features.yaml
+  - path: patch-config-map-config-network.yaml
 resources:
   - https://github.com/knative/serving/releases/download/knative-v1.9.2/serving-core.yaml
