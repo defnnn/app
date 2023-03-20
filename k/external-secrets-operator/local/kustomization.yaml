@@ -9,7 +9,7 @@ helmCharts:
       create: false
     webhook:
       create: false
-  version: 0.7.2
+  version: 0.8.1
 namespace: external-secrets
 resources:
 - resource-namespace-external-secrets.yaml

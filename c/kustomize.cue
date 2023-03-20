@@ -70,6 +70,7 @@ kustomize: "demo2": #Kustomize & {
 	}
 }
 
+// https://artifacthub.io/packages/helm/argo/argo-cd
 kustomize: "argo-cd": #Kustomize & {
 	namespace: "argocd"
 
@@ -336,6 +337,7 @@ kustomize: "vault": #KustomizeHelm & {
 	}
 }
 
+// https://github.com/knative-sandbox/net-kourier/releases
 kustomize: "kourier": #Kustomize & {
 	resource: "kourier": {
 		url: "https://github.com/knative-sandbox/net-kourier/releases/download/knative-v1.9.2/kourier.yaml"
@@ -453,13 +455,14 @@ kustomize: "dev": #Kustomize & {
 	}
 }
 
+// https://artifacthub.io/packages/helm/external-secrets-operator/external-secrets
 kustomize: "external-secrets-operator": #KustomizeHelm & {
 	namespace: "external-secrets"
 
 	helm: {
 		release: "external-secrets"
 		name:    "external-secrets"
-		version: "0.7.2"
+		version: "0.8.1"
 		repo:    "https://charts.external-secrets.io"
 		values: {
 			webhook: create:        false
@@ -492,6 +495,7 @@ kustomize: "external-secrets-operator": #KustomizeHelm & {
 	}
 }
 
+// https://artifacthub.io/packages/helm/jkroepke/amazon-eks-pod-identity-webhook
 kustomize: "pod-identity-webhook": #KustomizeHelm & {
 	namespace: "default"
 
@@ -543,6 +547,7 @@ kustomize: "karpenter": #Kustomize & {
 	}).outputs
 }
 
+// https://github.com/knative/serving/releases
 kustomize: "knative": #Kustomize & {
 	resource: "knative-serving": {
 		url: "https://github.com/knative/serving/releases/download/knative-v1.9.2/serving-core.yaml"
@@ -657,6 +662,7 @@ kustomize: "knative": #Kustomize & {
 	}
 }
 
+// https://artifacthub.io/packages/helm/cert-manager/cert-manager
 kustomize: "cert-manager": #KustomizeHelm & {
 	helm: {
 		release:   "cert-manager"
@@ -679,6 +685,7 @@ kustomize: "cert-manager": #KustomizeHelm & {
 	}
 }
 
+// https://github.com/isaaguilar/terraform-operator/releases
 kustomize: "tfo": #Kustomize & {
 	namespace: "tf-system"
 
