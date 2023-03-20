@@ -1,8 +1,0 @@
-bases:
-  - ../../k/argo-cd
-  - ../../k/cert-manager
-  - ../../k/pod-identity-webhook
-  - ../../k/tfo
-
-resources:
-  - ns.yaml
