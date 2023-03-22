@@ -6,6 +6,7 @@ kubeAPI:
   host: "${DEFN_DEV_HOST_API}"
   hostIP: "${DEFN_DEV_HOST_IP}"
   #hostPort: "${DEFN_DEV_HOST_PORT}"
+network: bridge
 image: quay.io/defn/dev:latest-k3d
 volumes:
   - volume: work:/mnt/work
