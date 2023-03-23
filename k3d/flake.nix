@@ -177,6 +177,7 @@
               cat operator.yaml \
                 | sed "s#client_id: .*#client_id: \"$(pass tailscale-operator-client-id-$name)\"#" \
                 | sed "s#client_secret: .*#client_secret: \"$(pass tailscale-operator-client-secret-$name)\"#"
+              echo ---
               kustomize build --enable-helm ~/work/app/k/argo-cd
             ) | docker run --rm -i \
               -v $name-manifest:/var/lib/rancher/k3s/server/manifests \
