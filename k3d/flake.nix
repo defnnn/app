@@ -50,7 +50,7 @@
 
         case "''${1:-}" in
           build)
-            earthly +image-k3d
+            earthly +build
             docker push quay.io/defn/dev:latest-k3d
             ;;
           create)
