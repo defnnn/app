@@ -3,16 +3,15 @@
     pkg.url = github:defn/pkg/0.0.170;
     vault.url = github:defn/pkg/vault-1.13.0-2?dir=vault;
     kubernetes.url = github:defn/pkg/kubernetes-0.0.18?dir=kubernetes;
+    tailscale.url = github:defn/pkg/tailscale-1.38.1-0?dir=tailscale;
   };
 
   outputs = inputs: inputs.pkg.main rec {
     src = ./.;
 
     config = rec {
-      ts-domain = "tail3884f.ts.net";
       clusters = {
         global = { };
-        control = { };
       };
     };
 
@@ -28,6 +27,7 @@
           flakeInputs = [
             inputs.vault.defaultPackage.${ctx.system}
             inputs.kubernetes.defaultPackage.${ctx.system}
+            inputs.tailscale.defaultPackage.${ctx.system}
           ];
         in
         flakeInputs
@@ -44,7 +44,7 @@
         set -efu
 
         name="$GIT_AUTHOR_NAME-${nme}"
-        host=k3d-$name.${config.${"ts-domain"}}
+        host=k3d-$name.$(tailscale cert 2>&1 | grep domain..use | cut -d'"' -f2 | cut -d. -f2-)
 
         export VAULT_ADDR=http://host.docker.internal:8200
 
@@ -55,6 +55,7 @@
             ;;
           create)
             export DEFN_DEV_HOST_API="$(host $host | grep 'has address' | awk '{print $NF}')"
+            if [[ -z "$DEFN_DEV_HOST_API" ]]; then DEFN_DEV_HOST_API=169.254.32.2; fi
             this-k3d-provision ${nme} $name
             ;;
           root)
