@@ -30,7 +30,7 @@ fi
 
 for a in /var/lib/rancher/k3s/server/tls /var/lib/rancher/k3s/server/manifests; do
   mkdir -p "$a"
-  (set +f; cp ${a}2/* ${a}/)
+  (set +f; cp ${a}2/* ${a}/) || true
 done
 
 if [[ -n "${DEFN_DEV_TSKEY:-}" ]]; then
