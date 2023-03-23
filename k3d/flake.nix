@@ -44,14 +44,13 @@
         set -efu
 
         name="$GIT_AUTHOR_NAME-${nme}"
-        host=k3d-$name.$(tailscale cert 2>&1 | grep domain..use | cut -d'"' -f2 | cut -d. -f2-)
+        host=k3d-$name-server-0.$(tailscale cert 2>&1 | grep domain..use | cut -d'"' -f2 | cut -d. -f2-)
 
         export VAULT_ADDR=http://host.docker.internal:8200
 
         case "''${1:-}" in
           build)
-            earthly +build
-            docker push quay.io/defn/dev:latest-k3d
+            earthly --push +build
             ;;
           create)
             export DEFN_DEV_HOST_API="$(host $host | grep 'has address' | awk '{print $NF}')"
