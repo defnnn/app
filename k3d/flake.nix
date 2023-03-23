@@ -159,8 +159,9 @@
         docker pull quay.io/defn/dev:latest-k3d
         k3d cluster delete $name || true
 
-        for a in tailscale irsa; do
+       #for a in tailscale irsa; do
           docker volume create $name-$a || true
+          continue
           (pass $name-$a | base64 -d) | docker run --rm -i \
             -v $name-tailscale:/var/lib/tailscale \
             -v $name-irsa:/var/lib/rancher/k3s/server/tls \
