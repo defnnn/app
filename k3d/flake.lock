@@ -78,6 +78,30 @@
       },
       "locked": {
         "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_12": {
+      "inputs": {
+        "flake-utils": "flake-utils_12",
+        "gomod2nix": "gomod2nix_12",
+        "nixpkgs": "nixpkgs_12",
+        "wrapper": "wrapper_12"
+      },
+      "locked": {
+        "dir": "dev",
         "lastModified": 1679173652,
         "narHash": "sha256-6cGqXtAuRtRSJmNyQaZfKnx9ZMdR3yIqSKmSlc2H/jk=",
         "owner": "defn",
@@ -333,6 +357,22 @@
         "type": "github"
       }
     },
+    "flake-utils_12": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
     "flake-utils_2": {
       "locked": {
         "lastModified": 1652776076,
@@ -495,6 +535,33 @@
     "gomod2nix_10": {
       "inputs": {
         "nixpkgs": [
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_11": {
+      "inputs": {
+        "nixpkgs": [
           "tailscale",
           "pkg",
           "dev",
@@ -521,7 +588,7 @@
         "type": "github"
       }
     },
-    "gomod2nix_11": {
+    "gomod2nix_12": {
       "inputs": {
         "nixpkgs": [
           "vault",
@@ -768,11 +835,15 @@
     "gomod2nix_9": {
       "inputs": {
         "nixpkgs": [
+          "kubernetes",
+          "vcluster",
           "pkg",
           "dev",
           "nixpkgs"
         ],
         "utils": [
+          "kubernetes",
+          "vcluster",
           "pkg",
           "dev",
           "flake-utils"
@@ -906,21 +977,22 @@
         "kn": "kn",
         "kubectl": "kubectl",
         "kustomize": "kustomize",
-        "pkg": "pkg_8"
+        "pkg": "pkg_8",
+        "vcluster": "vcluster"
       },
       "locked": {
         "dir": "kubernetes",
-        "lastModified": 1679377314,
-        "narHash": "sha256-IpZTs40iGwQpR02HBRLbMCXTqAmqcDK5HODPIZyxdWg=",
+        "lastModified": 1679638557,
+        "narHash": "sha256-S1NoEjWYR5lIj/x99NGz2Nua0UwI8Fw9VGRC4emoGEs=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "0e59da6685ae19179419a8bfba73eb485a095eed",
+        "rev": "0dfe48941247d18de2fe8fa61601397b515bd5bd",
         "type": "github"
       },
       "original": {
         "dir": "kubernetes",
         "owner": "defn",
-        "ref": "kubernetes-0.0.18",
+        "ref": "kubernetes-0.0.19",
         "repo": "pkg",
         "type": "github"
       }
@@ -979,6 +1051,22 @@
       }
     },
     "nixpkgs_11": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_12": {
       "locked": {
         "lastModified": 1669833724,
         "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
@@ -1165,6 +1253,25 @@
         "dev": "dev_11"
       },
       "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_12": {
+      "inputs": {
+        "dev": "dev_12"
+      },
+      "locked": {
         "lastModified": 1679173922,
         "narHash": "sha256-K4YdwQRMzIVzciXNGw6OmZ4wI8dewVQ5WUbSGS58+Qs=",
         "owner": "defn",
@@ -1334,14 +1441,14 @@
     "root": {
       "inputs": {
         "kubernetes": "kubernetes",
-        "pkg": "pkg_9",
+        "pkg": "pkg_10",
         "tailscale": "tailscale",
         "vault": "vault"
       }
     },
     "tailscale": {
       "inputs": {
-        "pkg": "pkg_10"
+        "pkg": "pkg_11"
       },
       "locked": {
         "dir": "tailscale",
@@ -1362,7 +1469,7 @@
     },
     "vault": {
       "inputs": {
-        "pkg": "pkg_11"
+        "pkg": "pkg_12"
       },
       "locked": {
         "dir": "vault",
@@ -1377,6 +1484,27 @@
         "dir": "vault",
         "owner": "defn",
         "ref": "vault-1.13.0-2",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "vcluster": {
+      "inputs": {
+        "pkg": "pkg_9"
+      },
+      "locked": {
+        "dir": "vcluster",
+        "lastModified": 1679638433,
+        "narHash": "sha256-yUErFVsFrg93NtknYYYvYBD/XTds5Uf4VLB8nvDsLoU=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "495ecfe0137f7bb9e173426df8352252deeceb06",
+        "type": "github"
+      },
+      "original": {
+        "dir": "vcluster",
+        "owner": "defn",
+        "ref": "vcluster-0.14.2-0",
         "repo": "pkg",
         "type": "github"
       }
@@ -1411,7 +1539,6 @@
     "wrapper_10": {
       "inputs": {
         "nixpkgs": [
-          "tailscale",
           "pkg",
           "dev",
           "nixpkgs"
@@ -1435,6 +1562,32 @@
       }
     },
     "wrapper_11": {
+      "inputs": {
+        "nixpkgs": [
+          "tailscale",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_12": {
       "inputs": {
         "nixpkgs": [
           "vault",
@@ -1651,6 +1804,8 @@
     "wrapper_9": {
       "inputs": {
         "nixpkgs": [
+          "kubernetes",
+          "vcluster",
           "pkg",
           "dev",
           "nixpkgs"
