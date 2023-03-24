@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vcluster-tailscale
+  namespace: global-vc0
+spec:
+  ports:
+    - name: https
+      port: 443
+      targetPort: 8443
+      protocol: TCP
+  selector:
+    app: vcluster
+  type: LoadBalancer
+  loadBalancerClass: tailscale
