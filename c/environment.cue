@@ -63,6 +63,7 @@ env: (#Transform & {
 				"rocky":                     50
 				"rosie":                     50
 				"bonchon":                   50
+				"global-vc0":                100
 			}
 		}
 	}
