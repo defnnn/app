@@ -61,7 +61,7 @@ command: gen: {
 			// Configuration for K3D clusters:
 			// ex: cluster.control.out > tf/control/main.tf.json
 			"\(cname)": file.Create & {
-				filename: "../tf/\(cname)/main.tf.json"
+				filename: "../misc/tf/\(cname)/main.tf.json"
 				contents: json.Marshal({c.out, "//": "ManagedBy: cue"})
 			}
 		}

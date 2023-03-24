@@ -157,7 +157,7 @@ spec:
         runAsUser: 1001
       containers:
         - name: terraform-operator
-          image: isaaguilar/terraform-operator:v0.9.0-beta3
+          image: isaaguilar/terraform-operator:v0.10.0
           imagePullPolicy: IfNotPresent
           command:
             - terraform-operator
@@ -281,7 +281,7 @@ spec:
               value: terraform-operator-selfsigned
       containers:
         - name: terraform-operator
-          image: isaaguilar/terraform-operator:v0.9.0-beta3
+          image: isaaguilar/terraform-operator:v0.10.0
           imagePullPolicy: IfNotPresent
           command:
             - terraform-operator
@@ -1869,6 +1869,10 @@ spec:
                   podType:
                     description: TaskType is which task is currently running.
                     type: string
+                  podUID:
+                    description: PodUID is the pod uid of the pod assigned to execute
+                      the stage.
+                    type: string
                   reason:
                     description: Reason is a message of what is happening with the
                       pod. The controller uses this field when certain reasons occur
@@ -1916,6 +1920,10 @@ spec:
                       type: string
                     podType:
                       description: TaskType is which task is currently running.
+                      type: string
+                    podUID:
+                      description: PodUID is the pod uid of the pod assigned to execute
+                        the stage.
                       type: string
                     reason:
                       description: Reason is a message of what is happening with the

@@ -10,10 +10,10 @@ gen:
 	rm -f ../k/*/kustomization.yaml
 	rm -f ../k/*/resource-*.yaml
 	rm -f ../k/*/patch-*.yaml
-	rm -f ../tf/*/*.tf.json
+	rm -f ../misc/tf/*/*.tf.json
 	c gen
-	git add ../e ../k ../tf
-	git add ../e ../k ../tf
+	git add ../e ../k ../misc/tf
+	git add ../e ../k ../misc/tf
 
 regen:
 	$(MAKE) gen
