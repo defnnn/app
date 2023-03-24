@@ -110,12 +110,12 @@ kustomize: [NAME=string]: _name: NAME
 	helm: {
 		release: "vcluster"
 		name:    "vcluster"
-		version: "0.12.3"
+		version: "0.14.2"
 		repo:    "https://charts.loft.sh"
 
 		values: {
 			service: type:   "ClusterIP"
-			vcluster: image: "rancher/k3s:v1.23.13-k3s1"
+			vcluster: image: "rancher/k3s:v1.24.11-k3s1"
 
 			syncer: extraArgs: [
 				"--tls-san=vcluster.\(_in.vc_name).svc.cluster.local",

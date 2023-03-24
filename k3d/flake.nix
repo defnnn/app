@@ -193,7 +193,7 @@
         k3d cluster create $name \
           --config k3d.yaml \
           --registry-config k3d-registries.yaml \
-          --k3s-node-label env=$name@server:0 \
+          --k3s-node-label env=''${name##*-}@server:0 \
           --volume $name-tailscale:/var/lib/tailscale@server:0 \
           --volume $name-irsa:/var/lib/rancher/k3s/server/tls2@server:0 \
           --volume $name-manifest:/var/lib/rancher/k3s/server/manifests2@server:0
