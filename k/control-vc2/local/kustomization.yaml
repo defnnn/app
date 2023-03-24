@@ -29,8 +29,8 @@ helmCharts:
       operator: Equal
       value: control-vc2
     vcluster:
-      image: rancher/k3s:v1.23.13-k3s1
-  version: 0.12.3
+      image: rancher/k3s:v1.24.11-k3s1
+  version: 0.14.2
 namespace: control-vc2
 resources:
 - resource-namespace-vcluster.yaml

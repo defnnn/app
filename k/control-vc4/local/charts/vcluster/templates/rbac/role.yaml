@@ -1,8 +1,16 @@
 {{- if .Values.rbac.role.create }}
+{{- if .Values.multiNamespaceMode.enabled }}
+kind: ClusterRole
+{{- else -}}
 kind: Role
+{{- end }}
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
+{{- if .Values.multiNamespaceMode.enabled }}
+  name: {{ template "vcluster.clusterRoleNameMultinamespace" . }}
+{{- else }}
   name: {{ .Release.Name }}
+{{- end }}
   namespace: {{ .Release.Namespace }}
   labels:
     app: vcluster
@@ -42,9 +50,11 @@ rules:
   - apiGroups: [""]
     resources: ["endpoints", "events", "pods/log"]
     verbs: ["get", "list", "watch"]
+  {{- if or .Values.sync.ingresses.enabled}}
   - apiGroups: ["networking.k8s.io"]
     resources: ["ingresses"]
     verbs: ["create", "delete", "patch", "update", "get", "list", "watch"]
+  {{- end }}
   - apiGroups: ["apps"]
     resources: ["statefulsets", "replicasets", "deployments"]
     verbs: ["get", "list", "watch"]
@@ -76,4 +86,5 @@ rules:
   {{- end }}
   {{- end }}
   {{- include "vcluster.plugin.roleExtraRules" . | indent 2 }}
+  {{- include "vcluster.generic.roleExtraRules" . | indent 2 }}
 {{- end }}

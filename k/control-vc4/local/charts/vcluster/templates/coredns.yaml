@@ -77,6 +77,7 @@ data:
             errors
             health
             ready
+            rewrite name regex .*\.{{ .Release.Name }}\.{{ .Release.Namespace }}\.nodes\.vcluster\.com kubernetes.default.svc.cluster.local
             kubernetes cluster.local in-addr.arpa ip6.arpa {
               pods insecure
               fallthrough in-addr.arpa ip6.arpa
@@ -178,8 +179,9 @@ data:
                   name: metrics
                   protocol: TCP
               securityContext:
+                runAsNonRoot: true
                 runAsUser: {{`{{.RUN_AS_USER}}`}}
-                runAsNonRoot: {{`{{.RUN_AS_NON_ROOT}}`}}
+                runAsGroup: {{`{{.RUN_AS_GROUP}}`}}
                 allowPrivilegeEscalation: false
                 capabilities:
                   drop:
