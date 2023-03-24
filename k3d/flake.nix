@@ -3,7 +3,7 @@
     pkg.url = github:defn/pkg/0.0.170;
     vault.url = github:defn/pkg/vault-1.13.0-2?dir=vault;
     kubernetes.url = github:defn/pkg/kubernetes-0.0.18?dir=kubernetes;
-    tailscale.url = github:defn/pkg/tailscale-1.38.1-0?dir=tailscale;
+    tailscale.url = github:defn/pkg/tailscale-1.38.2-0?dir=tailscale;
   };
 
   outputs = inputs: inputs.pkg.main rec {
