@@ -703,15 +703,12 @@ kustomize: "caddy": #KustomizeHelm & {
 			}
 			config: caddyFile: """
 				:80 {
-				  handle / {
-				   respond "hello1"
-				  }
-				}
-
-				https://*.*.ts.net:443 {
-				  handle / {
-				   respond "hello2"
-				  }
+					reverse_proxy https://argocd-server.argocd.svc.cluster.local {
+						transport http {
+							tls
+							tls_insecure_skip_verify
+						}
+					}
 				}
 				"""
 		}

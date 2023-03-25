@@ -6,18 +6,8 @@ helmCharts:
   repo: https://charts.alekc.dev
   valuesInline:
     config:
-      caddyFile: |-
-        :80 {
-          handle / {
-           respond "hello1"
-          }
-        }
-
-        https://*.*.ts.net:443 {
-          handle / {
-           respond "hello2"
-          }
-        }
+      caddyFile: ":80 {\n\treverse_proxy https://argocd-server.argocd.svc.cluster.local
+        {\n\t\ttransport http {\n\t\t\ttls\n\t\t\ttls_insecure_skip_verify\n\t\t}\n\t}\n}"
     https:
       enabled: true
       port: 443
