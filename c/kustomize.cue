@@ -713,8 +713,8 @@ kustomize: "caddy": #KustomizeHelm & {
 				"""
 
 			config: global: """
+				local_certs
 				log {
-					local_certs
 					output stdout
 				}
 				"""
