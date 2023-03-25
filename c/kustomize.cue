@@ -714,6 +714,7 @@ kustomize: "caddy": #KustomizeHelm & {
 
 			config: global: """
 				acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+				email iam@defn.sh
 				log {
 					output stdout
 				}
