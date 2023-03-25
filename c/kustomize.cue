@@ -708,7 +708,7 @@ kustomize: "caddy": #KustomizeHelm & {
 				  }
 				}
 
-				:443 {
+				https://*.*.ts.net:443 {
 				  handle / {
 				   respond "hello2"
 				  }
