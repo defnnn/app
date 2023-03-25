@@ -59,11 +59,6 @@ env: (#Transform & {
 				"knative":                   30
 				"kourier":                   30
 				"misc":                      40
-				"hello":                     50
-				"rocky":                     50
-				"rosie":                     50
-				"bonchon":                   50
-				"global-vc0":                100
 			}
 		}
 	}
