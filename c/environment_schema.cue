@@ -62,7 +62,7 @@ import (
 		#Input
 
 		type: string
-		bootstrap: [string]: int
+		bootstrap: [string]: [int, ...string]
 	}
 
 	to: #BootstrapMachine
@@ -76,22 +76,24 @@ import (
 
 	apps: [string]: #BootstrapApp
 	apps: {
-		for _app_name, _app_weight in _in.bootstrap {
+		for _app_name, _app in _in.bootstrap {
 			"\(_app_name)": #BootstrapApp & {
-				machine_type: ctx.machine_type
-				machine_name: ctx.machine_name
-				app_name:     _app_name
-				app_wave:     _app_weight
+				machine_type:     ctx.machine_type
+				machine_name:     ctx.machine_name
+				app_name:         _app_name
+				app_wave:         _app[0]
+				app_sync_options: _app[1:]
 			}
 		}
 	}
 }
 
 #BootstrapApp: {
-	machine_type: string
-	machine_name: string
-	app_name:     string
-	app_wave:     int
+	machine_type:     string
+	machine_name:     string
+	app_name:         string
+	app_wave:         int
+	app_sync_options: [...string] | *[]
 
 	application: {
 		apiVersion: "argoproj.io/v1alpha1"
@@ -121,9 +123,12 @@ import (
 				path:           "k/\(app_name)"
 			}
 
-			syncPolicy: automated: {
-				prune:    true
-				selfHeal: true
+			syncPolicy: {
+				automated: {
+					prune:    true
+					selfHeal: true
+				}
+				syncOptions: app_sync_options
 			}
 		}
 	}
@@ -134,7 +139,7 @@ import (
 	type: string
 	name: string
 
-	bootstrap: [string]: int
+	bootstrap: [string]: [int, ...string]
 	env: #EnvApp
 	env: {
 		// ex: k/k3d-control
@@ -175,7 +180,7 @@ import (
 #TransformK3D: {
 	from: {
 		#Input
-		bootstrap: [string]: number
+		bootstrap: [string]: [int, ...string]
 	}
 
 	to: #K3D
@@ -198,7 +203,7 @@ import (
 #TransformVCluster: {
 	from: {
 		#Input
-		bootstrap: [string]: number
+		bootstrap: [string]: [int, ...string]
 		instance_types: [...string]
 		parent: #K3D
 	}

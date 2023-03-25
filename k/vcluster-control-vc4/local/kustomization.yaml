@@ -25,4 +25,5 @@ helmCharts:
             automated:
               prune: true
               selfHeal: true
+            syncOptions: []
   version: 0.1.0

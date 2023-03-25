@@ -25,6 +25,7 @@ helmCharts:
             automated:
               prune: true
               selfHeal: true
+            syncOptions: []
       external-secrets-operator: |
         apiVersion: argoproj.io/v1alpha1
         kind: Application
@@ -45,6 +46,7 @@ helmCharts:
             automated:
               prune: true
               selfHeal: true
+            syncOptions: []
       k3d-control-secrets-store: |
         apiVersion: argoproj.io/v1alpha1
         kind: Application
@@ -65,6 +67,7 @@ helmCharts:
             automated:
               prune: true
               selfHeal: true
+            syncOptions: []
       pod-identity-webhook: |
         apiVersion: argoproj.io/v1alpha1
         kind: Application
@@ -85,4 +88,5 @@ helmCharts:
             automated:
               prune: true
               selfHeal: true
+            syncOptions: []
   version: 0.1.0
