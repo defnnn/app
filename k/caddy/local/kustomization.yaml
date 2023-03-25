@@ -6,7 +6,12 @@ helmCharts:
   repo: https://charts.alekc.dev
   valuesInline:
     config:
-      caddyFile: ""
+      caddyFile: |-
+        :8080 {
+          handle / {
+           respond "hello"
+          }
+        }
   version: 0.2.4
 namespace: caddy
 patches:

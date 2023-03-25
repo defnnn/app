@@ -696,7 +696,13 @@ kustomize: "caddy": #KustomizeHelm & {
 		version:   "0.2.4"
 		repo:      "https://charts.alekc.dev"
 		values: {
-			config: caddyFile: ""
+			config: caddyFile: """
+				:8080 {
+				  handle / {
+				   respond "hello"
+				  }
+				}
+				"""
 		}
 	}
 

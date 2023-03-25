@@ -10,7 +10,12 @@ helmCharts:
     namespace: caddy
     valuesInline:
       config:
-        caddyFile: ""
+        caddyFile: |-
+          :8080 {
+            handle / {
+             respond "hello"
+            }
+          }
     name: caddy
     version: 0.2.4
     repo: https://charts.alekc.dev
