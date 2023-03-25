@@ -6,12 +6,12 @@ helmCharts:
   - releaseName: bootstrap
     valuesInline:
       anyResources:
-        argoc-d: |
+        argo-cd: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
           metadata:
             namespace: argocd
-            name: k3d-global-argoc-d
+            name: k3d-global-argo-cd
             annotations:
               argocd.argoproj.io/sync-wave: "0"
           spec:
@@ -21,7 +21,7 @@ helmCharts:
             source:
               repoURL: https://github.com/defn/app
               targetRevision: master
-              path: k/argoc-d
+              path: k/argo-cd
             syncPolicy:
               automated:
                 prune: true
