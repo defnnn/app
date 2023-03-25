@@ -702,7 +702,7 @@ kustomize: "caddy": #KustomizeHelm & {
 				port:    443
 			}
 			config: caddyFile: """
-				:80 {
+				:443 {
 					reverse_proxy https://argocd-server.argocd.svc.cluster.local {
 						transport http {
 							tls
