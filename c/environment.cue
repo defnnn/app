@@ -51,6 +51,7 @@ env: (#Transform & {
 		// global is the global control plane, used by all machines.
 		global: {
 			bootstrap: {
+				"argocd":                    0
 				"cert-manager":              1
 				"pod-identity-webhook":      10
 				"external-secrets-operator": 10

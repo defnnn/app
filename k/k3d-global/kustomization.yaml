@@ -6,6 +6,26 @@ helmCharts:
   - releaseName: bootstrap
     valuesInline:
       anyResources:
+        argocd: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            namespace: argocd
+            name: k3d-global-argocd
+            annotations:
+              argocd.argoproj.io/sync-wave: "0"
+          spec:
+            project: default
+            destination:
+              name: k3d-global
+            source:
+              repoURL: https://github.com/defn/app
+              targetRevision: master
+              path: k/argocd
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
         cert-manager: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
