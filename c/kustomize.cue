@@ -713,7 +713,6 @@ kustomize: "caddy": #KustomizeHelm & {
 				"""
 
 			config: global: """
-				auto_https on
 				acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
 				log {
 					output stdout
