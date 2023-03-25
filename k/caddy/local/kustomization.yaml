@@ -8,8 +8,8 @@ helmCharts:
     config:
       caddyFile: "https://argocd.defn.run {\n\treverse_proxy https://argocd-server.argocd.svc.cluster.local
         {\n\t\ttransport http {\n\t\t\ttls\n\t\t\ttls_insecure_skip_verify\n\t\t}\n\t}\n}"
-      global: "acme_ca https://acme-staging-v02.api.letsencrypt.org/directory\nemail
-        iam@defn.sh\nlog {\n\toutput stdout\n}"
+      global: "acme_ca https://acme.zerossl.com/v2/DV90\nemail iam@defn.sh\nlog {\n\toutput
+        stdout\n}"
     https:
       enabled: true
       port: 443

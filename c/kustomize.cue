@@ -713,7 +713,7 @@ kustomize: "caddy": #KustomizeHelm & {
 				"""
 
 			config: global: """
-				acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+				acme_ca https://acme.zerossl.com/v2/DV90
 				email iam@defn.sh
 				log {
 					output stdout
