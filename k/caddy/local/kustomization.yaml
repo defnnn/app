@@ -5,6 +5,7 @@ helmCharts:
   releaseName: caddy
   repo: https://charts.alekc.dev
   version: 0.2.4
+namespace: caddy
 patches:
 - path: patch-service-tailscale.yaml
 resources:

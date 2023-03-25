@@ -687,6 +687,8 @@ kustomize: "cert-manager": #KustomizeHelm & {
 
 // https://artifacthub.io/packages/helm/alekc/caddy
 kustomize: "caddy": #KustomizeHelm & {
+	namespace: "caddy"
+
 	helm: {
 		release:   "caddy"
 		name:      "caddy"

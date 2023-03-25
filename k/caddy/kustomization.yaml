@@ -2,6 +2,7 @@
 
 patches:
   - path: patch-service-tailscale.yaml
+namespace: caddy
 resources:
   - resource-namespace-caddy.yaml
 helmCharts:
