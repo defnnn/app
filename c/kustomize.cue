@@ -702,7 +702,7 @@ kustomize: "caddy": #KustomizeHelm & {
 				port:    443
 			}
 			config: caddyFile: """
-				:443 {
+				https://argocd.defn.run {
 					reverse_proxy https://argocd-server.argocd.svc.cluster.local {
 						transport http {
 							tls
@@ -713,7 +713,7 @@ kustomize: "caddy": #KustomizeHelm & {
 				"""
 
 			config: global: """
-				auto_https disable_certs
+				auto_https on
 				acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
 				log {
 					output stdout
