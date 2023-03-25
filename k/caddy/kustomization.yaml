@@ -11,11 +11,18 @@ helmCharts:
     valuesInline:
       https:
         enabled: true
+        port: 443
       config:
         caddyFile: |-
+          :80 {
+            handle / {
+             respond "hello1"
+            }
+          }
+
           :443 {
             handle / {
-             respond "hello"
+             respond "hello2"
             }
           }
     name: caddy

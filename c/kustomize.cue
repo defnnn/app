@@ -696,11 +696,20 @@ kustomize: "caddy": #KustomizeHelm & {
 		version:   "0.2.4"
 		repo:      "https://charts.alekc.dev"
 		values: {
-			https: enabled: true
+			https: {
+				enabled: true
+				port:    443
+			}
 			config: caddyFile: """
+				:80 {
+				  handle / {
+				   respond "hello1"
+				  }
+				}
+
 				:443 {
 				  handle / {
-				   respond "hello"
+				   respond "hello2"
 				  }
 				}
 				"""
