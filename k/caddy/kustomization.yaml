@@ -1,0 +1,13 @@
+#ManagedBy: cue
+
+patches: []
+resources:
+  - resource-namespace-caddy.yaml
+helmCharts:
+  - releaseName: caddy
+    namespace: caddy
+    valuesInline: {}
+    name: caddy
+    version: 0.2.4
+    repo: https://charts.alekc.dev
+    includeCRDs: true

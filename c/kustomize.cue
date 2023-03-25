@@ -685,6 +685,25 @@ kustomize: "cert-manager": #KustomizeHelm & {
 	}
 }
 
+// https://artifacthub.io/packages/helm/alekc/caddy
+kustomize: "caddy": #KustomizeHelm & {
+	helm: {
+		release:   "caddy"
+		name:      "caddy"
+		namespace: "caddy"
+		version:   "0.2.4"
+		repo:      "https://charts.alekc.dev"
+	}
+
+	resource: "namespace-caddy": core.#Namespace & {
+		apiVersion: "v1"
+		kind:       "Namespace"
+		metadata: {
+			name: "caddy"
+		}
+	}
+}
+
 // https://github.com/isaaguilar/terraform-operator/releases
 kustomize: "tfo": #Kustomize & {
 	namespace: "tf-system"

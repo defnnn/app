@@ -1,0 +1,19 @@
+annotations:
+  artifacthub.io/changes: |
+    - "[Changed] Updated caddy version to 2.6.4"
+  artifacthub.io/images: |
+    - name: caddy
+      image: caddy
+  artifacthub.io/links: |
+    - name: Caddy home
+      url: https://github.com/caddyserver/caddy
+    - name: Helm Repo
+      url: https://gitlab.com/alexander-chernov/helm/caddy
+apiVersion: v2
+appVersion: 2.6.4
+description: |
+  The Caddy web server is an extensible, cross-platform, open-source web server written in Go.
+icon: https://camo.githubusercontent.com/05fad9fd69ed6a92cae6426996adfb868145028c031817ad40e7f23ddf53ac17/68747470733a2f2f63616464797365727665722e636f6d2f7265736f75726365732f696d616765732f66617669636f6e2e706e67
+name: caddy
+type: application
+version: 0.2.4

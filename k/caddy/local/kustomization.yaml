@@ -1,0 +1,9 @@
+helmCharts:
+- includeCRDs: true
+  name: caddy
+  namespace: caddy
+  releaseName: caddy
+  repo: https://charts.alekc.dev
+  version: 0.2.4
+resources:
+- resource-namespace-caddy.yaml
