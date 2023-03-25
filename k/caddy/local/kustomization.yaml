@@ -13,6 +13,15 @@ helmCharts:
       enabled: true
       port: 443
     listenPort: 80
+    volumeMounts:
+    - mountPath: /certs
+      name: certs
+      readonly: true
+    volumes:
+    - name: certs
+      secret:
+        optional: false
+        secretName: defn-run-wildcard
   version: 0.2.4
 namespace: caddy
 patches:

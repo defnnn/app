@@ -28,6 +28,15 @@ helmCharts:
           log {
           	output stdout
           }
+      volumes:
+        - name: certs
+          secret:
+            secretName: defn-run-wildcard
+            optional: false
+      volumeMounts:
+        - name: certs
+          mountPath: /certs
+          readonly: true
     name: caddy
     version: 0.2.4
     repo: https://charts.alekc.dev

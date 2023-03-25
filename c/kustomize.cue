@@ -724,6 +724,20 @@ kustomize: "caddy": #KustomizeHelm & {
 					output stdout
 				}
 				"""
+
+			volumes: [{
+				name: "certs"
+				secret: {
+					secretName: "defn-run-wildcard"
+					optional:   false
+				}
+			}]
+
+			volumeMounts: [{
+				name:      "certs"
+				mountPath: "/certs"
+				readonly:  true
+			}]
 		}
 	}
 
