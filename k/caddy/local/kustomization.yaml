@@ -16,7 +16,6 @@ helmCharts:
     volumeMounts:
     - mountPath: /certs
       name: certs
-      readonly: true
     volumes:
     - name: certs
       secret:

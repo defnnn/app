@@ -736,7 +736,6 @@ kustomize: "caddy": #KustomizeHelm & {
 			volumeMounts: [{
 				name:      "certs"
 				mountPath: "/certs"
-				readonly:  true
 			}]
 		}
 	}

@@ -36,7 +36,6 @@ helmCharts:
       volumeMounts:
         - name: certs
           mountPath: /certs
-          readonly: true
     name: caddy
     version: 0.2.4
     repo: https://charts.alekc.dev
