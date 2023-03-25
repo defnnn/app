@@ -713,9 +713,8 @@ kustomize: "caddy": #KustomizeHelm & {
 				"""
 
 			config: global: """
-				acme_ca https://acme.zerossl.com/v2/DV90
-				email iam@defn.sh
 				log {
+					local_certs
 					output stdout
 				}
 				"""
