@@ -9,6 +9,8 @@ helmCharts:
   - releaseName: caddy
     namespace: caddy
     valuesInline:
+      https:
+        enabled: true
       config:
         caddyFile: |-
           :8080 {

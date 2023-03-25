@@ -12,6 +12,8 @@ helmCharts:
            respond "hello"
           }
         }
+    https:
+      enabled: true
   version: 0.2.4
 namespace: caddy
 patches:
