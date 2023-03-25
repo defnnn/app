@@ -7,7 +7,10 @@ resources:
 helmCharts:
   - releaseName: cert-manager
     namespace: cert-manager
-    valuesInline: {}
+    valuesInline:
+      ingressShim:
+        defaultIssuerName: zerossl-production
+        defaultIssuerKind: ClusterIssuer
     name: cert-manager
     version: 1.11.0
     repo: https://charts.jetstack.io

@@ -670,6 +670,12 @@ kustomize: "cert-manager": #KustomizeHelm & {
 		namespace: "cert-manager"
 		version:   "1.11.0"
 		repo:      "https://charts.jetstack.io"
+		values: {
+			ingressShim: {
+				defaultIssuerName: "zerossl-production"
+				defaultIssuerKind: "ClusterIssuer"
+			}
+		}
 	}
 
 	resource: "namespace-cert-manager": core.#Namespace & {
