@@ -23,6 +23,12 @@ helmCharts:
           		}
           	}
           }
+        global: |-
+          auto_https: "disable_certs"
+          acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+          log {
+          	output stdout
+          }
     name: caddy
     version: 0.2.4
     repo: https://charts.alekc.dev
