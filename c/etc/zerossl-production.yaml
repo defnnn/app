@@ -14,8 +14,8 @@ spec:
     externalAccountBinding:
       keyID: TODO
       keySecretRef:
-        name: zerossl-eab
-        key: eab
+        name: dev
+        key: zerossl-eab-hmac
 
     solvers:
     - selector: {}
@@ -23,5 +23,5 @@ spec:
         cloudflare:
           email: TODO
           apiTokenSecretRef:
-            name: cloudflare-api-token
-            key: api-token
+            name: dev
+            key: cloudflare-api-token
