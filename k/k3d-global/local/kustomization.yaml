@@ -12,7 +12,7 @@ helmCharts:
           namespace: argocd
           name: k3d-global-argo-cd
           annotations:
-            argocd.argoproj.io/sync-wave: "0"
+            argocd.argoproj.io/sync-wave: "1000"
         spec:
           project: default
           destination:
