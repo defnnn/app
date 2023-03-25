@@ -21,6 +21,7 @@ helmCharts:
     https:
       enabled: true
       port: 443
+    litenPort: 80
   version: 0.2.4
 namespace: caddy
 patches:

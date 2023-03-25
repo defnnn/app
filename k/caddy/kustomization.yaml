@@ -9,6 +9,7 @@ helmCharts:
   - releaseName: caddy
     namespace: caddy
     valuesInline:
+      litenPort: 80
       https:
         enabled: true
         port: 443

@@ -696,6 +696,7 @@ kustomize: "caddy": #KustomizeHelm & {
 		version:   "0.2.4"
 		repo:      "https://charts.alekc.dev"
 		values: {
+			litenPort: 80
 			https: {
 				enabled: true
 				port:    443
