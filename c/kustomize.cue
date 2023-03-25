@@ -201,13 +201,14 @@ kustomize: "argo-workflows": #KustomizeHelm & {
 	}
 }
 
+// https://artifacthub.io/packages/helm/kyverno/kyverno
 kustomize: "kyverno": #KustomizeHelm & {
 	namespace: "kyverno"
 
 	helm: {
 		release: "kyverno"
 		name:    "kyverno"
-		version: "2.7.1"
+		version: "2.7.2"
 		repo:    "https://kyverno.github.io/kyverno"
 		values: {
 			replicaCount: 1
