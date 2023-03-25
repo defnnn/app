@@ -55,6 +55,7 @@ env: (#Transform & {
 				"pod-identity-webhook":      10
 				"external-secrets-operator": 10
 				"k3d-global-secrets-store":  20
+				"caddy":                     30
 				"tfo":                       30
 				"knative":                   30
 				"kourier":                   30

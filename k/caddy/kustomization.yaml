@@ -1,6 +1,7 @@
 #ManagedBy: cue
 
-patches: []
+patches:
+  - path: patch-service-tailscale.yaml
 resources:
   - resource-namespace-caddy.yaml
 helmCharts:

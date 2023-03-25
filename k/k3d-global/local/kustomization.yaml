@@ -25,6 +25,26 @@ helmCharts:
             automated:
               prune: true
               selfHeal: true
+      caddy: |
+        apiVersion: argoproj.io/v1alpha1
+        kind: Application
+        metadata:
+          namespace: argocd
+          name: k3d-global-caddy
+          annotations:
+            argocd.argoproj.io/sync-wave: "30"
+        spec:
+          project: default
+          destination:
+            name: k3d-global
+          source:
+            repoURL: https://github.com/defn/app
+            targetRevision: master
+            path: k/caddy
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
       cert-manager: |
         apiVersion: argoproj.io/v1alpha1
         kind: Application

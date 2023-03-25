@@ -702,6 +702,20 @@ kustomize: "caddy": #KustomizeHelm & {
 			name: "caddy"
 		}
 	}
+
+	psm: "service-tailscale": {
+		apiVersion: "v1"
+		kind:       "Service"
+
+		metadata: {
+			name: "caddy"
+		}
+
+		spec: {
+			type:              "LoadBalancer"
+			loadBalancerClass: "tailscale"
+		}
+	}
 }
 
 // https://github.com/isaaguilar/terraform-operator/releases
