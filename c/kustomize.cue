@@ -698,7 +698,7 @@ kustomize: "caddy": #KustomizeHelm & {
 		values: {
 			https: enabled: true
 			config: caddyFile: """
-				:8080 {
+				:443 {
 				  handle / {
 				   respond "hello"
 				  }

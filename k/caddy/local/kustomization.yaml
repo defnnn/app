@@ -7,7 +7,7 @@ helmCharts:
   valuesInline:
     config:
       caddyFile: |-
-        :8080 {
+        :443 {
           handle / {
            respond "hello"
           }
