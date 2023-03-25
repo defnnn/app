@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: zerossl-eab
+  namespace: cert-manager
+data:
+  eab: TODO

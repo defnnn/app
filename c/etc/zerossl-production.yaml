@@ -1,0 +1,27 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: zerossl-production
+  namespace: cert-manager
+spec:
+  acme:
+    server: https://acme.zerossl.com/v2/DV90
+    email: TODO
+
+    privateKeySecretRef:
+      name: zerossl-production
+
+    externalAccountBinding:
+      keyID: TODO
+      keySecretRef:
+        name: zerossl-eab
+        key: eab
+
+    solvers:
+    - selector: {}
+      dns01:
+        cloudflare:
+          email: TODO
+          apiTokenSecretRef:
+            name: cloudflare-api-token
+            key: api-token
