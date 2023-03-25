@@ -8,7 +8,9 @@ resources:
 helmCharts:
   - releaseName: caddy
     namespace: caddy
-    valuesInline: {}
+    valuesInline:
+      config:
+        caddyFile: ""
     name: caddy
     version: 0.2.4
     repo: https://charts.alekc.dev

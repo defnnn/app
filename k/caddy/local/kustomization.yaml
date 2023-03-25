@@ -4,6 +4,9 @@ helmCharts:
   namespace: caddy
   releaseName: caddy
   repo: https://charts.alekc.dev
+  valuesInline:
+    config:
+      caddyFile: ""
   version: 0.2.4
 namespace: caddy
 patches:

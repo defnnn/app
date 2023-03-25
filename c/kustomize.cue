@@ -695,6 +695,9 @@ kustomize: "caddy": #KustomizeHelm & {
 		namespace: "caddy"
 		version:   "0.2.4"
 		repo:      "https://charts.alekc.dev"
+		values: {
+			config: caddyFile: ""
+		}
 	}
 
 	resource: "namespace-caddy": core.#Namespace & {
