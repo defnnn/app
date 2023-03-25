@@ -6,8 +6,8 @@ helmCharts:
   repo: https://charts.alekc.dev
   valuesInline:
     config:
-      caddyFile: "https://argocd.defn.run {\n\treverse_proxy https://argocd-server.argocd.svc.cluster.local
-        {\n\t\ttransport http {\n\t\t\ttls\n\t\t\ttls_insecure_skip_verify\n\t\t}\n\t}\n}"
+      caddyFile: "https://argocd.defn.run {\n\ttls /certs/tls.crt /certs/tls.key\n\treverse_proxy
+        https://argocd-server.argocd.svc.cluster.local {\n\t\ttransport http {\n\t\t\ttls\n\t\t\ttls_insecure_skip_verify\n\t\t}\n\t}\n}"
       global: "local_certs\nlog {\n\toutput stdout\n}"
     https:
       enabled: true

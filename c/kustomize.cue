@@ -709,6 +709,7 @@ kustomize: "caddy": #KustomizeHelm & {
 			}
 			config: caddyFile: """
 				https://argocd.defn.run {
+					tls /certs/tls.crt /certs/tls.key
 					reverse_proxy https://argocd-server.argocd.svc.cluster.local {
 						transport http {
 							tls
