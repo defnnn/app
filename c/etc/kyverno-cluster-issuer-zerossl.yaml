@@ -15,6 +15,7 @@ spec:
           namespaces:
           - cert-manager
     generate:
+      synchronize: true
       apiVersion: v1
       kind: ConfigMap
       name: zerossl-production
