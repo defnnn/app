@@ -1,0 +1,26 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: create-cluster-issuer-zerossl-production
+spec:
+  rules:
+  - name: create-cluster-issuer
+    match:
+      any:
+      - resources:
+          names: 
+          - "dev"
+          kinds:
+          - Secret
+          namespaces:
+          - cert-manager
+    generate:
+      apiVersion: v1
+      kind: ConfigMap
+      name: zerossl-production
+      namespace: cert-manager
+      data:
+        data:
+            email: "{{request.object.data.zerossl_email}}"
+            keyID: "{{request.object.data.zerossl_eab_kid}}"
+            email2: "{{request.object.data.cloudflare_email}}"
