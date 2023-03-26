@@ -56,11 +56,11 @@ env: (#Transform & {
 				"external-secrets-operator": [10]
 				"kyverno": [10, "ServerSideApply=true"]
 				"k3d-global-secrets-store": [20]
-				"caddy": [30]
 				"tfo": [30]
 				"knative": [30]
 				"kourier": [30]
 				"misc": [40]
+				"caddy": [1000]
 				"argo-cd": [1000]
 			}
 		}

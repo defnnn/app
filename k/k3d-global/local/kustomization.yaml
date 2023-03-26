@@ -33,7 +33,7 @@ helmCharts:
           namespace: argocd
           name: k3d-global-caddy
           annotations:
-            argocd.argoproj.io/sync-wave: "30"
+            argocd.argoproj.io/sync-wave: "1000"
         spec:
           project: default
           destination:
