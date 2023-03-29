@@ -17,12 +17,29 @@ spec:
           - cert-manager
     generate:
       synchronize: true
-      apiVersion: v1
-      kind: ConfigMap
+      apiVersion: cert-manager.io/v1
+      kind: ClusterIssuer
       name: zerossl-production
       namespace: cert-manager
       data:
-        data:
-            email: "{{request.object.data.zerossl_email}}"
+        acme:
+          server: https://acme.zerossl.com/v2/DV90
+          email: "{{request.object.data.zerossl_email}}"
+
+          privateKeySecretRef:
+            name: zerossl-production
+
+          externalAccountBinding:
             keyID: "{{request.object.data.zerossl_eab_kid}}"
-            email2: "{{request.object.data.cloudflare_email}}"
+            keySecretRef:
+              name: dev
+              key: zerossl-eab-hmac
+
+          solvers:
+          - selector: {}
+            dns01:
+              cloudflare:
+                email: "{{request.object.data.cloudflare_email}}"
+                apiTokenSecretRef:
+                  name: dev
+                  key: cloudflare-api-token
