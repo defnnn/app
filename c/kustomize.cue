@@ -86,17 +86,6 @@ kustomize: "argo-cd": #Kustomize & {
 		url: "https://raw.githubusercontent.com/argoproj/argo-cd/v2.6.7/manifests/install.yaml"
 	}
 
-	psm: "clusterrole-kyverno-generate": {
-		apiVersion: "rbac.authorization.k8s.io/v1"
-		kind:       "ClusterRole"
-		metadata: name: "kyverno:generate"
-		rules: [{
-			apiGroups: ["cert-manager.io/v1"]
-			resources: ["clusterissuers"]
-			verbs: [ "create", "update", "patch", "delete"]
-		}]
-	}
-
 	psm: "configmap-argocd-cm": core.#ConfigMap & {
 		apiVersion: "v1"
 		kind:       "ConfigMap"
@@ -232,6 +221,17 @@ kustomize: "kyverno": #KustomizeHelm & {
 		metadata: {
 			name: "kyverno"
 		}
+	}
+
+	psm: "clusterrole-kyverno-generate": {
+		apiVersion: "rbac.authorization.k8s.io/v1"
+		kind:       "ClusterRole"
+		metadata: name: "kyverno:generate"
+		rules: [{
+			apiGroups: ["cert-manager.io/v1"]
+			resources: ["clusterissuers"]
+			verbs: [ "create", "update", "patch", "delete"]
+		}]
 	}
 }
 
