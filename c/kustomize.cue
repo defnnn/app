@@ -83,7 +83,7 @@ kustomize: "argo-cd": #Kustomize & {
 	}
 
 	resource: "argo-cd": {
-		url: "https://raw.githubusercontent.com/argoproj/argo-cd/v2.6.6/manifests/install.yaml"
+		url: "https://raw.githubusercontent.com/argoproj/argo-cd/v2.6.7/manifests/install.yaml"
 	}
 
 	psm: "configmap-argocd-cm": core.#ConfigMap & {
