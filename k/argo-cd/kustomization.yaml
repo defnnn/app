@@ -1,6 +1,7 @@
 #ManagedBy: cue
 
 patches:
+  - path: patch-clusterrole-kyverno-generate.yaml
   - path: patch-configmap-argocd-cm.yaml
 namespace: argocd
 resources:
