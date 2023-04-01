@@ -247,7 +247,7 @@ kustomize: "kyverno": #KustomizeHelm & {
 			"app.kubernetes.io/name":     "kyverno"
 		}
 		rules: [{
-			apiGroups: ["cert-manager.io"]
+			apiGroups: [""]
 			resources: ["secrets"]
 			verbs: [ "get"]
 		}]
