@@ -5,6 +5,7 @@ namespace: kyverno
 resources:
   - resource-namespace-kyverno.yaml
   - resource-clusterrole-create-clusterissuers.yaml
+  - resource-clusterrole-get-secrets.yaml
 helmCharts:
   - releaseName: kyverno
     namespace: kyverno

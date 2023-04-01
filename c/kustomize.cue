@@ -230,12 +230,26 @@ kustomize: "kyverno": #KustomizeHelm & {
 		metadata: labels: {
 			"app.kubernetes.io/instance": "kyverno"
 			"app.kubernetes.io/name":     "kyverno"
-			"app":                        "kyverno"
 		}
 		rules: [{
 			apiGroups: ["cert-manager.io"]
 			resources: ["clusterissuers"]
 			verbs: [ "create", "update", "patch", "delete"]
+		}]
+	}
+
+	resource: "clusterrole-get-secrets": {
+		apiVersion: "rbac.authorization.k8s.io/v1"
+		kind:       "ClusterRole"
+		metadata: name: "kyverno:get-secrets"
+		metadata: labels: {
+			"app.kubernetes.io/instance": "kyverno"
+			"app.kubernetes.io/name":     "kyverno"
+		}
+		rules: [{
+			apiGroups: ["cert-manager.io"]
+			resources: ["secrets"]
+			verbs: [ "get"]
 		}]
 	}
 }

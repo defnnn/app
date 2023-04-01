@@ -5,41 +5,42 @@ metadata:
 spec:
   generateExistingOnPolicyUpdate: true
   rules:
-  - name: create-cluster-issuer
-    match:
-      any:
-      - resources:
-          names: 
-          - "dev"
-          kinds:
-          - Secret
-          namespaces:
-          - cert-manager
-    generate:
-      synchronize: true
-      apiVersion: cert-manager.io/v1
-      kind: ClusterIssuer
-      name: zerossl-production
-      namespace: cert-manager
-      data:
-        acme:
-          server: https://acme.zerossl.com/v2/DV90
-          email: "{{request.object.data.zerossl_email}}"
+    - name: create-cluster-issuer
+      match:
+        any:
+          - resources:
+              names:
+                - dev
+              kinds:
+                - Secret
+              namespaces:
+                - cert-manager
+      generate:
+        synchronize: true
+        apiVersion: cert-manager.io/v1
+        kind: ClusterIssuer
+        name: zerossl-production
+        namespace: cert-manager
+        data:
+          spec:
+            acme:
+              server: https://acme.zerossl.com/v2/DV90
+              email: "{{request.object.data.zerossl_email}}"
 
-          privateKeySecretRef:
-            name: zerossl-production
+              privateKeySecretRef:
+                name: zerossl-production
 
-          externalAccountBinding:
-            keyID: "{{request.object.data.zerossl_eab_kid}}"
-            keySecretRef:
-              name: dev
-              key: zerossl-eab-hmac
-
-          solvers:
-          - selector: {}
-            dns01:
-              cloudflare:
-                email: "{{request.object.data.cloudflare_email}}"
-                apiTokenSecretRef:
+              externalAccountBinding:
+                keyID: "{{request.object.data.zerossl_eab_kid}}"
+                keySecretRef:
                   name: dev
-                  key: cloudflare-api-token
+                  key: zerossl-eab-hmac
+
+              solvers:
+                - selector: {}
+                  dns01:
+                    cloudflare:
+                      email: "{{request.object.data.cloudflare_email}}"
+                      apiTokenSecretRef:
+                        name: dev
+                        key: cloudflare-api-token
