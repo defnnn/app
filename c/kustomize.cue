@@ -233,7 +233,7 @@ kustomize: "kyverno": #KustomizeHelm & {
 			"app":                        "kyverno"
 		}
 		rules: [{
-			apiGroups: ["cert-manager.io/v1"]
+			apiGroups: ["cert-manager.io"]
 			resources: ["clusterissuers"]
 			verbs: [ "create", "update", "patch", "delete"]
 		}]
