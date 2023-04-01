@@ -1,6 +1,6 @@
 {
   inputs = {
-    pkg.url = github:defn/pkg/0.0.170;
+    pkg.url = github:defn/pkg/0.0.172;
     kustomize.url = github:defn/pkg/kustomize-5.0.1-0?dir=kustomize;
     helm.url = github:defn/pkg/helm-3.11.2-3?dir=helm;
   };
