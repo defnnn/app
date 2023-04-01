@@ -20,7 +20,6 @@ spec:
         apiVersion: cert-manager.io/v1
         kind: ClusterIssuer
         name: zerossl-production
-        namespace: cert-manager
         data:
           spec:
             acme:

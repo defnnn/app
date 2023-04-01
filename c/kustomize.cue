@@ -237,28 +237,6 @@ kustomize: "kyverno": #KustomizeHelm & {
 			verbs: [ "create", "update", "patch", "delete"]
 		}]
 	}
-
-	resource: "clusterrole-get-secrets": {
-		apiVersion: "rbac.authorization.k8s.io/v1"
-		kind:       "ClusterRole"
-		metadata: name: "kyverno:get-secrets"
-		metadata: labels: {
-			"app.kubernetes.io/instance": "kyverno"
-			"app.kubernetes.io/name":     "kyverno"
-		}
-		rules: [{
-			apiGroups: [""]
-			resources: ["secrets"]
-			verbs: [
-				"create",
-				"delete",
-				"get",
-				"list",
-				"patch",
-				"update",
-				"watch"]
-		}]
-	}
 }
 
 kustomize: "keda": #KustomizeHelm & {
