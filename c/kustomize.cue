@@ -249,7 +249,14 @@ kustomize: "kyverno": #KustomizeHelm & {
 		rules: [{
 			apiGroups: [""]
 			resources: ["secrets"]
-			verbs: [ "get"]
+			verbs: [
+				"create",
+				"delete",
+				"get",
+				"list",
+				"patch",
+				"update",
+				"watch"]
 		}]
 	}
 }
