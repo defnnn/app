@@ -1,10 +1,10 @@
 #ManagedBy: cue
 
-patches:
-  - path: patch-clusterrole-kyverno-generate.yaml
+patches: []
 namespace: kyverno
 resources:
   - resource-namespace-kyverno.yaml
+  - resource-clusterrole-create-clusterissuers.yaml
 helmCharts:
   - releaseName: kyverno
     namespace: kyverno

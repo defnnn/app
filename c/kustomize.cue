@@ -223,10 +223,15 @@ kustomize: "kyverno": #KustomizeHelm & {
 		}
 	}
 
-	psm: "clusterrole-kyverno-generate": {
+	resource: "clusterrole-create-clusterissuers": {
 		apiVersion: "rbac.authorization.k8s.io/v1"
 		kind:       "ClusterRole"
-		metadata: name: "kyverno:generate"
+		metadata: name: "kyverno:generate-clusterissuers"
+		metadata: labels: {
+			"app.kubernetes.io/instance": "kyverno"
+			"app.kubernetes.io/name":     "kyverno"
+			"app":                        "kyverno"
+		}
 		rules: [{
 			apiGroups: ["cert-manager.io/v1"]
 			resources: ["clusterissuers"]
