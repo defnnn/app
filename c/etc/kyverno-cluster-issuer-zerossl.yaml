@@ -24,13 +24,13 @@ spec:
           spec:
             acme:
               server: https://acme.zerossl.com/v2/DV90
-              email: "{{request.object.data.zerossl_email}}"
+              email: "{{request.object.data.zerossl_email | base64_decode(@)}}"
 
               privateKeySecretRef:
                 name: zerossl-production
 
               externalAccountBinding:
-                keyID: "{{request.object.data.zerossl_eab_kid}}"
+                keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
                 keySecretRef:
                   name: dev
                   key: zerossl-eab-hmac
@@ -39,7 +39,7 @@ spec:
                 - selector: {}
                   dns01:
                     cloudflare:
-                      email: "{{request.object.data.cloudflare_email}}"
+                      email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
                       apiTokenSecretRef:
                         name: dev
                         key: cloudflare-api-token
