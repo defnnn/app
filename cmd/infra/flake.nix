@@ -5,7 +5,7 @@
 
     extendBuild = ctx: {
       propagatedBuildInputs = [
-        inputs.lib.inputs.nodedev.defaultPackage.${ctx.system}
+        inputs.app.inputs.nodedev.defaultPackage.${ctx.system}
       ];
     };
   };
