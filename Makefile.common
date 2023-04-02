@@ -1,2 +1,2 @@
 generate: # Generate cdktf bindings
-	cdktf get --output gen
+	cdktf get
