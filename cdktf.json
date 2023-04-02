@@ -4,27 +4,43 @@
   "terraformModules": [
     {
       "name": "terraform_aws_dynamic_subnets",
-      "source": "./tf/terraform-aws-dynamic-subnets"
+      "source": "./m/terraform-aws-dynamic-subnets"
     },
     {
       "name": "terraform_aws_eks_cluster",
-      "source": "./tf/terraform-aws-eks-cluster"
+      "source": "./m/terraform-aws-eks-cluster"
     },
     {
       "name": "terraform_aws_eks_iam_role",
-      "source": "./tf/terraform-aws-eks-iam-role"
+      "source": "./m/terraform-aws-eks-iam-role"
     },
     {
       "name": "terraform_aws_eks_node_group",
-      "source": "./tf/terraform-aws-eks-node-group"
+      "source": "./m/terraform-aws-eks-node-group"
     },
     {
       "name": "terraform_aws_vpc",
-      "source": "./tf/terraform-aws-vpc"
+      "source": "./m/terraform-aws-vpc"
     },
     {
       "name": "terraform_null_label",
-      "source": "./tf/terraform-null-label"
+      "source": "./m/terraform-null-label"
+    },
+    {
+      "name": "chicken",
+      "source": "./m/chicken"
+    },
+    {
+      "name": "devpod",
+      "source": "./m/devpod"
+    },
+    {
+      "name": "egg",
+      "source": "./m/egg"
+    },
+    {
+      "name": "fried_chicken",
+      "source": "./m/fried-chicken"
     }
   ],
   "projectId": "dfe62831-4398-44b7-b24a-01a4b95461a2",
