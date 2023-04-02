@@ -9,19 +9,11 @@
       "annotations": [],
       "dependencies": []
     },
-    "gyre": {
-      "name": "gyre",
-      "constructPath": "gyre",
-      "workingDirectory": "stacks/gyre",
-      "synthesizedStackPath": "stacks/gyre/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "helix": {
-      "name": "helix",
-      "constructPath": "helix",
-      "workingDirectory": "stacks/helix",
-      "synthesizedStackPath": "stacks/helix/cdk.tf.json",
+    "coil": {
+      "name": "coil",
+      "constructPath": "coil",
+      "workingDirectory": "stacks/coil",
+      "synthesizedStackPath": "stacks/coil/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -33,19 +25,19 @@
       "annotations": [],
       "dependencies": []
     },
-    "imma": {
-      "name": "imma",
-      "constructPath": "imma",
-      "workingDirectory": "stacks/imma",
-      "synthesizedStackPath": "stacks/imma/cdk.tf.json",
+    "circus": {
+      "name": "circus",
+      "constructPath": "circus",
+      "workingDirectory": "stacks/circus",
+      "synthesizedStackPath": "stacks/circus/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
-    "jianghu": {
-      "name": "jianghu",
-      "constructPath": "jianghu",
-      "workingDirectory": "stacks/jianghu",
-      "synthesizedStackPath": "stacks/jianghu/cdk.tf.json",
+    "gyre": {
+      "name": "gyre",
+      "constructPath": "gyre",
+      "workingDirectory": "stacks/gyre",
+      "synthesizedStackPath": "stacks/gyre/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -54,30 +46,6 @@
       "constructPath": "curl",
       "workingDirectory": "stacks/curl",
       "synthesizedStackPath": "stacks/curl/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "coil": {
-      "name": "coil",
-      "constructPath": "coil",
-      "workingDirectory": "stacks/coil",
-      "synthesizedStackPath": "stacks/coil/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "spiral": {
-      "name": "spiral",
-      "constructPath": "spiral",
-      "workingDirectory": "stacks/spiral",
-      "synthesizedStackPath": "stacks/spiral/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "circus": {
-      "name": "circus",
-      "constructPath": "circus",
-      "workingDirectory": "stacks/circus",
-      "synthesizedStackPath": "stacks/circus/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -97,6 +65,14 @@
       "annotations": [],
       "dependencies": []
     },
+    "imma": {
+      "name": "imma",
+      "constructPath": "imma",
+      "workingDirectory": "stacks/imma",
+      "synthesizedStackPath": "stacks/imma/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
     "immanent": {
       "name": "immanent",
       "constructPath": "immanent",
@@ -105,11 +81,35 @@
       "annotations": [],
       "dependencies": []
     },
+    "jianghu": {
+      "name": "jianghu",
+      "constructPath": "jianghu",
+      "workingDirectory": "stacks/jianghu",
+      "synthesizedStackPath": "stacks/jianghu/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
     "fogg": {
       "name": "fogg",
       "constructPath": "fogg",
       "workingDirectory": "stacks/fogg",
       "synthesizedStackPath": "stacks/fogg/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
+    "helix": {
+      "name": "helix",
+      "constructPath": "helix",
+      "workingDirectory": "stacks/helix",
+      "synthesizedStackPath": "stacks/helix/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
+    "spiral": {
+      "name": "spiral",
+      "constructPath": "spiral",
+      "workingDirectory": "stacks/spiral",
+      "synthesizedStackPath": "stacks/spiral/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     }
