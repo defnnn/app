@@ -1,0 +1,12 @@
+# tilt up --legacy --port 0
+analytics_settings(False)
+
+local_resource(
+    "build",
+    "time go install && touch main.cue",
+    deps=["infra.go", "go.mod", "go.sum"])
+
+local_resource(
+    "synth",
+    "time (echo && infra) && echo && (git diff cdktf.out || echo)",
+    deps=["main.cue"])
