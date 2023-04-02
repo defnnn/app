@@ -725,7 +725,7 @@ metadata:
     app.kubernetes.io/instance: karpenter
     app.kubernetes.io/version: "0.27.0"
     app.kubernetes.io/managed-by: Helm
-data:  
+data:
     "aws.clusterEndpoint": ""
     "aws.clusterName": ""
     "aws.defaultInstanceProfile": ""
