@@ -1,6 +1,6 @@
 {
-  inputs.lib.url = github:defn/lib/0.0.74;
-  outputs = inputs: inputs.lib.goMain rec {
+  inputs.app.url = github:defn/app/0.0.20;
+  outputs = inputs: inputs.app.goMain rec {
     src = ./.;
 
     extendBuild = ctx: {
