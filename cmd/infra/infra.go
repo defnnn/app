@@ -27,8 +27,8 @@ import (
 	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/workspace"
 )
 
-//go:embed schema/aws.cue
-var aws_schema_cue string
+//go:embed schema/infra.cue
+var infra_schema string
 
 type TerraformCloud struct {
 	Organization string `json:"organization"`
@@ -217,7 +217,7 @@ func AwsOrganizationStack(scope constructs.Construct, org *AwsOrganization) cdkt
 func LoadUserAwsProps() AwsProps {
 	ctx := cuecontext.New()
 
-	user_schema := ctx.CompileString(aws_schema_cue)
+	user_schema := ctx.CompileString(infra_schema)
 
 	user_input_instance := load.Instances([]string{"."}, nil)[0]
 	user_input := ctx.BuildInstance(user_input_instance)
