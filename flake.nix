@@ -93,10 +93,10 @@
               devInputs = ctx.commands ++ [
                 goEnv
                 ctx.pkgs.gomod2nix
+                (goShell ctx)
                 inputs.godev.defaultPackage.${ctx.system}
                 inputs.nodedev.defaultPackage.${ctx.system}
                 inputs.terraform.defaultPackage.${ctx.system}
-                (goShell ctx)
               ];
             };
 
