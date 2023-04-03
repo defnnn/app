@@ -2,42 +2,48 @@
   "nodes": {
     "app": {
       "inputs": {
+        "godev": "godev",
         "helm": "helm",
         "kustomize": "kustomize",
-        "pkg": "pkg_3"
+        "nodedev": "nodedev",
+        "pkg": "pkg_9",
+        "terraform": "terraform"
       },
       "locked": {
-        "lastModified": 1680319317,
-        "narHash": "sha256-x8geYvhZPFnQLWGcv5Yu7kjlWMIuC4r/CXKCmzgdXYM=",
+        "lastModified": 1680483819,
+        "narHash": "sha256-fWd1Cc8WN87VtRsAV7YM2/WSw9ZRxsbCxUjpjHKd2tQ=",
         "owner": "defn",
         "repo": "app",
-        "rev": "9051a2ee7bbdeae245e1b03de10dc3c6174dee3b",
+        "rev": "d40fa68e8bab3dae013ed2ccc7aeb493447cef59",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.19",
+        "ref": "0.0.22",
         "repo": "app",
         "type": "github"
       }
     },
     "app_2": {
       "inputs": {
+        "godev": "godev_2",
         "helm": "helm_2",
         "kustomize": "kustomize_2",
-        "pkg": "pkg_6"
+        "nodedev": "nodedev_2",
+        "pkg": "pkg_19",
+        "terraform": "terraform_2"
       },
       "locked": {
-        "lastModified": 1680319317,
-        "narHash": "sha256-x8geYvhZPFnQLWGcv5Yu7kjlWMIuC4r/CXKCmzgdXYM=",
+        "lastModified": 1680483819,
+        "narHash": "sha256-fWd1Cc8WN87VtRsAV7YM2/WSw9ZRxsbCxUjpjHKd2tQ=",
         "owner": "defn",
         "repo": "app",
-        "rev": "9051a2ee7bbdeae245e1b03de10dc3c6174dee3b",
+        "rev": "d40fa68e8bab3dae013ed2ccc7aeb493447cef59",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.19",
+        "ref": "0.0.22",
         "repo": "app",
         "type": "github"
       }
@@ -48,17 +54,17 @@
       },
       "locked": {
         "dir": "k/argo-cd",
-        "lastModified": 1680319411,
-        "narHash": "sha256-UzZqvEoeoQBruS/2appBAL+tCjfk6NzNqXWUtnC3ows=",
+        "lastModified": 1680484553,
+        "narHash": "sha256-tjLROeO+le8JI0AKrY+TV5ohWFkaNxorDezNY+h+W3c=",
         "owner": "defn",
         "repo": "app",
-        "rev": "bb261a2ba05e69e08e14299fa9cbb14fff8b0be7",
+        "rev": "c7bf32ad1549915e9a33a25f1ceda2d14e15d05a",
         "type": "github"
       },
       "original": {
         "dir": "k/argo-cd",
         "owner": "defn",
-        "ref": "argo-cd-0.0.9",
+        "ref": "argo-cd-0.0.10",
         "repo": "app",
         "type": "github"
       }
@@ -69,18 +75,102 @@
       },
       "locked": {
         "dir": "k/argo-workflows",
-        "lastModified": 1680319486,
-        "narHash": "sha256-7KBSAu1FikqrwJm7erjuQnBIkYz6QQjVXXGLf89Z7J4=",
+        "lastModified": 1680484596,
+        "narHash": "sha256-n8jl73LZZb0yFKNNiWIgw8jG+1xnxoDIBpgh/djvRz0=",
         "owner": "defn",
         "repo": "app",
-        "rev": "9532ae0fbea15f9952cbd26c0ee94d4144a2c652",
+        "rev": "3f365f884a2b6451f27cb79aabf69c1e745ebfb5",
         "type": "github"
       },
       "original": {
         "dir": "k/argo-workflows",
         "owner": "defn",
-        "ref": "argo-workflows-0.0.8",
+        "ref": "argo-workflows-0.0.9",
         "repo": "app",
+        "type": "github"
+      }
+    },
+    "buf": {
+      "inputs": {
+        "pkg": "pkg"
+      },
+      "locked": {
+        "dir": "buf",
+        "lastModified": 1680157491,
+        "narHash": "sha256-3VKf6BCDlHtJ4XstoU4nZ1FSwFfSb9PsVmkyNfeVuc4=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "95c22238d3d03d53d46c7fab0c6cd4035f5dc7d8",
+        "type": "github"
+      },
+      "original": {
+        "dir": "buf",
+        "owner": "defn",
+        "ref": "buf-1.16.0-0",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "buf_2": {
+      "inputs": {
+        "pkg": "pkg_11"
+      },
+      "locked": {
+        "dir": "buf",
+        "lastModified": 1680157491,
+        "narHash": "sha256-3VKf6BCDlHtJ4XstoU4nZ1FSwFfSb9PsVmkyNfeVuc4=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "95c22238d3d03d53d46c7fab0c6cd4035f5dc7d8",
+        "type": "github"
+      },
+      "original": {
+        "dir": "buf",
+        "owner": "defn",
+        "ref": "buf-1.16.0-0",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "cosign": {
+      "inputs": {
+        "pkg": "pkg_2"
+      },
+      "locked": {
+        "dir": "cosign",
+        "lastModified": 1679174151,
+        "narHash": "sha256-mZlw19p8qZ4/WiZrrx/KsKOTW+5E1aAHJWWA6a82Vhk=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "5a7ecc41362ac766d91379ca547fa419a57f351c",
+        "type": "github"
+      },
+      "original": {
+        "dir": "cosign",
+        "owner": "defn",
+        "ref": "cosign-2.0.0-4",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "cosign_2": {
+      "inputs": {
+        "pkg": "pkg_12"
+      },
+      "locked": {
+        "dir": "cosign",
+        "lastModified": 1679174151,
+        "narHash": "sha256-mZlw19p8qZ4/WiZrrx/KsKOTW+5E1aAHJWWA6a82Vhk=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "5a7ecc41362ac766d91379ca547fa419a57f351c",
+        "type": "github"
+      },
+      "original": {
+        "dir": "cosign",
+        "owner": "defn",
+        "ref": "cosign-2.0.0-4",
+        "repo": "pkg",
         "type": "github"
       }
     },
@@ -90,6 +180,78 @@
         "gomod2nix": "gomod2nix",
         "nixpkgs": "nixpkgs",
         "wrapper": "wrapper"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_10": {
+      "inputs": {
+        "flake-utils": "flake-utils_10",
+        "gomod2nix": "gomod2nix_10",
+        "nixpkgs": "nixpkgs_10",
+        "wrapper": "wrapper_10"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_11": {
+      "inputs": {
+        "flake-utils": "flake-utils_11",
+        "gomod2nix": "gomod2nix_11",
+        "nixpkgs": "nixpkgs_11",
+        "wrapper": "wrapper_11"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_12": {
+      "inputs": {
+        "flake-utils": "flake-utils_12",
+        "gomod2nix": "gomod2nix_12",
+        "nixpkgs": "nixpkgs_12",
+        "wrapper": "wrapper_12"
       },
       "locked": {
         "dir": "dev",
@@ -108,12 +270,228 @@
         "type": "github"
       }
     },
+    "dev_13": {
+      "inputs": {
+        "flake-utils": "flake-utils_13",
+        "gomod2nix": "gomod2nix_13",
+        "nixpkgs": "nixpkgs_13",
+        "wrapper": "wrapper_13"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_14": {
+      "inputs": {
+        "flake-utils": "flake-utils_14",
+        "gomod2nix": "gomod2nix_14",
+        "nixpkgs": "nixpkgs_14",
+        "wrapper": "wrapper_14"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_15": {
+      "inputs": {
+        "flake-utils": "flake-utils_15",
+        "gomod2nix": "gomod2nix_15",
+        "nixpkgs": "nixpkgs_15",
+        "wrapper": "wrapper_15"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_16": {
+      "inputs": {
+        "flake-utils": "flake-utils_16",
+        "gomod2nix": "gomod2nix_16",
+        "nixpkgs": "nixpkgs_16",
+        "wrapper": "wrapper_16"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679173652,
+        "narHash": "sha256-6cGqXtAuRtRSJmNyQaZfKnx9ZMdR3yIqSKmSlc2H/jk=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f27bfe5eda1b54620e7597a867de1b476ce4f00c",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.33",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_17": {
+      "inputs": {
+        "flake-utils": "flake-utils_17",
+        "gomod2nix": "gomod2nix_17",
+        "nixpkgs": "nixpkgs_17",
+        "wrapper": "wrapper_17"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_18": {
+      "inputs": {
+        "flake-utils": "flake-utils_18",
+        "gomod2nix": "gomod2nix_18",
+        "nixpkgs": "nixpkgs_18",
+        "wrapper": "wrapper_18"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_19": {
+      "inputs": {
+        "flake-utils": "flake-utils_19",
+        "gomod2nix": "gomod2nix_19",
+        "nixpkgs": "nixpkgs_19",
+        "wrapper": "wrapper_19"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
     "dev_2": {
       "inputs": {
         "flake-utils": "flake-utils_2",
         "gomod2nix": "gomod2nix_2",
         "nixpkgs": "nixpkgs_2",
         "wrapper": "wrapper_2"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679173652,
+        "narHash": "sha256-6cGqXtAuRtRSJmNyQaZfKnx9ZMdR3yIqSKmSlc2H/jk=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f27bfe5eda1b54620e7597a867de1b476ce4f00c",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.33",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_20": {
+      "inputs": {
+        "flake-utils": "flake-utils_20",
+        "gomod2nix": "gomod2nix_20",
+        "nixpkgs": "nixpkgs_20",
+        "wrapper": "wrapper_20"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_21": {
+      "inputs": {
+        "flake-utils": "flake-utils_21",
+        "gomod2nix": "gomod2nix_21",
+        "nixpkgs": "nixpkgs_21",
+        "wrapper": "wrapper_21"
       },
       "locked": {
         "dir": "dev",
@@ -165,17 +543,17 @@
       },
       "locked": {
         "dir": "dev",
-        "lastModified": 1679173652,
-        "narHash": "sha256-6cGqXtAuRtRSJmNyQaZfKnx9ZMdR3yIqSKmSlc2H/jk=",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "f27bfe5eda1b54620e7597a867de1b476ce4f00c",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
         "type": "github"
       },
       "original": {
         "dir": "dev",
         "owner": "defn",
-        "ref": "dev-0.0.33",
+        "ref": "dev-0.0.34",
         "repo": "pkg",
         "type": "github"
       }
@@ -213,6 +591,30 @@
       },
       "locked": {
         "dir": "dev",
+        "lastModified": 1679173652,
+        "narHash": "sha256-6cGqXtAuRtRSJmNyQaZfKnx9ZMdR3yIqSKmSlc2H/jk=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f27bfe5eda1b54620e7597a867de1b476ce4f00c",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.33",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_7": {
+      "inputs": {
+        "flake-utils": "flake-utils_7",
+        "gomod2nix": "gomod2nix_7",
+        "nixpkgs": "nixpkgs_7",
+        "wrapper": "wrapper_7"
+      },
+      "locked": {
+        "dir": "dev",
         "lastModified": 1679174154,
         "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
         "owner": "defn",
@@ -228,12 +630,36 @@
         "type": "github"
       }
     },
-    "dev_7": {
+    "dev_8": {
       "inputs": {
-        "flake-utils": "flake-utils_7",
-        "gomod2nix": "gomod2nix_7",
-        "nixpkgs": "nixpkgs_7",
-        "wrapper": "wrapper_7"
+        "flake-utils": "flake-utils_8",
+        "gomod2nix": "gomod2nix_8",
+        "nixpkgs": "nixpkgs_8",
+        "wrapper": "wrapper_8"
+      },
+      "locked": {
+        "dir": "dev",
+        "lastModified": 1679174154,
+        "narHash": "sha256-KNADYM5u77+KqDQaaPmSonIZM7Tfp8XH5CRjIXACjr8=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "e629f9f696ad0de43fa1db6a2bc5186129861c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "dev",
+        "owner": "defn",
+        "ref": "dev-0.0.34",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "dev_9": {
+      "inputs": {
+        "flake-utils": "flake-utils_9",
+        "gomod2nix": "gomod2nix_9",
+        "nixpkgs": "nixpkgs_9",
+        "wrapper": "wrapper_9"
       },
       "locked": {
         "dir": "dev",
@@ -268,7 +694,199 @@
         "type": "github"
       }
     },
+    "flake-utils_10": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_11": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_12": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_13": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_14": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_15": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_16": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_17": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_18": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_19": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
     "flake-utils_2": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_20": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_21": {
       "locked": {
         "lastModified": 1652776076,
         "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
@@ -364,12 +982,97 @@
         "type": "github"
       }
     },
+    "flake-utils_8": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "flake-utils_9": {
+      "locked": {
+        "lastModified": 1652776076,
+        "narHash": "sha256-gzTw/v1vj4dOVbpBSJX4J0DwUR6LIyXo7/SuuTJp1kM=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "04c1b180862888302ddfb2e3ad9eaa63afc60cf8",
+        "type": "github"
+      }
+    },
+    "godev": {
+      "inputs": {
+        "buf": "buf",
+        "cosign": "cosign",
+        "goreleaser": "goreleaser",
+        "latest": "latest",
+        "operatorsdk": "operatorsdk",
+        "pkg": "pkg_5"
+      },
+      "locked": {
+        "dir": "godev",
+        "lastModified": 1680157801,
+        "narHash": "sha256-7XJLuufsr2EMYCPXxcjVvloxQCeYQ4ldDMUURqnsjOY=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "dc107b69987f283d598cd3b4ac82e66b4033bb9b",
+        "type": "github"
+      },
+      "original": {
+        "dir": "godev",
+        "owner": "defn",
+        "ref": "godev-0.0.19",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "godev_2": {
+      "inputs": {
+        "buf": "buf_2",
+        "cosign": "cosign_2",
+        "goreleaser": "goreleaser_2",
+        "latest": "latest_3",
+        "operatorsdk": "operatorsdk_2",
+        "pkg": "pkg_15"
+      },
+      "locked": {
+        "dir": "godev",
+        "lastModified": 1680157801,
+        "narHash": "sha256-7XJLuufsr2EMYCPXxcjVvloxQCeYQ4ldDMUURqnsjOY=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "dc107b69987f283d598cd3b4ac82e66b4033bb9b",
+        "type": "github"
+      },
+      "original": {
+        "dir": "godev",
+        "owner": "defn",
+        "ref": "godev-0.0.19",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
     "gomod2nix": {
       "inputs": {
         "nixpkgs": [
           "argo-cd",
           "app",
-          "helm",
+          "godev",
+          "buf",
           "pkg",
           "dev",
           "nixpkgs"
@@ -377,7 +1080,344 @@
         "utils": [
           "argo-cd",
           "app",
+          "godev",
+          "buf",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_10": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "terraform",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "terraform",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_11": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "buf",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "buf",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_12": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "cosign",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "cosign",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_13": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "goreleaser",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "goreleaser",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_14": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "operatorsdk",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "operatorsdk",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_15": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_16": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
           "helm",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "helm",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_17": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "kustomize",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "kustomize",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_18": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "nodedev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "nodedev",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_19": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
           "pkg",
           "dev",
           "flake-utils"
@@ -402,7 +1442,8 @@
         "nixpkgs": [
           "argo-cd",
           "app",
-          "kustomize",
+          "godev",
+          "cosign",
           "pkg",
           "dev",
           "nixpkgs"
@@ -410,7 +1451,68 @@
         "utils": [
           "argo-cd",
           "app",
-          "kustomize",
+          "godev",
+          "cosign",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_20": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "terraform",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-workflows",
+          "app",
+          "terraform",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_21": {
+      "inputs": {
+        "nixpkgs": [
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
           "pkg",
           "dev",
           "flake-utils"
@@ -435,6 +1537,208 @@
         "nixpkgs": [
           "argo-cd",
           "app",
+          "godev",
+          "goreleaser",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "godev",
+          "goreleaser",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_4": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "godev",
+          "operatorsdk",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "godev",
+          "operatorsdk",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_5": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "godev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "godev",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_6": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "helm",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "helm",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_7": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "kustomize",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "kustomize",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_8": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "nodedev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ],
+        "utils": [
+          "argo-cd",
+          "app",
+          "nodedev",
+          "pkg",
+          "dev",
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1671408935,
+        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_9": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
           "pkg",
           "dev",
           "nixpkgs"
@@ -461,133 +1765,51 @@
         "type": "github"
       }
     },
-    "gomod2nix_4": {
+    "goreleaser": {
       "inputs": {
-        "nixpkgs": [
-          "argo-workflows",
-          "app",
-          "helm",
-          "pkg",
-          "dev",
-          "nixpkgs"
-        ],
-        "utils": [
-          "argo-workflows",
-          "app",
-          "helm",
-          "pkg",
-          "dev",
-          "flake-utils"
-        ]
+        "pkg": "pkg_3"
       },
       "locked": {
-        "lastModified": 1671408935,
-        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "dir": "goreleaser",
+        "lastModified": 1679939163,
+        "narHash": "sha256-dxZpaEyVwvmBkEaxFTZzYfXUbdYp1lJfmeY7PJosMPQ=",
         "owner": "defn",
-        "repo": "gomod2nix",
-        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "repo": "pkg",
+        "rev": "2dc72ec135f36347975bd05d728f0bd2a4204631",
         "type": "github"
       },
       "original": {
+        "dir": "goreleaser",
         "owner": "defn",
-        "repo": "gomod2nix",
+        "ref": "goreleaser-1.16.2-1",
+        "repo": "pkg",
         "type": "github"
       }
     },
-    "gomod2nix_5": {
+    "goreleaser_2": {
       "inputs": {
-        "nixpkgs": [
-          "argo-workflows",
-          "app",
-          "kustomize",
-          "pkg",
-          "dev",
-          "nixpkgs"
-        ],
-        "utils": [
-          "argo-workflows",
-          "app",
-          "kustomize",
-          "pkg",
-          "dev",
-          "flake-utils"
-        ]
+        "pkg": "pkg_13"
       },
       "locked": {
-        "lastModified": 1671408935,
-        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
+        "dir": "goreleaser",
+        "lastModified": 1679939163,
+        "narHash": "sha256-dxZpaEyVwvmBkEaxFTZzYfXUbdYp1lJfmeY7PJosMPQ=",
         "owner": "defn",
-        "repo": "gomod2nix",
-        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
+        "repo": "pkg",
+        "rev": "2dc72ec135f36347975bd05d728f0bd2a4204631",
         "type": "github"
       },
       "original": {
+        "dir": "goreleaser",
         "owner": "defn",
-        "repo": "gomod2nix",
-        "type": "github"
-      }
-    },
-    "gomod2nix_6": {
-      "inputs": {
-        "nixpkgs": [
-          "argo-workflows",
-          "app",
-          "pkg",
-          "dev",
-          "nixpkgs"
-        ],
-        "utils": [
-          "argo-workflows",
-          "app",
-          "pkg",
-          "dev",
-          "flake-utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1671408935,
-        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
-        "owner": "defn",
-        "repo": "gomod2nix",
-        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "defn",
-        "repo": "gomod2nix",
-        "type": "github"
-      }
-    },
-    "gomod2nix_7": {
-      "inputs": {
-        "nixpkgs": [
-          "pkg",
-          "dev",
-          "nixpkgs"
-        ],
-        "utils": [
-          "pkg",
-          "dev",
-          "flake-utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1671408935,
-        "narHash": "sha256-bOf1aatxSy9g7PQKvT1cZ9rJ4AjAD5aYjUS9OMFfwqI=",
-        "owner": "defn",
-        "repo": "gomod2nix",
-        "rev": "8e5aeada820beff0c392c31ecdb9bef0f0dc97b8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "defn",
-        "repo": "gomod2nix",
+        "ref": "goreleaser-1.16.2-1",
+        "repo": "pkg",
         "type": "github"
       }
     },
     "helm": {
       "inputs": {
-        "pkg": "pkg"
+        "pkg": "pkg_6"
       },
       "locked": {
         "dir": "helm",
@@ -608,7 +1830,7 @@
     },
     "helm_2": {
       "inputs": {
-        "pkg": "pkg_4"
+        "pkg": "pkg_16"
       },
       "locked": {
         "dir": "helm",
@@ -629,7 +1851,7 @@
     },
     "kustomize": {
       "inputs": {
-        "pkg": "pkg_2"
+        "pkg": "pkg_7"
       },
       "locked": {
         "dir": "kustomize",
@@ -650,7 +1872,7 @@
     },
     "kustomize_2": {
       "inputs": {
-        "pkg": "pkg_5"
+        "pkg": "pkg_17"
       },
       "locked": {
         "dir": "kustomize",
@@ -666,6 +1888,70 @@
         "owner": "defn",
         "ref": "kustomize-5.0.1-0",
         "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "latest": {
+      "locked": {
+        "lastModified": 1678453159,
+        "narHash": "sha256-mU4mJeb1fRSvCDALe57vIKfhECvYroB4J4s0L2TR/iE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "64c27498901f104a11df646278c4e5c9f4d642db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "64c27498901f104a11df646278c4e5c9f4d642db",
+        "type": "github"
+      }
+    },
+    "latest_2": {
+      "locked": {
+        "lastModified": 1678571061,
+        "narHash": "sha256-0gI2FHID8XYD3504kLFRLH3C2GmMCzVMC50APV/kZp8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8ad5e8132c5dcf977e308e7bf5517cc6cc0bf7d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8ad5e8132c5dcf977e308e7bf5517cc6cc0bf7d8",
+        "type": "github"
+      }
+    },
+    "latest_3": {
+      "locked": {
+        "lastModified": 1678453159,
+        "narHash": "sha256-mU4mJeb1fRSvCDALe57vIKfhECvYroB4J4s0L2TR/iE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "64c27498901f104a11df646278c4e5c9f4d642db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "64c27498901f104a11df646278c4e5c9f4d642db",
+        "type": "github"
+      }
+    },
+    "latest_4": {
+      "locked": {
+        "lastModified": 1678571061,
+        "narHash": "sha256-0gI2FHID8XYD3504kLFRLH3C2GmMCzVMC50APV/kZp8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8ad5e8132c5dcf977e308e7bf5517cc6cc0bf7d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8ad5e8132c5dcf977e308e7bf5517cc6cc0bf7d8",
         "type": "github"
       }
     },
@@ -685,7 +1971,199 @@
         "type": "github"
       }
     },
+    "nixpkgs_10": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_11": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_12": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_13": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_14": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_15": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_16": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_17": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_18": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_19": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_20": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_21": {
       "locked": {
         "lastModified": 1669833724,
         "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
@@ -781,9 +2259,184 @@
         "type": "github"
       }
     },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_9": {
+      "locked": {
+        "lastModified": 1669833724,
+        "narHash": "sha256-/HEZNyGbnQecrgJnfE8d0WC5c1xuPSD2LUpB6YXlg4c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4d2b37a84fad1091b9de401eb450aae66f1a741e",
+        "type": "github"
+      }
+    },
+    "nodedev": {
+      "inputs": {
+        "latest": "latest_2",
+        "pkg": "pkg_8"
+      },
+      "locked": {
+        "dir": "nodedev",
+        "lastModified": 1679275323,
+        "narHash": "sha256-crK4sdZCsPxINse03OVnRwS2ZJVM81mzoOU/eEWv7ZE=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "9df03394fdad164024a75216c2c155f695024ee6",
+        "type": "github"
+      },
+      "original": {
+        "dir": "nodedev",
+        "owner": "defn",
+        "ref": "nodedev-0.0.4",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "nodedev_2": {
+      "inputs": {
+        "latest": "latest_4",
+        "pkg": "pkg_18"
+      },
+      "locked": {
+        "dir": "nodedev",
+        "lastModified": 1679275323,
+        "narHash": "sha256-crK4sdZCsPxINse03OVnRwS2ZJVM81mzoOU/eEWv7ZE=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "9df03394fdad164024a75216c2c155f695024ee6",
+        "type": "github"
+      },
+      "original": {
+        "dir": "nodedev",
+        "owner": "defn",
+        "ref": "nodedev-0.0.4",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "operatorsdk": {
+      "inputs": {
+        "pkg": "pkg_4"
+      },
+      "locked": {
+        "dir": "operatorsdk",
+        "lastModified": 1679939175,
+        "narHash": "sha256-S5n+L6VqSefH21+5YlXQDEWunKWrYeSL6oVEgok6WHQ=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "4f94dd02c17dd9aba1f3def5602d46bedeaf46f0",
+        "type": "github"
+      },
+      "original": {
+        "dir": "operatorsdk",
+        "owner": "defn",
+        "ref": "operatorsdk-1.28.0-1",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "operatorsdk_2": {
+      "inputs": {
+        "pkg": "pkg_14"
+      },
+      "locked": {
+        "dir": "operatorsdk",
+        "lastModified": 1679939175,
+        "narHash": "sha256-S5n+L6VqSefH21+5YlXQDEWunKWrYeSL6oVEgok6WHQ=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "4f94dd02c17dd9aba1f3def5602d46bedeaf46f0",
+        "type": "github"
+      },
+      "original": {
+        "dir": "operatorsdk",
+        "owner": "defn",
+        "ref": "operatorsdk-1.28.0-1",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
     "pkg": {
       "inputs": {
         "dev": "dev"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_10": {
+      "inputs": {
+        "dev": "dev_10"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_11": {
+      "inputs": {
+        "dev": "dev_11"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_12": {
+      "inputs": {
+        "dev": "dev_12"
       },
       "locked": {
         "lastModified": 1679173922,
@@ -796,6 +2449,139 @@
       "original": {
         "owner": "defn",
         "ref": "0.0.168",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_13": {
+      "inputs": {
+        "dev": "dev_13"
+      },
+      "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_14": {
+      "inputs": {
+        "dev": "dev_14"
+      },
+      "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_15": {
+      "inputs": {
+        "dev": "dev_15"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_16": {
+      "inputs": {
+        "dev": "dev_16"
+      },
+      "locked": {
+        "lastModified": 1679173922,
+        "narHash": "sha256-K4YdwQRMzIVzciXNGw6OmZ4wI8dewVQ5WUbSGS58+Qs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "c6bfcfa7f9926d3ccdf75b37bce3d3d17888c4cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.168",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_17": {
+      "inputs": {
+        "dev": "dev_17"
+      },
+      "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_18": {
+      "inputs": {
+        "dev": "dev_18"
+      },
+      "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_19": {
+      "inputs": {
+        "dev": "dev_19"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
         "repo": "pkg",
         "type": "github"
       }
@@ -805,23 +2591,23 @@
         "dev": "dev_2"
       },
       "locked": {
-        "lastModified": 1679174478,
-        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "lastModified": 1679173922,
+        "narHash": "sha256-K4YdwQRMzIVzciXNGw6OmZ4wI8dewVQ5WUbSGS58+Qs=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "rev": "c6bfcfa7f9926d3ccdf75b37bce3d3d17888c4cd",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.170",
+        "ref": "0.0.168",
         "repo": "pkg",
         "type": "github"
       }
     },
-    "pkg_3": {
+    "pkg_20": {
       "inputs": {
-        "dev": "dev_3"
+        "dev": "dev_20"
       },
       "locked": {
         "lastModified": 1679952092,
@@ -838,9 +2624,85 @@
         "type": "github"
       }
     },
+    "pkg_21": {
+      "inputs": {
+        "dev": "dev_21"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_3": {
+      "inputs": {
+        "dev": "dev_3"
+      },
+      "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
     "pkg_4": {
       "inputs": {
         "dev": "dev_4"
+      },
+      "locked": {
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.170",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_5": {
+      "inputs": {
+        "dev": "dev_5"
+      },
+      "locked": {
+        "lastModified": 1679952092,
+        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "type": "github"
+      },
+      "original": {
+        "owner": "defn",
+        "ref": "0.0.172",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "pkg_6": {
+      "inputs": {
+        "dev": "dev_6"
       },
       "locked": {
         "lastModified": 1679173922,
@@ -857,9 +2719,9 @@
         "type": "github"
       }
     },
-    "pkg_5": {
+    "pkg_7": {
       "inputs": {
-        "dev": "dev_5"
+        "dev": "dev_7"
       },
       "locked": {
         "lastModified": 1679174478,
@@ -876,28 +2738,28 @@
         "type": "github"
       }
     },
-    "pkg_6": {
+    "pkg_8": {
       "inputs": {
-        "dev": "dev_6"
+        "dev": "dev_8"
       },
       "locked": {
-        "lastModified": 1679952092,
-        "narHash": "sha256-itrQF+X8591/eOfWsociNPHEYCuruf2SlPtlLjd8Ofc=",
+        "lastModified": 1679174478,
+        "narHash": "sha256-OACVDBG3M0HaaCg0KKzxtYN96CQ7LdG5hWnfiN5XO94=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "f890e000858d1debf3f3fafb12b4689f95434362",
+        "rev": "50aa8ad66f9241d3d01cac3934239577f639b1e5",
         "type": "github"
       },
       "original": {
         "owner": "defn",
-        "ref": "0.0.172",
+        "ref": "0.0.170",
         "repo": "pkg",
         "type": "github"
       }
     },
-    "pkg_7": {
+    "pkg_9": {
       "inputs": {
-        "dev": "dev_7"
+        "dev": "dev_9"
       },
       "locked": {
         "lastModified": 1679952092,
@@ -918,13 +2780,256 @@
       "inputs": {
         "argo-cd": "argo-cd",
         "argo-workflows": "argo-workflows",
-        "pkg": "pkg_7"
+        "pkg": "pkg_21"
+      }
+    },
+    "terraform": {
+      "inputs": {
+        "pkg": "pkg_10"
+      },
+      "locked": {
+        "dir": "terraform",
+        "lastModified": 1680244570,
+        "narHash": "sha256-gvXSowHYJoeJscFjpLfX6QnS0CSzLAN68pQwHIBfIrY=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "d7caf66c18d4d405f44ce9d20623c88251b5d7e5",
+        "type": "github"
+      },
+      "original": {
+        "dir": "terraform",
+        "owner": "defn",
+        "ref": "terraform-1.4.4-0",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "terraform_2": {
+      "inputs": {
+        "pkg": "pkg_20"
+      },
+      "locked": {
+        "dir": "terraform",
+        "lastModified": 1680244570,
+        "narHash": "sha256-gvXSowHYJoeJscFjpLfX6QnS0CSzLAN68pQwHIBfIrY=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "d7caf66c18d4d405f44ce9d20623c88251b5d7e5",
+        "type": "github"
+      },
+      "original": {
+        "dir": "terraform",
+        "owner": "defn",
+        "ref": "terraform-1.4.4-0",
+        "repo": "pkg",
+        "type": "github"
       }
     },
     "wrapper": {
       "inputs": {
         "nixpkgs": [
           "argo-cd",
+          "app",
+          "godev",
+          "buf",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_10": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "terraform",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_11": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "buf",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_12": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "cosign",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1676791016,
+        "narHash": "sha256-xmyEDe/FZBVFdyuVXTwMFozADtxjeDHzUt/1BgzuD+c=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "056d285d8167c934783119e6195f037952e3bd6e",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.21",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_13": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "goreleaser",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_14": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "operatorsdk",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_15": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "godev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_16": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
           "app",
           "helm",
           "pkg",
@@ -949,12 +3054,149 @@
         "type": "github"
       }
     },
+    "wrapper_17": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "kustomize",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_18": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "nodedev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_19": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
     "wrapper_2": {
       "inputs": {
         "nixpkgs": [
           "argo-cd",
           "app",
-          "kustomize",
+          "godev",
+          "cosign",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1676791016,
+        "narHash": "sha256-xmyEDe/FZBVFdyuVXTwMFozADtxjeDHzUt/1BgzuD+c=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "056d285d8167c934783119e6195f037952e3bd6e",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.21",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_20": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-workflows",
+          "app",
+          "terraform",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_21": {
+      "inputs": {
+        "nixpkgs": [
           "pkg",
           "dev",
           "nixpkgs"
@@ -982,6 +3224,8 @@
         "nixpkgs": [
           "argo-cd",
           "app",
+          "godev",
+          "goreleaser",
           "pkg",
           "dev",
           "nixpkgs"
@@ -1007,9 +3251,10 @@
     "wrapper_4": {
       "inputs": {
         "nixpkgs": [
-          "argo-workflows",
+          "argo-cd",
           "app",
-          "helm",
+          "godev",
+          "operatorsdk",
           "pkg",
           "dev",
           "nixpkgs"
@@ -1017,17 +3262,17 @@
       },
       "locked": {
         "dir": "wrapper",
-        "lastModified": 1676791016,
-        "narHash": "sha256-xmyEDe/FZBVFdyuVXTwMFozADtxjeDHzUt/1BgzuD+c=",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
         "owner": "defn",
         "repo": "pkg",
-        "rev": "056d285d8167c934783119e6195f037952e3bd6e",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
         "type": "github"
       },
       "original": {
         "dir": "wrapper",
         "owner": "defn",
-        "ref": "wrapper-0.0.21",
+        "ref": "wrapper-0.0.23",
         "repo": "pkg",
         "type": "github"
       }
@@ -1035,9 +3280,9 @@
     "wrapper_5": {
       "inputs": {
         "nixpkgs": [
-          "argo-workflows",
+          "argo-cd",
           "app",
-          "kustomize",
+          "godev",
           "pkg",
           "dev",
           "nixpkgs"
@@ -1063,8 +3308,37 @@
     "wrapper_6": {
       "inputs": {
         "nixpkgs": [
-          "argo-workflows",
+          "argo-cd",
           "app",
+          "helm",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1676791016,
+        "narHash": "sha256-xmyEDe/FZBVFdyuVXTwMFozADtxjeDHzUt/1BgzuD+c=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "056d285d8167c934783119e6195f037952e3bd6e",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.21",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_7": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
+          "kustomize",
           "pkg",
           "dev",
           "nixpkgs"
@@ -1087,9 +3361,39 @@
         "type": "github"
       }
     },
-    "wrapper_7": {
+    "wrapper_8": {
       "inputs": {
         "nixpkgs": [
+          "argo-cd",
+          "app",
+          "nodedev",
+          "pkg",
+          "dev",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "wrapper",
+        "lastModified": 1679172528,
+        "narHash": "sha256-1GEt5r4+q2C9Pl3RMZwZUF4vbnIlM4R/GeNaIvoqrQs=",
+        "owner": "defn",
+        "repo": "pkg",
+        "rev": "70d480bd891d2e6bad6e07f6800b385d44fc3626",
+        "type": "github"
+      },
+      "original": {
+        "dir": "wrapper",
+        "owner": "defn",
+        "ref": "wrapper-0.0.23",
+        "repo": "pkg",
+        "type": "github"
+      }
+    },
+    "wrapper_9": {
+      "inputs": {
+        "nixpkgs": [
+          "argo-cd",
+          "app",
           "pkg",
           "dev",
           "nixpkgs"
