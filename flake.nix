@@ -1,8 +1,8 @@
 {
   inputs = {
     pkg.url = github:defn/pkg/0.0.172;
-    terraform.url = github:defn/pkg/terraform-1.4.0-2?dir=terraform;
-    godev.url = github:defn/pkg/godev-0.0.18?dir=godev;
+    terraform.url = github:defn/pkg/terraform-1.4.4-0?dir=terraform;
+    godev.url = github:defn/pkg/godev-0.0.19?dir=godev;
     kustomize.url = github:defn/pkg/kustomize-5.0.1-0?dir=kustomize;
     helm.url = github:defn/pkg/helm-3.11.2-3?dir=helm;
     nodedev.url = github:defn/pkg/nodedev-0.0.4?dir=nodedev;
