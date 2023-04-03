@@ -1,6 +1,6 @@
 {
   inputs = {
-    pkg.url = github:defn/pkg/0.0.172;
+    pkg.url = github:defn/pkg/0.0.173;
     argo-cd.url = github:defn/app/argo-cd-0.0.10?dir=k/argo-cd;
     argo-workflows.url = github:defn/app/argo-workflows-0.0.9?dir=k/argo-workflows;
   };
