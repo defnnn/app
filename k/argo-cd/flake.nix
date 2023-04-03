@@ -1,4 +1,4 @@
 {
-  inputs.app.url = github:defn/app/0.0.22;
+  inputs.app.url = github:defn/app/0.0.23;
   outputs = inputs: inputs.app.kustomizeMain rec { src = ./.; };
 }
