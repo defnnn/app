@@ -1,9 +1,9 @@
 {
   inputs = {
-    pkg.url = github:defn/pkg/0.0.172;
-    vault.url = github:defn/pkg/vault-1.13.1-0?dir=vault;
-    kubernetes.url = github:defn/pkg/kubernetes-0.0.25?dir=kubernetes;
-    tailscale.url = github:defn/pkg/tailscale-1.38.3-0?dir=tailscale;
+    pkg.url = github:defn/pkg/0.0.173;
+    vault.url = github:defn/pkg/vault-1.13.1-1?dir=vault;
+    kubernetes.url = github:defn/pkg/kubernetes-0.0.27?dir=kubernetes;
+    tailscale.url = github:defn/pkg/tailscale-1.38.3-1?dir=tailscale;
   };
 
   outputs = inputs: inputs.pkg.main rec {
