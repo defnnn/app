@@ -7,6 +7,7 @@
     helm.url = github:defn/pkg/helm-3.11.2-30?dir=helm;
     nodedev.url = github:defn/pkg/nodedev-0.0.31?dir=nodedev;
     gomod2nix.url = github:defn/gomod2nix/1.5.0-7;
+    latest.url = github:NixOS/nixpkgs?rev=64c27498901f104a11df646278c4e5c9f4d642db;
   };
 
   outputs = inputs:
@@ -48,7 +49,7 @@
               let
                 gomod2nixOverlay = inputs.gomod2nix.overlays.default;
 
-                goPkgs = import inputs.nixpkgs {
+                goPkgs = import inputs.latest {
                   system = ctx.system;
                   overlays = [ gomod2nixOverlay ];
                 };
@@ -95,7 +96,7 @@
             let
               gomod2nixOverlay = inputs.gomod2nix.overlays.default;
 
-              goPkgs = import inputs.nixpkgs {
+              goPkgs = import inputs.latest {
                 system = ctx.system;
                 overlays = [ gomod2nixOverlay ];
               };

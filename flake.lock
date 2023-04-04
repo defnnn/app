@@ -549,6 +549,22 @@
     },
     "latest_2": {
       "locked": {
+        "lastModified": 1678453159,
+        "narHash": "sha256-mU4mJeb1fRSvCDALe57vIKfhECvYroB4J4s0L2TR/iE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "64c27498901f104a11df646278c4e5c9f4d642db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "64c27498901f104a11df646278c4e5c9f4d642db",
+        "type": "github"
+      }
+    },
+    "latest_3": {
+      "locked": {
         "lastModified": 1678571061,
         "narHash": "sha256-0gI2FHID8XYD3504kLFRLH3C2GmMCzVMC50APV/kZp8=",
         "owner": "NixOS",
@@ -741,7 +757,7 @@
     },
     "nodedev": {
       "inputs": {
-        "latest": "latest_2",
+        "latest": "latest_3",
         "pkg": "pkg_8"
       },
       "locked": {
@@ -978,6 +994,7 @@
         "gomod2nix": "gomod2nix",
         "helm": "helm",
         "kustomize": "kustomize",
+        "latest": "latest_2",
         "nodedev": "nodedev",
         "pkg": "pkg_9",
         "terraform": "terraform"
