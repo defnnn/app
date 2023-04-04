@@ -9,35 +9,11 @@
       "annotations": [],
       "dependencies": []
     },
-    "coil": {
-      "name": "coil",
-      "constructPath": "coil",
-      "workingDirectory": "stacks/coil",
-      "synthesizedStackPath": "stacks/coil/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "vault": {
-      "name": "vault",
-      "constructPath": "vault",
-      "workingDirectory": "stacks/vault",
-      "synthesizedStackPath": "stacks/vault/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "circus": {
-      "name": "circus",
-      "constructPath": "circus",
-      "workingDirectory": "stacks/circus",
-      "synthesizedStackPath": "stacks/circus/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "gyre": {
-      "name": "gyre",
-      "constructPath": "gyre",
-      "workingDirectory": "stacks/gyre",
-      "synthesizedStackPath": "stacks/gyre/cdk.tf.json",
+    "fogg": {
+      "name": "fogg",
+      "constructPath": "fogg",
+      "workingDirectory": "stacks/fogg",
+      "synthesizedStackPath": "stacks/fogg/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -49,11 +25,27 @@
       "annotations": [],
       "dependencies": []
     },
-    "chamber": {
-      "name": "chamber",
-      "constructPath": "chamber",
-      "workingDirectory": "stacks/chamber",
-      "synthesizedStackPath": "stacks/chamber/cdk.tf.json",
+    "coil": {
+      "name": "coil",
+      "constructPath": "coil",
+      "workingDirectory": "stacks/coil",
+      "synthesizedStackPath": "stacks/coil/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
+    "spiral": {
+      "name": "spiral",
+      "constructPath": "spiral",
+      "workingDirectory": "stacks/spiral",
+      "synthesizedStackPath": "stacks/spiral/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
+    "vault": {
+      "name": "vault",
+      "constructPath": "vault",
+      "workingDirectory": "stacks/vault",
+      "synthesizedStackPath": "stacks/vault/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -62,14 +54,6 @@
       "constructPath": "whoa",
       "workingDirectory": "stacks/whoa",
       "synthesizedStackPath": "stacks/whoa/cdk.tf.json",
-      "annotations": [],
-      "dependencies": []
-    },
-    "imma": {
-      "name": "imma",
-      "constructPath": "imma",
-      "workingDirectory": "stacks/imma",
-      "synthesizedStackPath": "stacks/imma/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -89,11 +73,11 @@
       "annotations": [],
       "dependencies": []
     },
-    "fogg": {
-      "name": "fogg",
-      "constructPath": "fogg",
-      "workingDirectory": "stacks/fogg",
-      "synthesizedStackPath": "stacks/fogg/cdk.tf.json",
+    "gyre": {
+      "name": "gyre",
+      "constructPath": "gyre",
+      "workingDirectory": "stacks/gyre",
+      "synthesizedStackPath": "stacks/gyre/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     },
@@ -105,11 +89,27 @@
       "annotations": [],
       "dependencies": []
     },
-    "spiral": {
-      "name": "spiral",
-      "constructPath": "spiral",
-      "workingDirectory": "stacks/spiral",
-      "synthesizedStackPath": "stacks/spiral/cdk.tf.json",
+    "circus": {
+      "name": "circus",
+      "constructPath": "circus",
+      "workingDirectory": "stacks/circus",
+      "synthesizedStackPath": "stacks/circus/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
+    "chamber": {
+      "name": "chamber",
+      "constructPath": "chamber",
+      "workingDirectory": "stacks/chamber",
+      "synthesizedStackPath": "stacks/chamber/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    },
+    "imma": {
+      "name": "imma",
+      "constructPath": "imma",
+      "workingDirectory": "stacks/imma",
+      "synthesizedStackPath": "stacks/imma/cdk.tf.json",
       "annotations": [],
       "dependencies": []
     }
