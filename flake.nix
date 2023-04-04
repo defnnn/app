@@ -6,12 +6,7 @@
     kustomize.url = github:defn/pkg/kustomize-5.0.1-27?dir=kustomize;
     helm.url = github:defn/pkg/helm-3.11.2-30?dir=helm;
     nodedev.url = github:defn/pkg/nodedev-0.0.31?dir=nodedev;
-
-    gomod2nix = {
-      url = github:defn/gomod2nix/1.5.0-7;
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.utils.follows = "flake-utils";
-    };
+    gomod2nix.url = github:defn/gomod2nix/1.5.0-7;
   };
 
   outputs = inputs:
