@@ -93,7 +93,14 @@
 
           devShell = ctx:
             let
-              goEnv = ctx.pkgs.mkGoEnv {
+              gomod2nixOverlay = inputs.gomod2nix.overlays.default;
+
+              goPkgs = import inputs.nixpkgs {
+                system = ctx.system;
+                overlays = [ gomod2nixOverlay ];
+              };
+
+              goEnv = goPkgs.mkGoEnv {
                 pwd = src;
               };
             in
