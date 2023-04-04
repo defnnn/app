@@ -8,8 +8,8 @@ schema = 3
     version = "v3.2.0"
     hash = "sha256-JaGYNQwDxFCsLwzYVoJY4RUpP4dtiRlV14t2dVAg4oQ="
   [mod."github.com/aws/constructs-go/constructs/v10"]
-    version = "v10.1.299"
-    hash = "sha256-f4WXQULhCEnrwW5AbRta4p2CTr+CaAbLVkiIJIc/z9M="
+    version = "v10.1.301"
+    hash = "sha256-fObgs3BK1GY6WS/CY9VJ4RcpO259iJWNmG1BbIiEF6A="
   [mod."github.com/aws/jsii-runtime-go"]
     version = "v1.79.0"
     hash = "sha256-QjctI9rjVZaAXrsuG9IWwG0yjVMikYqWTg/jdI851S0="
