@@ -83,7 +83,14 @@
 
           defaultPackage = ctx:
             let
-              goCmd = ctx.pkgs.buildGoApplication rec {
+              gomod2nixOverlay = inputs.gomod2nix.overlays.default;
+
+              goPkgs = import inputs.latest {
+                system = ctx.system;
+                overlays = [ gomod2nixOverlay ];
+              };
+
+              goCmd = goPkgs.buildGoApplication rec {
                 inherit src;
                 pwd = src;
                 pname = ctx.config.slug;
@@ -108,7 +115,7 @@
             ctx.wrap.devShell {
               devInputs = ctx.commands ++ [
                 goEnv
-                ctx.pkgs.gomod2nix
+                goPkgs.gomod2nix
                 (goShell ctx)
                 inputs.godev.defaultPackage.${ctx.system}
                 inputs.nodedev.defaultPackage.${ctx.system}
