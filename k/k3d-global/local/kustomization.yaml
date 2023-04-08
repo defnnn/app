@@ -54,7 +54,7 @@ helmCharts:
           namespace: argocd
           name: k3d-global-cert-manager
           annotations:
-            argocd.argoproj.io/sync-wave: "1"
+            argocd.argoproj.io/sync-wave: "2"
         spec:
           project: default
           destination:
@@ -75,7 +75,7 @@ helmCharts:
           namespace: argocd
           name: k3d-global-defn
           annotations:
-            argocd.argoproj.io/sync-wave: "30"
+            argocd.argoproj.io/sync-wave: "31"
         spec:
           project: default
           destination:
@@ -84,6 +84,27 @@ helmCharts:
             repoURL: https://github.com/defn/app
             targetRevision: master
             path: k/defn
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
+            syncOptions: []
+      defn-shared: |
+        apiVersion: argoproj.io/v1alpha1
+        kind: Application
+        metadata:
+          namespace: argocd
+          name: k3d-global-defn-shared
+          annotations:
+            argocd.argoproj.io/sync-wave: "30"
+        spec:
+          project: default
+          destination:
+            name: k3d-global
+          source:
+            repoURL: https://github.com/defn/app
+            targetRevision: master
+            path: k/defn-shared
           syncPolicy:
             automated:
               prune: true
@@ -180,7 +201,7 @@ helmCharts:
           namespace: argocd
           name: k3d-global-kyverno
           annotations:
-            argocd.argoproj.io/sync-wave: "10"
+            argocd.argoproj.io/sync-wave: "1"
         spec:
           project: default
           destination:
@@ -195,27 +216,6 @@ helmCharts:
               selfHeal: true
             syncOptions:
               - ServerSideApply=true
-      misc: |
-        apiVersion: argoproj.io/v1alpha1
-        kind: Application
-        metadata:
-          namespace: argocd
-          name: k3d-global-misc
-          annotations:
-            argocd.argoproj.io/sync-wave: "40"
-        spec:
-          project: default
-          destination:
-            name: k3d-global
-          source:
-            repoURL: https://github.com/defn/app
-            targetRevision: master
-            path: k/misc
-          syncPolicy:
-            automated:
-              prune: true
-              selfHeal: true
-            syncOptions: []
       pod-identity-webhook: |
         apiVersion: argoproj.io/v1alpha1
         kind: Application

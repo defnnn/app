@@ -18,24 +18,6 @@ kustomize: (#Transform & {
 	}
 }).outputs
 
-kustomize: "misc": #Kustomize & {
-	resource: "cluster-role-binding-admin": rbac.#ClusterRoleBinding & {
-		apiVersion: "rbac.authorization.k8s.io/v1"
-		kind:       "ClusterRoleBinding"
-		metadata: name: "default-admin"
-		roleRef: {
-			apiGroup: "rbac.authorization.k8s.io"
-			kind:     "ClusterRole"
-			name:     "cluster-admin"
-		}
-		subjects: [{
-			kind:      "ServiceAccount"
-			name:      "default"
-			namespace: "default"
-		}]
-	}
-}
-
 kustomize: "hello": #Kustomize & {
 	namespace: "default"
 
@@ -707,85 +689,6 @@ kustomize: "cert-manager": #KustomizeHelm & {
 	resource: "cert-manager-crds": {
 		url: "https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml"
 	}
-
-	resource: "externalsecret-\(_issuer)": {
-		apiVersion: "external-secrets.io/v1beta1"
-		kind:       "ExternalSecret"
-		metadata: {
-			name:      _issuer
-			namespace: "cert-manager"
-		}
-		spec: {
-			refreshInterval: "1h"
-			secretStoreRef: {
-				kind: "ClusterSecretStore"
-				name: "dev"
-			}
-			dataFrom: [{
-				extract: key: "dev/amanibhavam-global"
-			}]
-			target: {
-				name:           _issuer
-				creationPolicy: "Owner"
-			}
-		}
-	}
-
-	resource: "clusterpolicy-clusterissuer-\(_issuer)": {
-		apiVersion: "kyverno.io/v1"
-		kind:       "ClusterPolicy"
-		metadata: name: "\(_issuer)-clusterissuer"
-		spec: {
-			generateExistingOnPolicyUpdate: true
-			rules: [{
-				name: "create-cluster-issuer"
-				match: any: [{
-					resources: {
-						names: [
-							_issuer,
-						]
-						kinds: [
-							"Secret",
-						]
-						namespaces: [
-							"cert-manager",
-						]
-					}
-				}]
-				generate: {
-					synchronize: true
-					apiVersion:  "cert-manager.io/v1"
-					kind:        "ClusterIssuer"
-					name:        _issuer
-					data: spec: acme: {
-						server: "https://acme.zerossl.com/v2/DV90"
-						email:  "{{request.object.data.zerossl_email | base64_decode(@)}}"
-
-						privateKeySecretRef: name: _issuer
-
-						externalAccountBinding: {
-							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
-							keySecretRef: {
-								name: _issuer
-								key:  "zerossl-eab-hmac"
-							}
-						}
-
-						solvers: [{
-							selector: {}
-							dns01: cloudflare: {
-								email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
-								apiTokenSecretRef: {
-									name: _issuer
-									key:  "cloudflare-api-token"
-								}
-							}
-						}]
-					}
-				}
-			}]
-		}
-	}
 }
 
 // https://artifacthub.io/packages/helm/alekc/caddy
@@ -948,6 +851,103 @@ kustomize: "sysbox": #Kustomize & {
 		spec: template: spec: tolerations: [{
 			key:      "env"
 			operator: "Exists"
+		}]
+	}
+}
+
+kustomize: "defn-global": #Kustomize & {
+	resource: "externalsecret-\(_issuer)": {
+		apiVersion: "external-secrets.io/v1beta1"
+		kind:       "ExternalSecret"
+		metadata: {
+			name:      _issuer
+			namespace: "cert-manager"
+		}
+		spec: {
+			refreshInterval: "1h"
+			secretStoreRef: {
+				kind: "ClusterSecretStore"
+				name: "dev"
+			}
+			dataFrom: [{
+				extract: key: "dev/amanibhavam-global"
+			}]
+			target: {
+				name:           _issuer
+				creationPolicy: "Owner"
+			}
+		}
+	}
+
+	resource: "clusterpolicy-clusterissuer-\(_issuer)": {
+		apiVersion: "kyverno.io/v1"
+		kind:       "ClusterPolicy"
+		metadata: name: "\(_issuer)-clusterissuer"
+		spec: {
+			generateExistingOnPolicyUpdate: true
+			rules: [{
+				name: "create-cluster-issuer"
+				match: any: [{
+					resources: {
+						names: [
+							_issuer,
+						]
+						kinds: [
+							"Secret",
+						]
+						namespaces: [
+							"cert-manager",
+						]
+					}
+				}]
+				generate: {
+					synchronize: true
+					apiVersion:  "cert-manager.io/v1"
+					kind:        "ClusterIssuer"
+					name:        _issuer
+					data: spec: acme: {
+						server: "https://acme.zerossl.com/v2/DV90"
+						email:  "{{request.object.data.zerossl_email | base64_decode(@)}}"
+
+						privateKeySecretRef: name: _issuer
+
+						externalAccountBinding: {
+							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
+							keySecretRef: {
+								name: _issuer
+								key:  "zerossl-eab-hmac"
+							}
+						}
+
+						solvers: [{
+							selector: {}
+							dns01: cloudflare: {
+								email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
+								apiTokenSecretRef: {
+									name: _issuer
+									key:  "cloudflare-api-token"
+								}
+							}
+						}]
+					}
+				}
+			}]
+		}
+	}
+
+	resource: "cluster-role-binding-admin": rbac.#ClusterRoleBinding & {
+		apiVersion: "rbac.authorization.k8s.io/v1"
+		kind:       "ClusterRoleBinding"
+		metadata: name: "default-admin"
+		roleRef: {
+			apiGroup: "rbac.authorization.k8s.io"
+			kind:     "ClusterRole"
+			name:     "cluster-admin"
+		}
+		subjects: [{
+			kind:      "ServiceAccount"
+			name:      "default"
+			namespace: "default"
 		}]
 	}
 }

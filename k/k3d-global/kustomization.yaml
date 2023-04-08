@@ -6,6 +6,28 @@ helmCharts:
   - releaseName: bootstrap
     valuesInline:
       anyResources:
+        kyverno: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            namespace: argocd
+            name: k3d-global-kyverno
+            annotations:
+              argocd.argoproj.io/sync-wave: "1"
+          spec:
+            project: default
+            destination:
+              name: k3d-global
+            source:
+              repoURL: https://github.com/defn/app
+              targetRevision: master
+              path: k/kyverno
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+              syncOptions:
+                - ServerSideApply=true
         cert-manager: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -13,7 +35,7 @@ helmCharts:
             namespace: argocd
             name: k3d-global-cert-manager
             annotations:
-              argocd.argoproj.io/sync-wave: "1"
+              argocd.argoproj.io/sync-wave: "2"
           spec:
             project: default
             destination:
@@ -69,28 +91,6 @@ helmCharts:
                 prune: true
                 selfHeal: true
               syncOptions: []
-        kyverno: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-kyverno
-            annotations:
-              argocd.argoproj.io/sync-wave: "10"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/kyverno
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-              syncOptions:
-                - ServerSideApply=true
         k3d-global-secrets-store: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -112,6 +112,27 @@ helmCharts:
                 prune: true
                 selfHeal: true
               syncOptions: []
+        defn-shared: |
+          apiVersion: argoproj.io/v1alpha1
+          kind: Application
+          metadata:
+            namespace: argocd
+            name: k3d-global-defn-shared
+            annotations:
+              argocd.argoproj.io/sync-wave: "30"
+          spec:
+            project: default
+            destination:
+              name: k3d-global
+            source:
+              repoURL: https://github.com/defn/app
+              targetRevision: master
+              path: k/defn-shared
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+              syncOptions: []
         defn: |
           apiVersion: argoproj.io/v1alpha1
           kind: Application
@@ -119,7 +140,7 @@ helmCharts:
             namespace: argocd
             name: k3d-global-defn
             annotations:
-              argocd.argoproj.io/sync-wave: "30"
+              argocd.argoproj.io/sync-wave: "31"
           spec:
             project: default
             destination:
@@ -191,27 +212,6 @@ helmCharts:
               repoURL: https://github.com/defn/app
               targetRevision: master
               path: k/kourier
-            syncPolicy:
-              automated:
-                prune: true
-                selfHeal: true
-              syncOptions: []
-        misc: |
-          apiVersion: argoproj.io/v1alpha1
-          kind: Application
-          metadata:
-            namespace: argocd
-            name: k3d-global-misc
-            annotations:
-              argocd.argoproj.io/sync-wave: "40"
-          spec:
-            project: default
-            destination:
-              name: k3d-global
-            source:
-              repoURL: https://github.com/defn/app
-              targetRevision: master
-              path: k/misc
             syncPolicy:
               automated:
                 prune: true

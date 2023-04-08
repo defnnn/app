@@ -1,5 +1,0 @@
-#ManagedBy: cue
-
-patches: []
-resources:
-  - resource-cluster-role-binding-admin.yaml

@@ -51,16 +51,16 @@ env: (#Transform & {
 		// global is the global control plane, used by all machines.
 		global: {
 			bootstrap: {
-				"cert-manager": [1]
+				"kyverno": [1, "ServerSideApply=true"]
+				"cert-manager": [2]
 				"pod-identity-webhook": [10]
 				"external-secrets-operator": [10]
-				"kyverno": [10, "ServerSideApply=true"]
 				"k3d-global-secrets-store": [20]
-				"defn": [30]
+				"defn-shared": [30]
+				"defn": [31]
 				"tfo": [30]
 				"knative": [30]
 				"kourier": [30]
-				"misc": [40]
 				"caddy": [50]
 				"argo-cd": [1000]
 			}
