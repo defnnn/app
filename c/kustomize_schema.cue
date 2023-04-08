@@ -115,7 +115,7 @@ kustomize: [NAME=string]: _name: NAME
 
 		values: {
 			service: type:   "ClusterIP"
-			vcluster: image: "rancher/k3s:v1.24.11-k3s1"
+			vcluster: image: "rancher/k3s:v1.24.12-k3s1"
 
 			syncer: extraArgs: [
 				"--tls-san=vcluster.\(_in.vc_name).svc.cluster.local",

@@ -29,7 +29,7 @@ helmCharts:
       operator: Equal
       value: control-vc4
     vcluster:
-      image: rancher/k3s:v1.24.11-k3s1
+      image: rancher/k3s:v1.24.12-k3s1
   version: 0.14.2
 namespace: control-vc4
 resources:
