@@ -7,6 +7,8 @@ import (
 	rbac "github.com/defn/boot/k8s.io/api/rbac/v1"
 )
 
+_issuer: "zerossl-production"
+
 kustomize: (#Transform & {
 	transformer: #TransformChicken
 
@@ -688,7 +690,7 @@ kustomize: "cert-manager": #KustomizeHelm & {
 		repo:      "https://charts.jetstack.io"
 		values: {
 			ingressShim: {
-				defaultIssuerName: "zerossl-production"
+				defaultIssuerName: _issuer
 				defaultIssuerKind: "ClusterIssuer"
 			}
 		}
@@ -704,6 +706,85 @@ kustomize: "cert-manager": #KustomizeHelm & {
 
 	resource: "cert-manager-crds": {
 		url: "https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml"
+	}
+
+	resource: "externalsecret-\(_issuer)": {
+		apiVersion: "external-secrets.io/v1beta1"
+		kind:       "ExternalSecret"
+		metadata: {
+			name:      _issuer
+			namespace: "cert-manager"
+		}
+		spec: {
+			refreshInterval: "1h"
+			secretStoreRef: {
+				kind: "ClusterSecretStore"
+				name: "dev"
+			}
+			dataFrom: [{
+				extract: key: "dev/amanibhavam-global"
+			}]
+			target: {
+				name:           _issuer
+				creationPolicy: "Owner"
+			}
+		}
+	}
+
+	resource: "clusterpolicy-clusterissuer-\(_issuer)": {
+		apiVersion: "kyverno.io/v1"
+		kind:       "ClusterPolicy"
+		metadata: name: "\(_issuer)-clusterissuer"
+		spec: {
+			generateExistingOnPolicyUpdate: true
+			rules: [{
+				name: "create-cluster-issuer"
+				match: any: [{
+					resources: {
+						names: [
+							_issuer,
+						]
+						kinds: [
+							"Secret",
+						]
+						namespaces: [
+							"cert-manager",
+						]
+					}
+				}]
+				generate: {
+					synchronize: true
+					apiVersion:  "cert-manager.io/v1"
+					kind:        "ClusterIssuer"
+					name:        _issuer
+					data: spec: acme: {
+						server: "https://acme.zerossl.com/v2/DV90"
+						email:  "{{request.object.data.zerossl_email | base64_decode(@)}}"
+
+						privateKeySecretRef: name: _issuer
+
+						externalAccountBinding: {
+							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
+							keySecretRef: {
+								name: _issuer
+								key:  "zerossl-eab-hmac"
+							}
+						}
+
+						solvers: [{
+							selector: {}
+							dns01: cloudflare: {
+								email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
+								apiTokenSecretRef: {
+									name: _issuer
+									key:  "cloudflare-api-token"
+								}
+							}
+						}]
+					}
+				}
+			}]
+		}
 	}
 }
 
@@ -885,89 +966,10 @@ kustomize: "defn": #Kustomize & {
 				"*.defn.run",
 			]
 			issuerRef: {
-				name:  "zerossl-production"
+				name:  _issuer
 				kind:  "ClusterIssuer"
 				group: "cert-manager.io"
 			}
-		}
-	}
-
-	resource: "externalsecret-zerossl-production": {
-		apiVersion: "external-secrets.io/v1beta1"
-		kind:       "ExternalSecret"
-		metadata: {
-			name:      "zerossl-production"
-			namespace: "cert-manager"
-		}
-		spec: {
-			refreshInterval: "1h"
-			secretStoreRef: {
-				kind: "ClusterSecretStore"
-				name: "dev"
-			}
-			dataFrom: [{
-				extract: key: "dev/amanibhavam-global"
-			}]
-			target: {
-				name:           "zerossl-production"
-				creationPolicy: "Owner"
-			}
-		}
-	}
-
-	resource: "clusterpolicy-clusterissuer-zerossl-production": {
-		apiVersion: "kyverno.io/v1"
-		kind:       "ClusterPolicy"
-		metadata: name: "zerossl-production-clusterissuer"
-		spec: {
-			generateExistingOnPolicyUpdate: true
-			rules: [{
-				name: "create-cluster-issuer"
-				match: any: [{
-					resources: {
-						names: [
-							"zerossl-production",
-						]
-						kinds: [
-							"Secret",
-						]
-						namespaces: [
-							"cert-manager",
-						]
-					}
-				}]
-				generate: {
-					synchronize: true
-					apiVersion:  "cert-manager.io/v1"
-					kind:        "ClusterIssuer"
-					name:        "zerossl-production"
-					data: spec: acme: {
-						server: "https://acme.zerossl.com/v2/DV90"
-						email:  "{{request.object.data.zerossl_email | base64_decode(@)}}"
-
-						privateKeySecretRef: name: "zerossl-production"
-
-						externalAccountBinding: {
-							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
-							keySecretRef: {
-								name: "zerossl-production"
-								key:  "zerossl-eab-hmac"
-							}
-						}
-
-						solvers: [{
-							selector: {}
-							dns01: cloudflare: {
-								email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
-								apiTokenSecretRef: {
-									name: "zerossl-production"
-									key:  "cloudflare-api-token"
-								}
-							}
-						}]
-					}
-				}
-			}]
 		}
 	}
 }
