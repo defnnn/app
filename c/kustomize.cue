@@ -909,7 +909,7 @@ kustomize: "defn-shared": #Kustomize & {
 						server: "https://acme.zerossl.com/v2/DV90"
 						email:  "{{request.object.data.zerossl_email | base64_decode(@)}}"
 
-						privateKeySecretRef: name: _issuer
+						privateKeySecretRef: name: "\(_issuer)-acme"
 
 						externalAccountBinding: {
 							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"

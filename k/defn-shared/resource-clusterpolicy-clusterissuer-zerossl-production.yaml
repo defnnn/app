@@ -28,7 +28,7 @@ spec:
               server: https://acme.zerossl.com/v2/DV90
               email: '{{request.object.data.zerossl_email | base64_decode(@)}}'
               privateKeySecretRef:
-                name: zerossl-production
+                name: zerossl-production-acme
               externalAccountBinding:
                 keyID: '{{request.object.data.zerossl_eab_kid | base64_decode(@)}}'
                 keySecretRef:
