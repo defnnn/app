@@ -855,7 +855,7 @@ kustomize: "sysbox": #Kustomize & {
 	}
 }
 
-kustomize: "defn-global": #Kustomize & {
+kustomize: "defn-shared": #Kustomize & {
 	resource: "externalsecret-\(_issuer)": {
 		apiVersion: "external-secrets.io/v1beta1"
 		kind:       "ExternalSecret"
