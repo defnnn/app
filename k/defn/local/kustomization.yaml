@@ -1,4 +1,4 @@
 resources:
 - resource-certificate-defn-run-wildcard.yaml
-- resource-externalsecret-dev.yaml
+- resource-externalsecret-zerossl-production.yaml
 - resource-clusterpolicy-clusterissuer-zerossl-production.yaml

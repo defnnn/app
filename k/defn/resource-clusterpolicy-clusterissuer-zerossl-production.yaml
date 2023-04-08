@@ -3,7 +3,7 @@
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
 metadata:
-  name: create-cluster-issuer-zerossl-production
+  name: zerossl-production-clusterissuer
 spec:
   generateExistingOnPolicyUpdate: true
   rules:
@@ -12,7 +12,7 @@ spec:
         any:
           - resources:
               names:
-                - dev
+                - zerossl-production
               kinds:
                 - Secret
               namespaces:
@@ -32,7 +32,7 @@ spec:
               externalAccountBinding:
                 keyID: '{{request.object.data.zerossl_eab_kid | base64_decode(@)}}'
                 keySecretRef:
-                  name: dev
+                  name: zerossl-production
                   key: zerossl-eab-hmac
               solvers:
                 - selector: {}
@@ -40,5 +40,5 @@ spec:
                     cloudflare:
                       email: '{{request.object.data.cloudflare_email | base64_decode(@)}}'
                       apiTokenSecretRef:
-                        name: dev
+                        name: zerossl-production
                         key: cloudflare-api-token

@@ -892,11 +892,11 @@ kustomize: "defn": #Kustomize & {
 		}
 	}
 
-	resource: "externalsecret-dev": {
+	resource: "externalsecret-zerossl-production": {
 		apiVersion: "external-secrets.io/v1beta1"
 		kind:       "ExternalSecret"
 		metadata: {
-			name:      "dev"
+			name:      "zerossl-production"
 			namespace: "cert-manager"
 		}
 		spec: {
@@ -905,20 +905,20 @@ kustomize: "defn": #Kustomize & {
 				kind: "ClusterSecretStore"
 				name: "dev"
 			}
-			target: {
-				name:           "dev"
-				creationPolicy: "Owner"
-			}
 			dataFrom: [{
 				extract: key: "dev/amanibhavam-global"
 			}]
+			target: {
+				name:           "zerossl-production"
+				creationPolicy: "Owner"
+			}
 		}
 	}
 
 	resource: "clusterpolicy-clusterissuer-zerossl-production": {
 		apiVersion: "kyverno.io/v1"
 		kind:       "ClusterPolicy"
-		metadata: name: "create-cluster-issuer-zerossl-production"
+		metadata: name: "zerossl-production-clusterissuer"
 		spec: {
 			generateExistingOnPolicyUpdate: true
 			rules: [{
@@ -926,7 +926,7 @@ kustomize: "defn": #Kustomize & {
 				match: any: [{
 					resources: {
 						names: [
-							"dev",
+							"zerossl-production",
 						]
 						kinds: [
 							"Secret",
@@ -950,7 +950,7 @@ kustomize: "defn": #Kustomize & {
 						externalAccountBinding: {
 							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
 							keySecretRef: {
-								name: "dev"
+								name: "zerossl-production"
 								key:  "zerossl-eab-hmac"
 							}
 						}
@@ -960,7 +960,7 @@ kustomize: "defn": #Kustomize & {
 							dns01: cloudflare: {
 								email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
 								apiTokenSecretRef: {
-									name: "dev"
+									name: "zerossl-production"
 									key:  "cloudflare-api-token"
 								}
 							}
