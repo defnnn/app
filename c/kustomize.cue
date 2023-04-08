@@ -870,3 +870,104 @@ kustomize: "sysbox": #Kustomize & {
 		}]
 	}
 }
+
+kustomize: "defn": #Kustomize & {
+	resource: "certificate-defn-run-wildcard": {
+		apiVersion: "cert-manager.io/v1"
+		kind:       "Certificate"
+		metadata: {
+			name:      "defn-run-wildcard"
+			namespace: "caddy"
+		}
+		spec: {
+			secretName: "defn-run-wildcard"
+			dnsNames: [
+				"*.defn.run",
+			]
+			issuerRef: {
+				name:  "zerossl-production"
+				kind:  "ClusterIssuer"
+				group: "cert-manager.io"
+			}
+		}
+	}
+
+	resource: "externalsecret-dev": {
+		apiVersion: "external-secrets.io/v1beta1"
+		kind:       "ExternalSecret"
+		metadata: {
+			name:      "dev"
+			namespace: "cert-manager"
+		}
+		spec: {
+			refreshInterval: "1h"
+			secretStoreRef: {
+				kind: "ClusterSecretStore"
+				name: "dev"
+			}
+			target: {
+				name:           "dev"
+				creationPolicy: "Owner"
+			}
+			dataFrom: [{
+				extract: key: "dev/amanibhavam-global"
+			}]
+		}
+	}
+
+	resource: "clusterpolicy-clusterissuer-zerossl-production": {
+		apiVersion: "kyverno.io/v1"
+		kind:       "ClusterPolicy"
+		metadata: name: "create-cluster-issuer-zerossl-production"
+		spec: {
+			generateExistingOnPolicyUpdate: true
+			rules: [{
+				name: "create-cluster-issuer"
+				match: any: [{
+					resources: {
+						names: [
+							"dev",
+						]
+						kinds: [
+							"Secret",
+						]
+						namespaces: [
+							"cert-manager",
+						]
+					}
+				}]
+				generate: {
+					synchronize: true
+					apiVersion:  "cert-manager.io/v1"
+					kind:        "ClusterIssuer"
+					name:        "zerossl-production"
+					data: spec: acme: {
+						server: "https://acme.zerossl.com/v2/DV90"
+						email:  "{{request.object.data.zerossl_email | base64_decode(@)}}"
+
+						privateKeySecretRef: name: "zerossl-production"
+
+						externalAccountBinding: {
+							keyID: "{{request.object.data.zerossl_eab_kid | base64_decode(@)}}"
+							keySecretRef: {
+								name: "dev"
+								key:  "zerossl-eab-hmac"
+							}
+						}
+
+						solvers: [{
+							selector: {}
+							dns01: cloudflare: {
+								email: "{{request.object.data.cloudflare_email | base64_decode(@)}}"
+								apiTokenSecretRef: {
+									name: "dev"
+									key:  "cloudflare-api-token"
+								}
+							}
+						}]
+					}
+				}
+			}]
+		}
+	}
+}
