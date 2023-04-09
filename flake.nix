@@ -1,12 +1,11 @@
 {
   inputs = {
-    pkg.url = github:defn/pkg/0.0.208;
-    terraform.url = github:defn/pkg/terraform-1.4.4-34?dir=terraform;
+    gomod2nix.url = github:defn/gomod2nix/1.5.0-9;
     godev.url = github:defn/pkg/godev-0.0.59?dir=godev;
+    nodedev.url = github:defn/pkg/nodedev-0.0.38?dir=nodedev;
+    terraform.url = github:defn/pkg/terraform-1.4.4-34?dir=terraform;
     kustomize.url = github:defn/pkg/kustomize-5.0.1-34?dir=kustomize;
     helm.url = github:defn/pkg/helm-3.11.2-37?dir=helm;
-    nodedev.url = github:defn/pkg/nodedev-0.0.38?dir=nodedev;
-    gomod2nix.url = github:defn/gomod2nix/1.5.0-9;
     latest.url = github:NixOS/nixpkgs?rev=64c27498901f104a11df646278c4e5c9f4d642db;
   };
 
@@ -28,7 +27,7 @@
             '';
           };
         in
-        inputs.pkg.main rec {
+        inputs.godev.inputs.pkg.main rec {
           src = caller.src;
 
           defaultPackage = ctx: kustomize (ctx // { inherit src; });
@@ -78,7 +77,7 @@
               } // (defaultCaller.extendBuild ctx)
             );
         in
-        inputs.pkg.main rec {
+        inputs.godev.inputs.pkg.main rec {
           src = caller.src;
 
           defaultPackage = ctx:
@@ -158,7 +157,7 @@
               '';
             }) // (defaultCaller.extendBuild ctx);
         in
-        inputs.pkg.main rec {
+        inputs.godev.inputs.pkg.main rec {
           src = caller.src;
 
           defaultPackage = ctx: cdktf (ctx // { inherit src; });
@@ -177,7 +176,7 @@
       inherit kustomizeMain;
       inherit goMain;
       inherit cdktfMain;
-    } // inputs.pkg.main rec {
+    } // inputs.godev.inputs.pkg.main rec {
       src = ./.;
       defaultPackage = ctx: ctx.wrap.nullBuilder {
         propagatedBuildInputs = with ctx.pkgs; [
