@@ -1,5 +1,5 @@
 {
-  inputs.app.url = github:defn/app/0.0.30;
+  inputs.app.url = github:defn/app/0.0.31;
   outputs = inputs: inputs.app.goMain rec {
     src = ./.;
 
