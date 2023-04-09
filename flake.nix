@@ -11,6 +11,8 @@
 
   outputs = inputs:
     let
+      pkg = inputs.godev.inputs.pkg;
+
       kustomizeMain = caller:
         let
           kustomize = ctx: ctx.wrap.bashBuilder {
@@ -27,7 +29,7 @@
             '';
           };
         in
-        inputs.godev.inputs.pkg.main rec {
+        pkg.main rec {
           src = caller.src;
 
           defaultPackage = ctx: kustomize (ctx // { inherit src; });
@@ -77,7 +79,7 @@
               } // (defaultCaller.extendBuild ctx)
             );
         in
-        inputs.godev.inputs.pkg.main rec {
+        pkg.main rec {
           src = caller.src;
 
           defaultPackage = ctx:
@@ -157,7 +159,7 @@
               '';
             }) // (defaultCaller.extendBuild ctx);
         in
-        inputs.godev.inputs.pkg.main rec {
+        pkg.main rec {
           src = caller.src;
 
           defaultPackage = ctx: cdktf (ctx // { inherit src; });
@@ -173,10 +175,11 @@
         };
     in
     {
+      inherit pkg;
       inherit kustomizeMain;
       inherit goMain;
       inherit cdktfMain;
-    } // inputs.godev.inputs.pkg.main rec {
+    } // pkg.main rec {
       src = ./.;
       defaultPackage = ctx: ctx.wrap.nullBuilder {
         propagatedBuildInputs = with ctx.pkgs; [
